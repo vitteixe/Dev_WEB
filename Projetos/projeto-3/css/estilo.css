@@ -1,0 +1,68 @@
+/*Limpar formatações padrão*/
+*{
+    margin: 0;
+    padding: 0;
+}
+/*Limpar formatações padrão*/
+
+
+
+/* ---------- Layout ----------*/
+
+#area-cabecalho{
+    background-color: #f7b600;
+    padding: 20px;
+    text-align: center;
+}
+
+#area-logo, #area-menu{
+    padding: 10px;
+}
+
+/* ---------- Layout ----------*/
+
+
+
+/* ---------- Formatação do Menu ----------*/
+a{
+    text-decoration: none;
+}
+
+a:link, a:visited{
+    color: #fff;
+    padding: 8px 12px;
+}
+
+a:hover{
+    color:#f7b600;
+    background: #fff;
+}
+
+/* ---------- Formatação do Menu ----------*/
+
+
+
+/* ---------- Formatação Geral ----------*/
+body{
+    font-size: 1em;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    background: #e6e6e6;
+}
+
+h1 {
+    color: #4e4e4e;
+    font-size: 2.5em;
+}
+
+.branco{
+    color: white;
+}
+/* ---------- Formatação Geral ----------*/
+
+
+
+
+
+
+
+
