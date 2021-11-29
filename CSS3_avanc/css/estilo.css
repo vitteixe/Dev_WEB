@@ -1,0 +1,26 @@
+
+/**********************************************
+SELETOR DE FILHO
+li > a {
+    color: red;
+    text-decoration: none;
+}*/
+
+
+/**********************************************
+SELETOR DESCENDENTE 
+li a {
+    color: green;
+}*/
+
+/**********************************************
+SELETOR DE IRMÃO ADJACENTE 
+h1+p{
+    color: red;
+}*/
+
+/**********************************************
+SELETOR DE IRMÃO GERAL */
+h1~p{
+    color: pink;
+}
