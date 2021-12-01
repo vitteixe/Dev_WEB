@@ -1,0 +1,35 @@
+/**********************************************
+Herança 
+body {
+    color: red;
+    border: 1px solid blue;
+}*/
+
+
+/**********************************************
+Especificidade
+p {
+    color: blue;
+}*/
+
+
+/**********************************************
+Se um seletor for mais específico que outro a regra
+mais especifica será aplicada (terá precedência 
+sobre regras mais gerais)  */
+
+*{
+    color: red;
+} 
+
+h2 {         /*3º*/
+    color: olive;
+}
+
+h2.verde {   /*2º*/
+    color: green;
+}
+
+h2#amarelo{  /*1º*/
+    color: orange;
+}
