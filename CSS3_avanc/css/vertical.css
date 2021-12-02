@@ -27,10 +27,18 @@ ul a{
     text-decoration: none;
     text-indent: 40px;
     line-height: 40px;
-    background: url(../images/menu.png) no-repeat left bottom;
+    background: #f7b600 url(../images/menu.png) no-repeat left bottom;
 }
 
 a:hover{
     background-position: right bottom;
+    background-color: #f99200;
+    color: #fff;
+}
+
+#Home #navegacao .home a,
+#sobre #navegacao .sobre a{
+    background-position: right bottom;
+    background-color: #f99200;
     color: #fff;
 }
