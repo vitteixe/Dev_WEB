@@ -1,0 +1,33 @@
+body{
+    font-family: "Tebuchet MS", Helvetica, sans-serif;
+}
+
+table {
+    width: 600px;
+    border-collapse: collapse; /*separate*/
+}
+
+th, td{
+    padding: 7px;
+}
+
+th{
+    text-transform: uppercase;   /*Deixar todas as letras MAIUSCULAS*/
+    border-top: 1px solid #999;
+    border-bottom: 1px solid #111;
+    text-align: left;
+    font-size: 90%;
+    letter-spacing: 0.1em;     /*Epaçamento entre as letras MAIUSCULAS*/
+}
+
+tr.alternado{
+    background-color: #efefef;
+}
+
+tr:hover {
+    background-color: #c3e6e5;
+}
+
+.numero {
+    text-align: right;
+}
