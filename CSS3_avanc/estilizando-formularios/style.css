@@ -1,0 +1,33 @@
+body{
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+fieldset{
+    padding: 1em;
+    margin: 1em 0;;
+    border: 1px solid #ccc;
+    background: #f8f8f8;
+}
+
+legend{
+    font-weight: bold;
+}
+
+label {
+    display: block;
+    cursor: pointer;
+}
+
+input{
+    width: 20em;
+}
+
+input.radio, input.checkbox, input.submit{
+    width: auto;
+    margin-right: 1em;
+}
+
+textarea{
+    width: 20em;
+    height: 10em;
+}
