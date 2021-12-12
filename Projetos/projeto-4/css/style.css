@@ -18,7 +18,7 @@ body{
     height: 150px;
     background: url(../images/detalhe-topo.png) no-repeat right top;
     padding-top: 25px;
-    border: 1px solid red;    
+   /* border: 1px solid red;   */ 
 }
 
 .logo{
@@ -26,4 +26,49 @@ body{
     height: 66px;
     background: url(../images/logo.png) no-repeat center;
     text-indent: -3000px;
+}
+
+
+/* BARRA DE NAVEGAÇÃO*/
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#topo ul{
+    margin-top: 30px;
+    background: #b10333; 
+    float: left;
+}
+
+#topo ul li {
+    float: left;
+}
+
+#topo ul a{
+    font-size: 0.9em;
+    display: block;
+    padding: 0.5em 1em;
+    line-height:2.1em;
+    text-decoration: none;
+    color: #fff;
+    background: url(../images/divisor.png) no-repeat left center;
+}
+
+#topo ul .primeiro a {
+    background: none;
+}
+
+#topo ul a:hover{
+    color: #69001d
+}
+
+body.home #navegacao a#home,
+body.brasil #navegacao a#brasil,
+body.internacional #navegacao a#internacional, 
+body.fotos #navegacao a#fotos {
+    color: #fff;
+    background: #de003e;
+    cursor: text;
 }
