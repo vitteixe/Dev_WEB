@@ -37,6 +37,15 @@ ul{
     list-style: none;
 }
 
+a:link, a:visited{
+    color: #b10333;
+    padding: 2px;
+}
+
+a:hover{
+    color: #e50040;
+}
+
 #topo ul{
     margin-top: 30px;
     background: #b10333; 
@@ -191,6 +200,11 @@ img.img-principal{
 
 
 /* FORMATANDO CABEÇALHOS */
+
+#uma-coluna h3{
+    font-size: 1em;
+}
+
 h3{
     text-transform: uppercase;
     display: inline;
@@ -208,6 +222,41 @@ h3{
 }
 
 /* \\FORMATANDO CABEÇALHOS */
+
+
+/* LISTA DE NOTÍCIAS */
+#lista-noticias li{
+    padding: 2px;
+    border-bottom: 1px solid #ccc;
+    height: 63px;
+}
+
+#lista-noticias li a {
+    text-decoration: none;
+}
+
+#lista-noticias li a h3{
+    font-size: 0.8em;
+    padding: 0;
+    color: #3e7ab9;
+}
+
+#lista-noticias li a p{
+    font-size: 0.7em;
+    color: #000;
+}
+
+#lista-noticias li:hover{
+    background: #eee;
+    cursor: pointer;
+}
+
+#lista-noticias li a img{
+    float: left;
+    margin: 5px;
+    
+}
+/* \\LISTA DE NOTÍCIAS */
 
 
 /* RODAPE */
