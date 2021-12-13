@@ -178,6 +178,38 @@ input.submit{
 /* \\FORMATANDO FOMULÁRIOS */
 
 
+/* FORMATANDO IMAGENS */
+img{
+    border: 2px solid #dfdfdf;
+}
+
+img.img-principal{
+    width: 98%;
+    border: 3px solid #dfdfdf;
+}
+/* \\FORMATANDO IMAGENS */
+
+
+/* FORMATANDO CABEÇALHOS */
+h3{
+    text-transform: uppercase;
+    display: inline;
+    font-size: 0.8em;
+    padding: 3px;
+}
+
+.destaque h3{
+    background-color: #b10333;
+    color: #fff;
+}
+
+.entrevista h3{
+    background-color: #de003e;
+}
+
+/* \\FORMATANDO CABEÇALHOS */
+
+
 /* RODAPE */
 #container-rodape{
     background: #294c71;
