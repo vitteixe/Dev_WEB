@@ -94,6 +94,10 @@ a.reserva {
     float: right;
 }
 
+a:hover.reserva {
+    background: #8b8448;
+}
+
 
 /* -BARRA DE NAVEGAÇÃO VERTICAL */
 #menu{
@@ -147,9 +151,56 @@ ul#navegacao a:hover{
 /* \\ÁREA DE CONTEÚDOS */
 
 
+/* FORMATAÇÕES DE TEXTOS */
+h2{
+    color: #7d7640;
+    font-size: 1.1em;
+    padding: 5px 0px;
+}
+p {
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+/* \\FORMATAÇÕES DE TEXTOS */
+
+
+/* FORMATAÇÕES DA ÁREA-LATERAL */
+#beneficios li{
+    padding: 8px;
+    border-bottom: 1px solid #f3efcb;
+    height: 6em;
+}
+
+#beneficios li a img {
+    float: left;
+    margin-right: 8px;
+}
+
+#beneficios li a p{
+    font-size: 0.8em;
+    color: #000;
+}
+
+#beneficios li a h3 {
+    font-size: 1em;
+    color: #615b2d;
+    padding: 5px 0;
+    background: url(../images/ornamento.png) no-repeat center right;
+}
+
+#beneficios li:hover {
+    background: #f6f3d6;
+    cursor: pointer;
+}
+/* \\FORMATAÇÕES DA ÁREA-LATERAL */
+
+
 /* RODAPE */
 #rodape {
     clear: both;
+    padding: 16px;
+    color: #7d7640;
+    background: #fff url(../images/bg-rodape.png) repeat-x top;
 }
 /* \\RODAPE */
 
