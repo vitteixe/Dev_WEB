@@ -8,6 +8,7 @@ body{
     background: #fff url(../images/fundo.png) repeat-x;
 }
 
+/* TOPO */
 #container {
     width: 750px;
     margin: 0 auto;
@@ -17,8 +18,7 @@ body{
 #topo{
     height: 150px;
     background: url(../images/detalhe-topo.png) no-repeat right top;
-    padding-top: 25px;
-   /* border: 1px solid red;   */ 
+    padding-top: 25px; 
 }
 
 .logo{
@@ -27,9 +27,10 @@ body{
     background: url(../images/logo.png) no-repeat center;
     text-indent: -3000px;
 }
+/* \\TOPO */
 
 
-/* BARRA DE NAVEGAÇÃO*/
+/* BARRA DE NAVEGAÇÃO */
 ul{
     margin: 0;
     padding: 0;
@@ -72,3 +73,77 @@ body.fotos #navegacao a#fotos {
     background: #de003e;
     cursor: text;
 }
+/* \\BARRA DE NAVEGAÇÃO */
+
+
+/* Configurar layout de três colunas */
+#conteudo {
+    margin-top: 60px;
+    background: #f5f5f5;
+}
+
+#conteudo-lateral {
+    width: 180px;
+    float: left;
+    margin: 0 0 20px -750px;
+}
+
+/* Conteudo primario com quantidade de colunas */
+#conteudo-primario {
+    width: 270px;
+    float: left;
+    margin: 0 0 20px 195px;;
+}
+
+#duas-colunas #conteudo-primario {
+    width: 555px;
+}
+
+#uma-coluna #conteudo-primario {
+    width: 750px;
+    margin: 0 0 20px 0;
+}
+/* \\Conteudo primario com quantidade de colunas */
+
+#conteudo-secundario {
+    width: 270px;
+    float: left;
+    margin: 0 0 20px 15px;
+}
+
+/* \\Configurar layout de três colunas */
+
+
+/* CAIXA */
+.caixa{
+    margin: 10px 0;
+    padding: 5px 0 5px 0;
+    background: #f3f3f3 url("../images/fundo-caixa.png");
+}
+
+.caixa h2{
+    font-size: 1em;
+    background: #294c71;
+    color: #fff;
+    padding: 5px;
+}
+
+.caixa-conteudo{
+    background: #fff;
+    padding: 5px;
+    margin-top: 5px;
+}
+/* \\CAIXA */
+
+
+/* RODAPE */
+#container-rodape{
+    background: #294c71;
+    padding: 20px;
+}
+#rodape{
+    width: 750px;
+    margin: 0 auto;
+    color: #fff;
+}
+/* \\RODAPÉ */
