@@ -14,6 +14,10 @@ a{
     text-decoration: none;
 }
 
+ul{
+    list-style: none;
+}
+
 #container {
     background: #ede9cc;
     margin: 0 auto;
@@ -89,4 +93,36 @@ a.reserva {
     padding: 5px 10px;
     float: right;
 }
+
+
+/* -BARRA DE NAVEGAÇÃO VERTICAL */
+#menu{
+    margin-top: 15px;
+}
+
+
+
+ul#navegacao{
+    float: left;
+}
+
+ul#navegacao a {
+    text-transform: uppercase;
+    font-size: 0.8em;
+    padding: 5px;
+    color: #6e672e;
+    line-height: 30px;
+}
+
+ul#navegacao a:hover{
+    background: #fdf6be;
+}
+
+.depoimento{
+    width: 226px;
+    height: 164px;
+}
+/* \\-BARRA DE NAVEGAÇÃO VERTICAL */
+
+
 /* \\TOPO */
