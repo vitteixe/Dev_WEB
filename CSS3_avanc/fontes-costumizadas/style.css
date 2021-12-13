@@ -1,0 +1,22 @@
+/* DECLARAÇÃO DE FONTES */
+@font-face {
+    font-family: "Ancient" ;
+    src: url("fonts/Ancient-Medium.woff");
+}
+
+@font-face {
+    font-family: Heart;
+    src: url("fonts/BringHeart.woff");
+}
+/* \\DECLARAÇÃO DE FONTES */
+
+
+h1{
+    font-size: 6em;
+    font-family: "Ancient";
+}
+
+p{
+    font-size: 3em;
+    font-family: Heart;
+}
