@@ -7,7 +7,11 @@ Este repositório foi criado para realizar commits durante a evolução do meu c
 
 ## Projetos
 
-Estes são projetos criados para praticar o aprendizado adquirido no decorrer do curso. <br />
+Estes são projetos criados para praticar o aprendizado adquirido no decorrer do curso. <br /><br />
+
+### [5. Notícias Cidade](https://vitteixe.github.io/Dev_WEB/Projetos/projeto-5/)
+
+---
 
 ### [4. Notícias Cidade](https://vitteixe.github.io/Dev_WEB/Projetos/projeto-4/)
 

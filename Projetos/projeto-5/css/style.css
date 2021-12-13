@@ -1,0 +1,45 @@
+/* ESTRUTURA DO SITE */
+*{
+    margin: 0;
+    padding: 0%;
+}
+
+body {
+    font-family: Helvetica, "Trebuchet MS", sans-serif;
+    background: #fff url(../images/bg.png);
+    margin: 15px;
+}
+
+#container {
+    background: #ede9cc;
+}
+/* \\ESTRUTURA DO SITE */
+
+
+/* TOPO */
+#topo{
+    position: relative;
+    background: #dbcd87;
+    height: 15.4em;
+    min-height: 250px;
+}
+
+#area-logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(../images/topo-imagem-principal.png) no-repeat;
+    width: 100%;
+    height: 250px;
+}
+
+#area-menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: url(../images/topo-imagem-lateral.png) no-repeat;
+    width: 450px;
+    height: 250px;
+    
+}
+/* \\TOPO */
