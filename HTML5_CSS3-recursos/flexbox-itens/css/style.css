@@ -1,0 +1,59 @@
+#conteudo{
+    background: #dcdcdc;
+    height: 600px;
+    padding-top: 10px;
+    display: flex;
+}
+
+.item{
+    background: #fff;
+    /*width: 200px;*/
+    height: 100px;
+    margin: 10px;
+    border: 1px solid gray;
+    
+    /* Define a porporção de espaço ocupado por um item */
+    flex-grow: 0; 
+
+    /* Define a capacidade de redução de tamanho do item */
+    flex-shrink: 1;
+
+    /* Define o tamanho inicial do flex item antes da
+    distribuição do espaço restante */
+    flex-basis: 300px;
+}
+
+.item1{
+    /*flex-grow: 1px;*/
+    flex-shrink: 2; 
+}
+
+.item2{
+    /*flex-grow: 2px;*/
+    flex-shrink: 2;
+}
+
+.item3{
+    /*flex-grow: 2px;*/
+    flex-shrink: 5;
+}
+
+
+
+/*
+.ordem1{
+    order: 1;
+}
+
+.ordem2{
+    order: 2;
+}
+
+.ordem3{
+    order: 3;
+}
+
+.ordem4{
+    order: 4;
+}
+*/
