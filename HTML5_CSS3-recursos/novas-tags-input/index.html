@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Novas Tags Input</title>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--[if lt IE 9]>
+	<script src="js/html5shiv.js"></script>
+    <![endif]-->
+    
+</head>
+
+<body>
+
+    <form>
+
+        <!-- Novos Inputs e Atributos HTML required autofocus-->
+        <label for="nome">Nome</label>
+        <input type="text" name="nome" id="nome" >
+        <br><br>
+
+        <!-- EMAIL - email required-->
+        <label for="email">Email</label>
+        <input type="email" id="email" >
+        <br><br>
+
+        <!-- Número - number -->
+        <label for="numero">Número</label>
+        <input type="number" id="numero" min="0" max="20" step="5">
+        <br><br>
+
+        <!-- URL - url-->
+        <label for="url">URL</label>
+        <input type="url" id="url" placeholder="http://">
+        <br><br>
+
+         <!-- Pesquisa - search -->
+         <label for="pesquisa">Pesquisa</label>
+         <input type="search" id="pesquisa">
+         <br><br>
+
+          <!-- Range -->
+          <label for="range">Range</label>
+          <input type="range" id="range" min="1" max="30" value="2">
+          <br><br>
+
+          <!-- Data - date -->
+          <label for="data">Data</label>
+          <input type="date" id="data">
+          <br><br>
+
+          <!-- Cor - color -->
+          <label for="cor">Cor</label>
+          <input type="color" id="cor">
+          <br><br>
+
+
+        <input type="submit" value="Enviar">
+
+    </form>
+
+</body>
+
+</html>
