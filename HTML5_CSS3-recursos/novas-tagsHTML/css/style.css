@@ -1,0 +1,30 @@
+/* CABEÇALHO */
+header{                   
+    border: 1px solid red;
+    padding: 10px;
+}
+
+/* NAVEGAÇÃO */
+nav{
+    border: 1px solid rgb(14, 190, 52);
+    background:  #f2f2f2;
+}
+
+/* RODAPÉ */
+footer{
+    background: #ccc;
+}
+
+/* CONTEÚDOS */
+article{
+    background: orange;
+    padding: 10px;
+}
+
+section {
+    border: 1px dotted dodgerblue;
+}
+
+aside{
+    background: forestgreen
+}
