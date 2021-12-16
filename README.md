@@ -9,6 +9,12 @@ Este repositório foi criado para realizar commits durante a evolução do meu c
 
 Estes são projetos criados para praticar o aprendizado adquirido no decorrer do curso. <br /><br />
 
+### [6. Museu Nacional](https://vitteixe.github.io/Dev_WEB/Projetos/projeto-6/)
+
+---
+
+<img style="display: block; margin: 0 auto;" src="https://user-images.githubusercontent.com/89394210/146291094-67e68e4d-d470-4238-bdca-8852079598b0.png" width="65%" height="65%" /><br /><br />
+
 ### [5. Chalé Hotel](https://vitteixe.github.io/Dev_WEB/Projetos/projeto-5/)
 
 ---
