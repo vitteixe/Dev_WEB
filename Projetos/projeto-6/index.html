@@ -21,12 +21,14 @@
 
         <!-- Início header -->
         <header>
+            
             <div id="logo">
                 <h1><a href="">Museu Nacional</a></h1>
             </div>
 
             <!-- Início nav -->
             <nav>
+
                 <ul>
                     <li><a href="">Home</a></li>
                     <li><a href="">Exposições</a></li>
@@ -36,14 +38,77 @@
                     <li><a href="">Fotos</a></li>
                     <li><a href="">Contato</a></li>
                 </ul>
-            </nav>
-            <!--/ Fim nav -->
 
-        </header>
-        <!--/ Fim header -->
+            </nav><!--/ Fim nav -->
 
-    </div>
-    <!--/ Fim container -->
+        </header><!--/ Fim header -->
+
+        <!-- Início principal -->
+        <div id="principal">
+
+            <!-- Início conteúdo -->
+            <div id="conteudo">
+                
+                <section id="capa">
+                    <img src="images/museu.png">        
+                </section>
+
+            </div><!-- /Fim conteúdo -->
+
+            <!-- Início aside -->
+            <aside>
+                
+                <section id="depoimento">
+                    <img src="images/depoimento.png">
+                </section>
+
+                <!-- Início seção visita -->
+                <section id="visita">
+                    <h4>Faça uma visita</h4>
+                    
+                    <form>
+                        <fieldset>
+                            <legend>Selecione uma data</legend>
+
+                            <label for="data"> Data </label>
+                            <input class="campo" style="width: 120.4px" type="date" id="data" required>
+
+                            <label for="qtd">Qtd. pessoas</label>
+                            <input class="campo" style="width: 30px"type="number" id="qtd" value="0" min="1" required>
+                        </fieldset>
+
+                        <input class="botao" type="submit" value="Verificar disponibilidade">
+
+                    </form>
+                </section><!-- /Fim seção visita -->
+
+                <!-- Início seção galeria -->
+                <section id="galeria">
+                    <h4>Galeria de Fotos</h4>
+                    
+                    <a href="">
+                        <img src="images/imagem1.jpg" height="93" width="93">
+                    </a>
+
+                    <a href="">
+                        <img src="images/imagem2.jpg" height="93" width="93">
+                    </a>
+
+                    <a href="">
+                        <img src="images/imagem3.jpg" height="93" width="93">
+                    </a>
+
+                    <a href="">
+                        <img src="images/imagem4.jpg" height="93" width="93">
+                    </a>
+
+                </section><!-- /Fim seção Galeria -->
+
+            </aside><!-- /Fim aside -->
+            
+        </div><!-- /Fim principal -->
+
+    </div><!--/ Fim container -->
 
 </body>
 
