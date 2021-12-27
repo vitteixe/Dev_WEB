@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+
+    <title>Bootstrap - Navegação </title>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+</head>
+
+<body style="margin-bottom: 200px; margin: 0 auto;">
+
+     <!-- Navegação
+    Tipos de navegação:
+        nav-pills
+        nav-tabs
+    opções de alinhamento: 
+        justify-content-center 
+        justify-content-end
+        flex-column
+    -->
+    <h2>Navegação simples / abas</h2>
+    <ul class="nav nav-pills flex-column">
+        <li class="nav-item">
+            <a class="nav-link " href="">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="">Sobre</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" href="">Serviços</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link disabled" href="">Link 4</a>
+        </li>
+    </ul>
+    
+
+    <h2>Barra de navegação simples</h2>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-secondary">
+        <!-- Logo -->
+        <a href="" class="navbar-brand"> Chalé Hotel</a>
+
+        <!-- Navegação -->
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="">Sobre</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="">Serviços</a>
+            </li>
+        </ul>
+    </nav>
+    
+
+    <h2>Barra de navegação com menu responsivo</h2>
+    <nav class="navbar navbar-expand-md navbar-light bg-warning">
+        <!-- Logo -->
+        <a href="" class="navbar-brand"> Chalé Hotel</a>
+
+        <!-- Menu hamburguer -->
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#nav-target">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navegação -->
+        <div class="collapse navbar-collapse" id="nav-target">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="">Sobre</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="">Serviços</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <h2>Barra de navegação com formulário</h2>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <!-- Logo -->
+        <a href="" class="navbar-brand"> Chalé Hotel</a>
+
+        <!-- Menu hamburguer -->
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#nav-target2">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navegação -->
+        <div class="collapse navbar-collapse" id="nav-target2">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="">Sobre</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="">Serviços</a>
+                </li>
+            </ul>
+
+            <!-- Fomulário -->
+            <form class="form-inline">
+                <input type="text" class="form-control" placeholder="pesquisar...">
+                <button class="btn btn-outline-success">OK</button>
+            </form>
+        </div>
+    </nav>
+
+    
+    <h2>Barra de navegação com menu dropdown</h2>
+    <nav class="navbar navbar-expand-md navbar-dark bg-danger">
+        <!-- Logo -->
+        <a href="" class="navbar-brand"> Chalé Hotel</a>
+
+        <!-- Menu hamburguer -->
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#nav-target2">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navegação -->
+        <div class="collapse navbar-collapse" id="nav-target2">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="">Sobre</a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="">Serviços</a>
+
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="">Serviço 1</a>
+                        <a class="dropdown-item" href="">Serviço 2</a>
+                        <a class="dropdown-item" href="">Serviço 3</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+    </nav>
+    
+    
+    <!--Cores
+    opções: bg-primary, bg-secondary, bg-success, bg-info,
+    bg-warning, bg-danger, bg-light, bg-dark
+    -->
+    <h2>Cores</h2>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+        <!-- Logo -->
+        <a href="" class="navbar-brand"> Chalé Hotel</a>
+
+        <!-- Navegação -->
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="">Sobre</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="">Serviços</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!--Alinhamentos
+    opções: fixed-top, fixed-bottom, sticky
+    -->
+
+    <h1>Lorem ipsum dolor sit amet</h1>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+         Etiam et libero id erat tristique fermentum placerat a erat. 
+         Vestibulum ante ipsum primis in faucibus orci luctus et 
+         ultrices posuere cubilia Curae; Sed ac lobortis quam. Nunc 
+         vestibulum tincidunt arcu, at scelerisque velit ornare et. 
+         Vestibulum ut malesuada nibh.
+    </p>
+
+    <h1>Lorem ipsum dolor sit amet</h1>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+         Etiam et libero id erat tristique fermentum placerat a erat. 
+         Vestibulum ante ipsum primis in faucibus orci luctus et 
+         ultrices posuere cubilia Curae; Sed ac lobortis quam. Nunc 
+         vestibulum tincidunt arcu, at scelerisque velit ornare et. 
+         Vestibulum ut malesuada nibh.
+    </p>
+
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+         Etiam et libero id erat tristique fermentum placerat a erat. 
+         Vestibulum ante ipsum primis in faucibus orci luctus et 
+         ultrices posuere cubilia Curae; Sed ac lobortis quam. Nunc 
+         vestibulum tincidunt arcu, at scelerisque velit ornare et. 
+         Vestibulum ut malesuada nibh.
+    </p>
+
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+         Etiam et libero id erat tristique fermentum placerat a erat. 
+         Vestibulum ante ipsum primis in faucibus orci luctus et 
+         ultrices posuere cubilia Curae; Sed ac lobortis quam. Nunc 
+         vestibulum tincidunt arcu, at scelerisque velit ornare et. 
+         Vestibulum ut malesuada nibh.
+    </p>
+
+    <h2>Alinhamentos</h2>
+    <nav class="navbar fixed-bottom navbar-expand-sm navbar-dark bg-success">
+        <!-- Logo -->
+        <a href="" class="navbar-brand"> Chalé Hotel</a>
+
+        <!-- Navegação -->
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="">Sobre</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="">Serviços</a>
+            </li>
+        </ul>
+    </nav>
+
+    <h1>Lorem ipsum dolor sit amet</h1>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+         Etiam et libero id erat tristique fermentum placerat a erat. 
+         Vestibulum ante ipsum primis in faucibus orci luctus et 
+         ultrices posuere cubilia Curae; Sed ac lobortis quam. Nunc 
+         vestibulum tincidunt arcu, at scelerisque velit ornare et. 
+         Vestibulum ut malesuada nibh.
+    </p>
+
+    <h1>Lorem ipsum dolor sit amet</h1>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+         Etiam et libero id erat tristique fermentum placerat a erat. 
+         Vestibulum ante ipsum primis in faucibus orci luctus et 
+         ultrices posuere cubilia Curae; Sed ac lobortis quam. Nunc 
+         vestibulum tincidunt arcu, at scelerisque velit ornare et. 
+         Vestibulum ut malesuada nibh.
+    </p>
+
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+         Etiam et libero id erat tristique fermentum placerat a erat. 
+         Vestibulum ante ipsum primis in faucibus orci luctus et 
+         ultrices posuere cubilia Curae; Sed ac lobortis quam. Nunc 
+         vestibulum tincidunt arcu, at scelerisque velit ornare et. 
+         Vestibulum ut malesuada nibh.
+    </p>
+
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+         Etiam et libero id erat tristique fermentum placerat a erat. 
+         Vestibulum ante ipsum primis in faucibus orci luctus et 
+         ultrices posuere cubilia Curae; Sed ac lobortis quam. Nunc 
+         vestibulum tincidunt arcu, at scelerisque velit ornare et. 
+         Vestibulum ut malesuada nibh.
+    </p>
+
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+         Etiam et libero id erat tristique fermentum placerat a erat. 
+         Vestibulum ante ipsum primis in faucibus orci luctus et 
+         ultrices posuere cubilia Curae; Sed ac lobortis quam. Nunc 
+         vestibulum tincidunt arcu, at scelerisque velit ornare et. 
+         Vestibulum ut malesuada nibh.
+    </p>
+
+    <h1>Lorem ipsum dolor sit amet</h1>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+         Etiam et libero id erat tristique fermentum placerat a erat. 
+         Vestibulum ante ipsum primis in faucibus orci luctus et 
+         ultrices posuere cubilia Curae; Sed ac lobortis quam. Nunc 
+         vestibulum tincidunt arcu, at scelerisque velit ornare et. 
+         Vestibulum ut malesuada nibh.
+    </p>
+
+    <h1>Lorem ipsum dolor sit amet</h1>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+         Etiam et libero id erat tristique fermentum placerat a erat. 
+         Vestibulum ante ipsum primis in faucibus orci luctus et 
+         ultrices posuere cubilia Curae; Sed ac lobortis quam. Nunc 
+         vestibulum tincidunt arcu, at scelerisque velit ornare et. 
+         Vestibulum ut malesuada nibh.
+    </p>
+
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+         Etiam et libero id erat tristique fermentum placerat a erat. 
+         Vestibulum ante ipsum primis in faucibus orci luctus et 
+         ultrices posuere cubilia Curae; Sed ac lobortis quam. Nunc 
+         vestibulum tincidunt arcu, at scelerisque velit ornare et. 
+         Vestibulum ut malesuada nibh.
+    </p>
+
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+         Etiam et libero id erat tristique fermentum placerat a erat. 
+         Vestibulum ante ipsum primis in faucibus orci luctus et 
+         ultrices posuere cubilia Curae; Sed ac lobortis quam. Nunc 
+         vestibulum tincidunt arcu, at scelerisque velit ornare et. 
+         Vestibulum ut malesuada nibh.
+    </p>
+
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+         Etiam et libero id erat tristique fermentum placerat a erat. 
+         Vestibulum ante ipsum primis in faucibus orci luctus et 
+         ultrices posuere cubilia Curae; Sed ac lobortis quam. Nunc 
+         vestibulum tincidunt arcu, at scelerisque velit ornare et. 
+         Vestibulum ut malesuada nibh.
+    </p>
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous">
+    </script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+    </script>
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
