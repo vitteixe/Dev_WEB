@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+
+    <title>Bootstrap - Config Grids </title>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <style type="text/css">
+        .marcador {
+            background: #fe9d9d;
+            border: 1px solid #f94646;
+            height: 120px;
+        }
+
+        .marcador-container {
+            background: #5bf946;
+            border: 1px solid #36ae26;
+        }
+
+        .borda {
+            border: 1px solid blue;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h2>Alinhamento vertical (align-items-ALINHAMENTO: start, center, end)</h2>
+        <div class="marcador row align-items-center">
+            <div class="borda col">Área 1</div>
+            <div class="borda col">Área 2</div>
+            <div class="borda col">Área 3</div>
+        </div>
+
+        <h2>Alinhamento vertical individual (align-self-ALINHAMENTO: start, center, end)</h2>
+        <div class="marcador row">
+            <div class="borda col align-self-start">Área 1</div>
+            <div class="borda col align-self-center">Área 2</div>
+            <div class="borda col align-self-end">Área 3</div>
+        </div>
+
+        <h2>Alinhamento horizontal colunas (justify-content-ALINHAMENTO: start, center, end)</h2>
+        <div class="row justify-content-center">
+            <div class="marcador col-2">Área 1</div>
+            <div class="marcador col-2">Área 2</div>
+            <div class="marcador col-2">Área 3</div>
+        </div>
+
+        <h2>Distribuição (justify-content-ALINHAMENTO: around, between)</h2>
+        <div class="row borda justify-content-between">
+            <div class="marcador col-2">Área 1</div>
+            <div class="marcador col-2">Área 2</div>
+            <div class="marcador col-2">Área 3</div>
+        </div>
+
+        <h2>Removendo espaçamento</h2>
+        <div class="row no-gutters">
+            <div class="borda col-2">Área 1</div>
+            <div class="borda col-2">Área 2</div>
+            <div class="borda col-2">Área 3</div>
+        </div>
+
+
+    </div>
+
+</html>
