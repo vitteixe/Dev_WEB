@@ -87,6 +87,9 @@ nav.navbar-transparent{
 #services h2, h3{
     color: #7c25f8;
 }
+#services p{
+    color: black;
+}
 
 /*****************************/
 #resources{
@@ -115,6 +118,42 @@ nav.navbar-transparent{
     padding-left: 80px;
 
 }
+
+
+/* ROdapé
+******************************/
+footer{
+    background: #000;
+    padding: 50px 0px 20px 0px;
+    position: relative;
+}
+
+footer h4 {
+    color: #919496;
+    font-size: 0.8em;
+    text-transform: uppercase;
+}
+
+footer .navbar-nav a{
+    color: white;
+    font-size: 0.8em;
+}
+
+footer .navbar-nav a:hover{
+    color: #9bf0e1;
+    text-decoration: none;
+}
+
+footer ul{
+    list-style: none;
+}
+
+footer ul li{
+    float: right;
+    margin: 0 5px;
+}
+
+
 
 
 /* Tipografia
@@ -146,6 +185,7 @@ h3{
 @media (max-width: 575.98px) {
     .btn-custom {
         margin: 10px 15px;
+        font-size: 1em;
     }
 }
 
