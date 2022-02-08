@@ -75,6 +75,12 @@ nav.navbar-transparent{
     color: black;
 }
 
+.carousel-control-next, .carousel-control-prev{
+    width: 5%;
+    font-size: 1.4em;
+}
+
+
 
 /* Estrutura de conteúdos
 ******************************/
