@@ -2,6 +2,7 @@
 ******************************/
 html, body, #home{
     height: 100%;
+    overflow-x: hidden;  /* para não rolar para os lados */
 }
 
 body{
@@ -75,6 +76,46 @@ nav.navbar-transparent{
 }
 
 
+/* Estrutura de conteúdos
+******************************/
+#services{
+    background: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#services h2, h3{
+    color: #7c25f8;
+}
+
+/*****************************/
+#resources{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#resources h2, p{
+    color: white;
+}
+
+#resources h3{
+    color: #9bf0e1;
+}
+
+/*****************************/
+
+.albuns{
+    padding: 10px 0;
+}
+
+.rotate{
+    -ms-transform: rotate(30deg);
+    -webkit-transform: rotate(30deg);
+    transform: rotate(30deg);
+    padding-left: 80px;
+
+}
+
 
 /* Tipografia
 ******************************/
@@ -85,6 +126,17 @@ h1{
     color: white;
 }
 
+h2{
+    font-size: 3em;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+}
+
+h3{
+    font-size: 2em;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+}
 
 
 
