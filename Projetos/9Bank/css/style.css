@@ -1,0 +1,63 @@
+
+
+
+
+
+/* INDEX.HTML *************************/
+/* Carrossel
+******************************/
+.card-body{
+    height: 400px;
+    padding: 1.8em;
+    color: black;
+}
+
+.card-body .title{
+    padding: 0.5em;
+}
+
+.card-body .form-group{
+    margin-top: 60px;
+}
+
+/* Sobreescrevendo o espaço das setas estabelecidos pelo font */
+.carousel-control-next, .carousel-control-prev {
+    width: 2px;
+}
+
+#home{
+    background-color: #f04d55;
+    color: white;
+    padding-bottom: 0%;
+    height: 518px;
+}
+
+.carousel-item.active h1{
+    margin-bottom: 17%;
+    margin-top: 10%;
+}
+
+.carousel-item.active p{
+    margin-bottom: 8%;
+}
+
+section#home span{
+    color:#007bff;
+}
+
+section#home span:hover{
+    color:#459dfaf8;
+    cursor: pointer;
+}
+
+section#home {
+    margin-bottom: 0;
+}
+
+
+.caixa{
+    padding: 60px 0;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+
