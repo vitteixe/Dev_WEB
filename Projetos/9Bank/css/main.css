@@ -14,11 +14,11 @@ body{
 /* Barra de navegação
 ******************************/
 header{
-    margin-bottom: 9.1em;
+    margin-bottom: 80px
 }
 
 nav.navbar-color{
-    padding: 15px 0px;
+    padding: 38px 0px;
     background: #f04d55;
 }
 
@@ -120,6 +120,9 @@ footer span h5 {
 ******************************/
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
+    .logo{
+        width: 162px;
+    }
 }
 
 /* Small devices (landscape phones, 576px and up) */
@@ -127,10 +130,10 @@ footer span h5 {
     h1{
         font-size: 3em;
     }
-
-    .btn-custom {
-        margin: 10px 15px;
+    .logo{
+        width: 182px;
     }
+
 }
 
 /* Medium devices (tablets, 768px and up) */
@@ -138,6 +141,10 @@ footer span h5 {
     h1{
         font-size: 2em;
     }
+    .logo{
+        width: 212px;
+    }
+    
 }
 
 /* Large devices (desktops, 992px and up) */
@@ -145,11 +152,18 @@ footer span h5 {
     h1{
         font-size: 2.5em;
     }
+    .logo{
+        width: 242px;
+    }
+    
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
     h1{
         font-size: 3em;
+    }
+    .logo{
+        width: 262px;
     }
 }

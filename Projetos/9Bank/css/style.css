@@ -28,8 +28,9 @@
 #home{
     background-color: #f04d55;
     color: white;
+    padding-top: 2em;
     padding-bottom: 0%;
-    height: 518px;
+    height: 618px;
 }
 
 .carousel-item.active h1{
