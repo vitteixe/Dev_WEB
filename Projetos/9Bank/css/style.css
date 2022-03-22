@@ -23,8 +23,8 @@
     background-color: #f04d55;
     color: white;
     padding-top: 2em;
-    padding-bottom: 0%;
-    height: 618px;
+    height: 551px;
+    margin-top: 128px;
 }
 
 .carousel-item.active h1{
@@ -49,10 +49,71 @@ section#home {
     margin-bottom: 0;
 }
 
+.errorInput {
+    border: 2px solid #db0101 !important;
+}
 
-.caixa{
-    padding: 60px 0;
-    border-bottom: 1px solid #e5e5e5;
+.correctInput {
+    border: 2px solid #11eb2e !important;
 }
 
 
+
+
+.caixa{
+    padding: 60px 0;
+    border-bottom: 1px solid #e5e5e5;;
+}
+
+.caixa p{
+    color: #242424;
+    margin-bottom: 50px;
+}
+
+.caixa h4{
+    margin-bottom: 25px;
+}
+
+.cx{
+    border: 1px solid #cececefb;
+    border-radius: 20px;
+}
+
+.cx:hover{
+    border: 2px solid #ffc547fb;
+}
+
+.cx:hover h4{
+    font-size: 28px;
+}
+
+
+
+
+
+
+
+/*Conteudos
+**************************************/
+#conteudos{
+    border: 1px solid #f78b91;
+    border-radius: 70px;
+    padding: 30px;
+    margin-top: 150px;
+    background: #fdfdfd;
+}
+
+#conteudos h2{
+    text-align: center;
+    padding: 5px;
+    margin-top: 7px;
+}
+
+#conteudos p{
+    margin-top: 25px;
+    margin-bottom: 10px;
+    margin-right: 30px;
+    margin-left: 30px;
+    color: #000;
+    text-align: justify;
+}

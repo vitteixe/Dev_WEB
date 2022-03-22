@@ -43,15 +43,15 @@
 
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
-                            <a href="index.html" class="nav-link">Inicio</a>
+                            <a href="" class="nav-link">Inicio</a>
                         </li>
 
                         <li class="nav-item">
-                            <a href="" class="nav-link">Quem somos</a>
+                            <a href="pages/quem-somos.html" class="nav-link">Quem somos</a>
                         </li>
 
                         <li class="nav-item">
-                            <a href="" class="nav-link">Saque Digital</a>
+                            <a href="testes1.html" class="nav-link">Saque Digital</a>
                         </li>
 
                         <li class="nav-item">
@@ -103,16 +103,19 @@
                                         <div class="card">
                                             <div class="card-body">
                                                 <h3 class="title">Com NineBank, a resposta vem em menos de 1 minuto</h3>
+                                                
+                                                <form>
 
-                                                <div class="form-group">
-                                                    <input type="text" placeholder="Digite seu CPF"
-                                                        class="form-control form-control-lg">
-                                                </div>
-
-                                                <button type="button" class="btn btn-outline-secondary btn-block p-2">
-                                                    Continuar <i class="fa-solid fa-arrow-right-long mr-6"></i>
-                                                </button>
-
+                                                    <div class="form-group">
+                                                        <input id="cpf" name="cpf" type="text" placeholder="Digite seu CPF" class="form-control form-control-lg" autocomplete="off" maxlength="14">
+                                                    </div>
+                                        
+                                                    <button id="button" type="submit" class="button btn btn-outline-secondary btn-block p-2">
+                                                        Continuar <i class="fa-solid fa-arrow-right-long mr-6"></i>
+                                                    </button>
+                                    
+                                                </form>
+                                                
                                             </div>
                                         </div>
 
@@ -193,7 +196,7 @@
     </section>
     <!--HOME-->
 
-    <!--Inicio seção saiba-->
+    <!--saiba-->
     <section class="caixa">
 
         <div class="container">
@@ -221,9 +224,9 @@
         </div>
 
     </section>
-    <!--\\Fim seção saiba-->
+    <!--saiba-->
 
-    <!--Inicio seção juros-->
+    <!--juros-->
     <section class="caixa">
 
         <div class="container">
@@ -250,15 +253,15 @@
         </div>
 
     </section>
-    <!--\\Fim seção juros-->
+    <!--juros-->
 
-    <!--Inicio seção recursos-->
+    <!--recursos-->
     <section class="caixa">
 
         <div class="container">
             <div class="row">
 
-                <div class="col-md-4">
+                <div class="col-md-4 cx">
                     <img src="images/facil.png" class="img-fluid">
 
                     <h4>Fácil de Usar</h4>
@@ -269,7 +272,7 @@
                     </p>
                 </div>
 
-                <div class="col-md-4">
+                <div class="col-md-4 cx">
                     <img src="images/economize.png" class="img-fluid">
                     <h4>Economize seu tempo</h4>
                     <p>
@@ -278,7 +281,7 @@
                     </p>
                 </div>
 
-                <div class="col-md-4">
+                <div class="col-md-4 cx">
                     <img src="images/suporte.png" class="img-fluid">
                     <h4>Suporte amigo</h4>
                     <p>
@@ -292,7 +295,7 @@
         </div>
 
     </section>
-    <!--\\Fim seção recursos-->
+    <!--ecursos-->
 
     <!--Footer-->
     <footer class="d-flex">
@@ -308,9 +311,9 @@
                     <!--Logo-->
 
                     <!--Linha 1-->
-                    <div class="row justify-content-around">
+                    <div class="row">
                         
-                        <div class="col-md-7 caixa-footer">
+                        <div class="col-md-6 caixa-footer">
                             
                             <a href=""><i class="fa-brands fa-facebook"></i></a>
                             <a href=""><i class="fa-brands fa-instagram"></i></a>
@@ -321,7 +324,7 @@
 
                         </div>
 
-                        <div class="col-md-7 caixa-footer">
+                        <div class="col-md-5 caixa-footer">
                            
                             <div class="apps">
                                 <span>Baixe o app </span>       
@@ -337,7 +340,7 @@
                     <div class="divisor-footer"></div>
 
                     <!--Linha2 -->
-                    <div class="row justify-content-around">
+                    <div class="row">
 
                         <!--Coluna 1-->
                         <div class="col-md-7">
@@ -452,7 +455,7 @@
 
 
 
-
+    <script src="js/validation.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">

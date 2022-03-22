@@ -15,17 +15,18 @@ body{
 ******************************/
 header{
     margin-bottom: 80px
+    
 }
 
 nav.navbar-color{
     padding: 38px 0px;
     background: #f04d55;
-    
 }
 
 #nav-principal .nav-link{
     color: white;
     font-size: 1.2em;
+    margin-bottom: auto;
 }
 
 #nav-principal .nav-link:hover{
