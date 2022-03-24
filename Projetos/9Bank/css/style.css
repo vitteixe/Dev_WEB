@@ -87,9 +87,28 @@ section#home {
     font-size: 28px;
 }
 
+#buttons {
+    text-align: center;
+}
 
+#buttons h1{
+    margin-top: 115px;
+}
 
+#buttons a{
 
+    border: 1px solid #f04d55;
+    border-radius: 65px;
+    margin-top: 55px;
+    padding: 150px;
+    color: #f03a43;
+    transition: 1s;
+}
+
+#buttons a:hover{
+    background: #f04d55;
+    color: #fff;
+}
 
 
 
@@ -116,4 +135,44 @@ section#home {
     margin-left: 30px;
     color: #000;
     text-align: justify;
+}
+
+
+
+
+/* Media Queries
+******************************/
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+    #buttons a{
+        padding: 75px;
+    }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    
+    #buttons a{
+        padding: 85px;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    #buttons a{
+        padding: 95px;
+    }
+    
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    #buttons a{
+        padding: 150px;
+    }
 }
