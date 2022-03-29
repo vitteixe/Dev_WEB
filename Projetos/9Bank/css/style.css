@@ -112,30 +112,6 @@ section#home {
 
 
 
-/*Conteudos
-**************************************/
-#conteudos{
-    border: 1px solid #f78b91;
-    border-radius: 70px;
-    padding: 30px;
-    margin-top: 150px;
-    background: #fdfdfd;
-}
-
-#conteudos h2{
-    text-align: center;
-    padding: 5px;
-    margin-top: 7px;
-}
-
-#conteudos p{
-    margin-top: 25px;
-    margin-bottom: 10px;
-    margin-right: 30px;
-    margin-left: 30px;
-    color: #000;
-    text-align: justify;
-}
 
 
 
