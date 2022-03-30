@@ -1,5 +1,4 @@
-/* Layout
-******************************/
+
 html, body{
     height: 100%;
     overflow-x: hidden;/* para não rolar para os lados */
@@ -10,12 +9,8 @@ body{
     font-family: Helvetica, Arial, sans-serif;
 }
 
-
-/* Barra de navegação
-******************************/
 header{
-    margin-bottom: 80px
-    
+    margin-bottom: 80px;    
 }
 
 nav.navbar-color{
@@ -24,7 +19,7 @@ nav.navbar-color{
 }
 
 #nav-principal .nav-link{
-    color: white;
+    color: #fff;
     font-size: 1.2em;
     margin-bottom: auto;
 }
@@ -32,7 +27,6 @@ nav.navbar-color{
 #nav-principal .nav-link:hover{
     color: #fff6;
 }
-
 
 /* Footer
 *********************************************/
@@ -114,12 +108,6 @@ footer span h5 {
     margin-bottom: 15px;
 }
 
-
-
-
-
-/* Media Queries
-******************************/
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
     .logo{
