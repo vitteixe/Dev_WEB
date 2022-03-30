@@ -68,6 +68,7 @@
 
 .ac{
     border-color: #f7c627;
+    transition: 1s;
 }
 
 .ac:hover{
@@ -77,6 +78,7 @@
 
 .cb{
     border-color: #0066FF;
+    transition: 1s;
 }
 
 .cb:hover{
@@ -86,6 +88,7 @@
 
 .vt{
     border-color: #7332A4;
+    transition: 1s;
 }
 
 .vt:hover{
@@ -95,6 +98,7 @@
 
 .jr{
     border-color: #37A737;
+    transition: 1s;
 }
 
 .jr:hover{
@@ -104,6 +108,7 @@
 
 .vm{
     border-color: #FC8604;
+    transition: 1s;
 }
 
 .vm:hover{
