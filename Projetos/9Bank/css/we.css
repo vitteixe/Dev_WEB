@@ -66,6 +66,10 @@
     font-weight: bold;
 }
 
+.point{
+    cursor: pointer;
+}
+
 .ac{
     border-color: #f7c627;
     transition: 1s;
