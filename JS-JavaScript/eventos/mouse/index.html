@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta charset="utf-8">
+    <title>Eventos de mouse</title>
+
+</head>
+
+<body>
+
+    <div onclick="acao()" style="background: #ccc; height: 300px; width: 300px; text-align: center;">
+        <h3>onclick</h3>
+        <h2>Ao clicar UMA vez</h2>
+    </div>
+
+    <div ondblclick="acao()" style="background: #9568; height: 300px; width: 300px; text-align: center;">
+        <h3>ondblclick</h3>
+        <h2>Ao clicar DUAS vez seguidas</h2> 
+    </div>
+
+    <div onmouseup="acao()" style="background: #483D8B; height: 300px; width: 300px; text-align: center;">
+        <h3>onmouseup</h3>
+        <h2>Ao levantar o botão do mouse</h2> 
+    </div>
+
+    <div onmouseover="acao()" style="background: #CD853F; height: 300px; width: 300px; text-align: center;">
+        <h3>onmouseover</h3>
+        <h2>Ao passar o mouse em cima </h2> 
+    </div>
+
+    <div onmouseout="acao()" style="background: #BA55D3; height: 300px; width: 300px; text-align: center;">
+        <h3>onmouseout</h3>
+        <h2>Ao retirar o cursor do local do evento</h2> 
+    </div>
+
+    <div onclick="acao1()" onmouseout="acao2()" style="background: 	#9ACD32; height: 300px; width: 300px; text-align: center;">
+        <h2>COM DUAS FUNÇÕES</h2> 
+    </div>
+
+
+
+
+    <script src='mouse.js'></script>
+
+</body>
+</html>
