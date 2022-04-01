@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta charset="utf-8">
+    <title>Eventos do teclado</title>
+
+</head>
+
+<body>
+
+    <div>
+        <h3>Executa a ação, depois a tecla</h3>
+        <input onkeydown="acao1()" type="text" placeholder="onkeydown"><hr><br>
+    </div>
+    
+    <div>
+        <h3>Só executa a ação se a tecla for um character</h3>
+        <input onkeypress="acao1()" type="text" placeholder="onkeypress"><hr><br>
+    </div>
+
+    <div>
+        <h3>Executa a tecla, depois a ação</h3>
+        <input onkeyup="acao1()" type="text" placeholder="onkeyup"><hr>
+    </div>
+
+
+
+    <script src='keyboard.js'></script>
+
+</body>
+</html>
