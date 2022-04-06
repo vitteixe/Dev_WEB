@@ -1,0 +1,18 @@
+body{
+    text-align: center;
+}
+
+#aluno{
+    border: 1px solid #989FA7;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 38px;
+}
+
+#comparar{
+    margin: 25px 0px;
+    padding: 18px;
+}
+
+
