@@ -11,3 +11,4 @@ while(y < lista_frutas.length){
     document.write(lista_frutas[y]+'<br>')
     y++
 }
+
