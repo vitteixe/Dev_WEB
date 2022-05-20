@@ -1,0 +1,450 @@
+/* 
+*********************************/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+html, body, header{
+    height: 100%;
+    overflow-x: hidden;  /* para não rolar para os lados */
+}
+
+
+header{
+    width: 100vw;
+    height: 100vh;
+    background: #e7e7df;
+    background: url(../images/garden1.png) no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+@media (max-width: 575.98px) {
+    header{
+        height: 60%;
+    }
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+
+}
+@media (min-width: 992px){
+
+}
+
+/*  Gallery
+*********************************/
+
+.gallery{
+    width: 100%;
+    padding: 2%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 30vh;
+}
+@media (max-width: 575.98px) {
+    .gallery{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 30vh;
+    }
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .gallery{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 15vh;
+    } 
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .gallery{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 30vh;
+    }
+}
+@media (min-width: 992px){
+    .gallery{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-rows: 30vh;
+    }
+}
+
+
+
+.h-2{
+    grid-row: span 2;
+}
+
+.w-2{
+    grid-column: span 2;
+}
+
+.single-gallery{
+    border-radius: 5px;
+    margin: 0.5vw;
+}
+
+.single-gallery img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;    /*Imagem responsiva*/
+    cursor: pointer;
+    transition: transform 0.25s ease-in-out;   /* Animação no transform (segundo */
+}
+
+.single-gallery img:hover{
+    transform: scale(1.1);    /*efetito de zoom nas imagens*/
+}
+
+
+
+.gallery-modal{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.267);
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 4%;
+    visibility: hidden;
+    z-index: 5;
+}
+
+.gallery-modal span{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 22px;
+    color: rgb(243, 71, 71);
+    cursor: pointer;
+}
+
+.gallery-modal img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transform: scale(0);
+    transition: transform 0.5s ease-in-out;
+}
+
+
+
+
+
+/*  Card-form
+*********************************/
+.cards-form h2{
+    margin-top: 30px;
+    text-align: center;
+}
+
+.cards-form{
+    background: #fafaf8;
+    height: 450px;
+    width: 450px;
+    border-radius:9%;
+    padding: 25px;
+}
+
+.cards-form input.start{
+    margin-top: 1%;
+}
+
+.cards-form input{
+    margin-top: 15px;
+}
+
+.cards-form button{
+    margin-top: 30px;
+}
+
+button.btn.btn-outline-warning {
+    text-transform: uppercase;
+    margin-left: 18%;
+}
+
+
+
+
+
+
+
+
+
+/*Fachada
+***********************************************************/
+/*inicio*/
+@media (max-width: 575.98px) {
+    .outset{
+        padding-top: 80px;
+    }
+}
+@media (min-width: 576px){
+    .outset{
+        padding-top: 120px;
+    }
+}
+@media (min-width: 992px){
+    .outset{
+        padding-top: 280px;
+    }
+}
+
+
+.log img{
+    margin: auto;
+    margin-bottom: 18px;
+    display: block;
+}
+@media (max-width: 575.98px) {  
+    .log img{
+        width: 300px;
+    }
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .log img{
+        width: 400px;
+    }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .log img{
+        width: 420px;
+    }
+}
+@media (min-width: 992px){
+    .log img{
+        width: 42%;
+    }
+}
+
+/******/
+
+.introduction h2{
+    text-align: center;
+    margin: auto;
+
+}
+
+@media (max-width: 575.98px) {
+    .introduction h2 {
+        font-size: 1.6em;
+    }
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .introduction h2 {
+        font-size: 2.2em;
+    }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .introduction h2 {
+        font-size: 2.3em;
+    }
+}
+@media (min-width: 992px){
+    .introduction h2 {
+        font-size: 2.5em;
+    }
+}
+
+/*inicio*/
+
+
+/*Menu*/
+ul{
+    margin: 0px;
+    padding: 0px;
+}
+
+
+
+#nav a{
+    font-size: 1.5em;
+    color: #2e3192;
+    text-decoration: none;
+    padding-bottom: 30px;
+    height: 50px;
+    position: relative;
+}
+@media (min-width: 992px){
+
+}
+@media (min-width: 992px){
+    #nav a{
+        font-size: 1.8em;
+    }
+}
+
+#nav a::after{
+    content: " ";
+    width: 0%;      /*tamahho iniciaç*/
+    height: 3px;
+    background-color: #2e3192;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 0.3s ease-in-out;
+}
+
+
+#nav a:hover::after{
+    width: 65%;     /*tamanho final*/
+}
+
+
+
+
+#nav {
+    margin-top: -20px;
+    height: 70px;;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+#menu {
+    display: flex;
+    list-style: none;
+    gap: 5rem;
+}
+
+#menu a{ 
+    display: block;
+    padding: .5rem;
+}
+
+
+@media (min-width: 230px) and (max-width: 575.98px){
+    .hbg{
+        margin-top: 5%;
+        display: flex;
+        right: 60px;
+        align-items: center;
+        position: absolute;
+    }
+}
+
+@media (min-width: 576px){
+    .hbg{
+        margin-top: 10%;
+    }
+}
+
+
+#btn-mobile{
+    display: none;
+    left: 0;
+}
+
+@media (max-width: 980px){
+    #btn-mobile{
+        display: flex;
+    }
+
+    #menu{
+        display: none;
+        position: absolute;
+        width: 100%;
+        top:94%;
+        left: 40%;
+    }
+
+    #nav.active #menu{
+        margin-top: -300px;
+        display: flex;
+        display: block;
+    }
+}
+
+
+header.active{
+    height: 80%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Media Queries
+******************************/
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+    
+
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px){
+
+}
+
+
+
+
