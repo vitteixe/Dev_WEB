@@ -1,15 +1,17 @@
 const btnMobile = document.getElementById('btn-mobile');
 
-function toggleMenu (){
+function toggleMenu (event){
 
-    const Header = document.getElementById('header');
+    if(event.type === 'touchstart') event.preventDefault();  //prevenir de ativar o click 
 
+    const Header = document.getElementById('header') ;
+    Header.classList.toggle('active');
 
     const nav = document.getElementById('nav');
+    nav.classList.toggle('active');
 
-    nav.classList.toggle('active')
 
-    Header.classList.toggle('active')
 }
 
-btnMobile.addEventListener('click', toggleMenu)
+btnMobile.addEventListener('click', toggleMenu);
+btnMobile.addEventListener('touchstart', toggleMenu);

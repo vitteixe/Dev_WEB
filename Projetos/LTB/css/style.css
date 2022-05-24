@@ -19,8 +19,14 @@ header{
     background: #e7e7df;
     background: url(../images/garden1.png) no-repeat;
     background-size: cover;
+    transition: .6s;
     background-position: center center;
 }
+header.active{
+    height: 80%;
+}
+
+
 @media (max-width: 575.98px) {
     header{
         height: 60%;
@@ -321,7 +327,7 @@ ul{
 
 @media (min-width: 230px) and (max-width: 575.98px){
     .hbg{
-        margin-top: 5%;
+        margin-top: 30%;
         display: flex;
         right: 60px;
         align-items: center;
@@ -347,24 +353,62 @@ ul{
     }
 
     #menu{
-        display: none;
+        visibility: hidden;  /*possivelmente tirar e por display:none*/
         position: absolute;
         width: 100%;
         top:94%;
         left: 40%;
+        transition: .1s;   /*possivelmente tirar*/
+        overflow-y: hidden;
     }
 
     #nav.active #menu{
         margin-top: -300px;
+        margin-left: -50px;
         display: flex;
         display: block;
+        visibility: visible;
+        overflow-y: auto;
     }
 }
 
-
-header.active{
-    height: 80%;
+#btn-mobile{
+    border: none;
+    background: none;
+    gap: .5rem;
 }
+
+#hamburguer{
+    border-top: 2px solid;
+    width: 20px;
+    display: block;
+}
+
+#hamburguer::after,#hamburguer::before{
+    content: '';
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: currentColor;
+    margin-top: 5px;
+    transition: .4s;
+    position: relative;
+}
+
+#header.active #hamburguer{
+    border-top-color: transparent;
+}
+
+#header.active #hamburguer::before{
+    transform: rotate(135deg);
+}
+
+#header.active #hamburguer::after{
+    transform: rotate(-135deg);
+    top: -7px;
+}
+
+
 
 
 
