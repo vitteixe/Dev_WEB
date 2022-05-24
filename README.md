@@ -8,6 +8,15 @@ Este repositório foi criado para realizar commits durante a evolução do meu c
 
 Estes são projetos criados para praticar o aprendizado adquirido no decorrer do curso. <br><br>
 
+### [9. Calculadora](https://vitteixe.github.io/Dev_WEB/Projetos/projeto-9/)
+
+---
+
+<a href="https://vitteixe.github.io/Dev_WEB/Projetos/projeto-9/">
+    <img src="https://user-images.githubusercontent.com/89394210/170057364-fe6a65a1-b2b1-4ba2-9c7d-f8e53e78dc13.png" 
+    style="display: block; margin: 0 auto;" width="65%" height="65%">
+</a> <br><br>
+
 ### [8. Spotify](https://vitteixe.github.io/Dev_WEB/Projetos/projeto-8/)
 
 ---
