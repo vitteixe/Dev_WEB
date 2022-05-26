@@ -23,13 +23,14 @@ console.log(positionX, positionY);
 //criar elemento html
 var mosquito = document.createElement('img');
 mosquito.src = 'images/mosquito.png';
-mosquito.className = tamanhoAleatorio();
+mosquito.className = tamanhoAleatorio() + ' ' + ladoAleatorio();
 mosquito.style.position = 'absolute'
 mosquito.style.left = positionX + 'px';
 mosquito.style.top = positionY + 'px';
 
 //adicionar 'mosquito' como filho do body
 document.body.appendChild(mosquito);
+
 
 
 //função para classes de tamanhos diferentes
@@ -46,6 +47,20 @@ function tamanhoAleatorio(){
         case 2:
             return 'mosquito3';
 
+    }
+
+}
+
+//Mosquito com lados aleatórios
+function ladoAleatorio(){
+    var classe = Math.floor(Math.random() * 2);
+    
+    switch(classe){
+        case 0:
+            return 'sideA';
+
+        case 1:
+            return 'sideB';
     }
 
 }
