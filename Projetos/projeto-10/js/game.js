@@ -3,13 +3,14 @@ ajustaTamanhoPalcoJogo();
 //inserir elemento (mosquito) a cada 1seg
 setInterval(function(){
     posicaoRnadomica();
-}, 1000);
+}, 2000);
 
 
 
 //Capiturando Altura e Largura do objeto Window.
 var height;
 var width;
+var lives = 1;
 
 
 function ajustaTamanhoPalcoJogo(){
@@ -25,6 +26,17 @@ function posicaoRnadomica(){
     //remover mosquito anterior (caso exista)
     if(document.getElementById('mosquito')){
         document.getElementById('mosquito').remove();
+        
+        //controlando pontos de vida
+        if(lives > 3){
+
+            alert('GAME OVER!');
+
+        }else{
+            document.getElementById('l' + lives).src='images/empty-heart.png';
+        }
+        
+        lives++
     }
 
     // Posições aleatórias
@@ -43,10 +55,17 @@ function posicaoRnadomica(){
     mosquito.style.position = 'absolute'
     mosquito.style.left = positionX + 'px';
     mosquito.style.top = positionY + 'px';
-    mosquito.id = 'mosquito'
+    mosquito.id = 'mosquito';
+
+    mosquito.style.cursor='pointer'
 
     //adicionar 'mosquito' como filho do body
     document.body.appendChild(mosquito);
+
+    //Função de eliminar o mosquito
+    mosquito.onclick = function (){
+        this.remove()
+    }
 
 }
 
@@ -82,3 +101,6 @@ function ladoAleatorio(){
     }
 
 }
+
+
+
