@@ -85,6 +85,8 @@ var stopwatch = setInterval(function() {
         clearInterval(stopwatch);   //limpar cronometro e a função de criar mosca
         clearInterval(breedFly);
 
+        window.location.href = 'screens/victory.html'
+
     } else {
         document.getElementById('stopwatch').innerHTML = time
     }
