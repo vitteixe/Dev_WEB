@@ -1,7 +1,7 @@
 ajustaTamanhoPalcoJogo();
 
 //inserir elemento (mosquito) a cada 1seg
-setInterval(function(){
+var breedFly = setInterval(function(){
     posicaoRnadomica();
 }, 2000);
 
@@ -10,6 +10,7 @@ setInterval(function(){
 //Capiturando Altura e Largura do objeto Window.
 var height;
 var width;
+
 var lives = 1;
 
 
@@ -70,6 +71,29 @@ function posicaoRnadomica(){
 }
 
 
+//Cronometro
+var time = 10;
+
+document.getElementById('stopwatch').innerHTML = time
+
+var stopwatch = setInterval(function() {
+
+    time -=1;
+
+    if(time < 0){
+
+        clearInterval(stopwatch);   //limpar cronometro e a função de criar mosca
+        clearInterval(breedFly);
+
+    } else {
+        document.getElementById('stopwatch').innerHTML = time
+    }
+
+
+}, 1000);
+
+
+
 //função para classes de tamanhos diferentes
 function tamanhoAleatorio(){
     var classe = Math.floor(Math.random() * 3);
@@ -104,8 +128,3 @@ function ladoAleatorio(){
 
 
 
-//Botão de reset (Game Over)
-var buttonReset = document.getElementById('reset');
-buttonReset.onclick = function(){
-    window.location.href = '../game.html';
-}
