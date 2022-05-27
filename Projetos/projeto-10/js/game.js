@@ -30,7 +30,7 @@ function posicaoRnadomica(){
         //controlando pontos de vida
         if(lives > 3){
 
-            alert('GAME OVER!');
+            window.location.href = 'screens/game-over.html'
 
         }else{
             document.getElementById('l' + lives).src='images/empty-heart.png';
@@ -104,3 +104,8 @@ function ladoAleatorio(){
 
 
 
+//Botão de reset (Game Over)
+var buttonReset = document.getElementById('reset');
+buttonReset.onclick = function(){
+    window.location.href = '../game.html';
+}
