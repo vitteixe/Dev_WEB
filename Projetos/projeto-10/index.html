@@ -9,13 +9,13 @@
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 
-    <script src="../js/buttons.js" defer></script>
+    <script src="js/buttons.js" defer></script>
 
     <link rel="icon" href="images/mosquito.png">
 
-    <title>VICTORY</title>
+    <title>Game Mata Mosquito</title>
     
 </head>
 
@@ -27,18 +27,39 @@
             <div class="col">
                 <div class="d-flex justify-content-center">
 
-                    <img src="../images/victory.png">
+                    <img src="images/game.png">
 
                 </div>
             </div>
         </div>
 
+
         <div class="row">
             <div class="col">
                 <div class="d-flex justify-content-center">
 
-                    <button id='reset' type="button" class="btn btn-dark btn-lg">
-                        Reiniciar
+                    <div class="mb-2">
+                        <select class="form-control" id="nivel">
+                        
+                            <option value="">-- Selecione o Nível --</option>
+                            <option value="normal">Normal</option>
+                            <option value="dificil">Difícil</option>
+                            <option value="chucknorris">Chuck Norris</option>
+    
+                        </select>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col">
+                <div class="d-flex justify-content-center">
+
+                    <button type="button" class="btn btn-danger btn-lg"  id="start" >
+                        Iniciar Jogo
                     </button>
 
                 </div>

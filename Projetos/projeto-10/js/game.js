@@ -31,10 +31,10 @@ function posicaoRnadomica(){
         //controlando pontos de vida
         if(lives > 3){
 
-            window.location.href = 'screens/game-over.html'
+            window.location.href = 'game-over.html'
 
         }else{
-            document.getElementById('l' + lives).src='images/empty-heart.png';
+            document.getElementById('l' + lives).src='../images/empty-heart.png';
         }
         
         lives++
@@ -51,7 +51,7 @@ function posicaoRnadomica(){
     
     //criar elemento html
     var mosquito = document.createElement('img');
-    mosquito.src = 'images/mosquito.png';
+    mosquito.src = '../images/mosquito.png';
     mosquito.className = tamanhoAleatorio() + ' ' + ladoAleatorio();
     mosquito.style.position = 'absolute'
     mosquito.style.left = positionX + 'px';
@@ -85,7 +85,7 @@ var stopwatch = setInterval(function() {
         clearInterval(stopwatch);   //limpar cronometro e a função de criar mosca
         clearInterval(breedFly);
 
-        window.location.href = 'screens/victory.html'
+        window.location.href = 'victory.html'
 
     } else {
         document.getElementById('stopwatch').innerHTML = time
