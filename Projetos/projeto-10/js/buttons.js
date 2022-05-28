@@ -9,10 +9,12 @@ if(document.getElementById('start')){
         
         if(nivel === ''){
             alert('Selecione um nível para iniciar o jogo!');
-            return false
+            return false;
         }
 
-        alert(nivel);
+        window.location.href = 'screens/game.html?' + nivel;
+
+
     }
 
 

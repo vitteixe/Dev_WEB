@@ -1,10 +1,31 @@
 ajustaTamanhoPalcoJogo();
 
-//inserir elemento (mosquito) a cada 1seg
-var breedFly = setInterval(function(){
-    posicaoRnadomica();
-}, 2000);
+//controle de niveis do game
+var nivel = window.location.search;
+nivel = nivel.replace('?','');    //substituição de todos caracteres '?' -> ''
 
+if (nivel === 'normal'){
+
+    //inserir elemento (mosquito)
+    var breedFly = setInterval(function(){
+        posicaoRnadomica();
+    }, 1500);
+
+} else if (nivel === 'dificil'){
+    
+    //inserir elemento (mosquito)
+    var breedFly = setInterval(function(){
+        posicaoRnadomica();
+    }, 1000);
+
+} else if (nivel === 'chucknorris'){
+    
+    //inserir elemento (mosquito)
+    var breedFly = setInterval(function(){
+        posicaoRnadomica();
+    }, 750);
+
+}
 
 
 //Capiturando Altura e Largura do objeto Window.
@@ -72,7 +93,7 @@ function posicaoRnadomica(){
 
 
 //Cronometro
-var time = 10;
+var time = 15;
 
 document.getElementById('stopwatch').innerHTML = time
 
@@ -127,6 +148,3 @@ function ladoAleatorio(){
     }
 
 }
-
-
-
