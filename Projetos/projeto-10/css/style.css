@@ -1,7 +1,3 @@
-html{
-    cursor: url(../images/fly-swatter.png) 30 30, auto;
-}
-
 body{
     width: 100vw;
     height: 100vh;
@@ -9,6 +5,11 @@ body{
     background-size: cover;
     background-position: center center;
     overflow: hidden;
+    cursor: url(../images/fly-swatter.png) 30 30, auto;
+}
+
+select{
+    cursor: pointer;
 }
 
 .panel{
