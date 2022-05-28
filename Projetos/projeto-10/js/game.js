@@ -79,8 +79,6 @@ function posicaoRnadomica(){
     mosquito.style.top = positionY + 'px';
     mosquito.id = 'mosquito';
 
-    mosquito.style.cursor='pointer'
-
     //adicionar 'mosquito' como filho do body
     document.body.appendChild(mosquito);
 
