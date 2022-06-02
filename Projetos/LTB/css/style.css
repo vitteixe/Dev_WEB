@@ -27,7 +27,7 @@ header.active{
 }
 
 
-@media (max-width: 575.98px) {
+@media (min-width: 575.98px) and (max-width: 979.98px){
     header{
         height: 60%;
     }
@@ -208,11 +208,7 @@ button.btn.btn-outline-warning {
     margin-bottom: 18px;
     display: block;
 }
-@media (max-width: 575.98px) {  
-    .log img{
-        width: 300px;
-    }
-}
+
 @media (min-width: 576px) and (max-width: 767.98px) {
     .log img{
         width: 400px;
@@ -237,11 +233,6 @@ button.btn.btn-outline-warning {
 
 }
 
-@media (max-width: 575.98px) {
-    .introduction h2 {
-        font-size: 1.6em;
-    }
-}
 @media (min-width: 576px) and (max-width: 767.98px) {
     .introduction h2 {
         font-size: 2.2em;
@@ -265,6 +256,7 @@ button.btn.btn-outline-warning {
 ul{
     margin: 0px;
     padding: 0px;
+    display: relative;
 }
 
 
@@ -276,6 +268,7 @@ ul{
     padding-bottom: 30px;
     height: 50px;
     position: relative;
+
 }
 @media (min-width: 992px){
 
@@ -331,7 +324,7 @@ ul{
         display: flex;
         right: 60px;
         align-items: center;
-        position: absolute;
+        position: relative;
     }
 }
 
@@ -407,7 +400,6 @@ ul{
     transform: rotate(-135deg);
     top: -7px;
 }
-
 
 
 
