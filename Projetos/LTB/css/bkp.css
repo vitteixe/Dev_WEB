@@ -13,10 +13,11 @@ header{
     background: url(../images/garden1.png) no-repeat;
     background-size: cover;
     background-position:center center;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     text-align: center;
-    transition: .6s;
+    transition: .5s;
+    overflow-y: hidden;
 }
 
 header img{
@@ -32,7 +33,7 @@ header h2 {
 /* NAV
 **************************************************/
 ul{
-    margin-top: 180px;
+    margin-top: 60px;  /*180*/
     display: flex;
     list-style: none;
     gap: 5rem;
@@ -67,6 +68,12 @@ ul a::after{
 
 ul a:hover::after{
     width: 55%;    /*tamanho final*/
+}
+
+#header{
+    height: 300px;
+    box-sizing: border-box;
+    overflow-y: hidden;
 }
 
 /*BOTÃO HAMBURGUER*/
@@ -109,34 +116,115 @@ header.active #hamburguer::after{
 
 header.active #hamburguer::before{
     transform: rotate(135deg);
+    top: 1px;
 }
 
 
 
+header.active{
+    height: 70vh;
+}
 
-
-
-@media (max-width: 980px){
+/*BOTTOM HAMBURGUER*/
+@media (min-width: 320px) and (max-width: 979.98px){
     header{
-        height: 10%;
-    }
-
-    header.active {
-        height: 80%;
+        height: 50vh;
     }
     
     #btn-mobile{
         display: flex;
+        padding-right: 35px;
     }
 
-   
-    ul {
-        display: none;
-    }
-
-    ul.active {
+    ul{
+        position: absolute;   /*talvez afete*/
         display: block;
+        z-index: 1000;
+        transition: .6s;
+        visibility: hidden;
+        overflow-y: hidden;
     }
 
+    #nav.active ul{
+        visibility: visible;
+    }
+}
+/*MEDIA HEADER*/
+@media (max-width: 575.98px) {
+    
+    header img{
+        width: 300px;
+        margin-top: 60px;
+    }
+
+    header h2{
+        font-size: 1.5em;
+    }
+    header .text{
+        margin-top: 10px;
+        margin-bottom: 25px;
+    }
 
 }
+
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    header img{ 
+        width: 340px;
+        margin-top: 90px;
+    }
+
+    header h2{
+        font-size: 1.6em;
+    }
+
+    header .text{
+        margin-top: 10px;
+        margin-bottom: px;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    header img{
+        width: 360px;
+        margin-top: 80px;
+    }
+
+    header h2{
+        font-size: 1.7em;
+    }
+
+    header .text{
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px){
+    header img{
+        width: 520px;
+
+    }
+
+    header h2{
+        font-size: 2.3em;
+    }
+
+    header .text{
+        margin-top: 30px;
+    }
+    
+    header #nav{
+        margin-top: 60px;
+        font-size: 1.1em;
+    }
+}
+
+/*
+*********************************************************************/
+
+

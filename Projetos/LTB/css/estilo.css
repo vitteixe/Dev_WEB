@@ -116,6 +116,7 @@ header.active #hamburguer::after{
 
 header.active #hamburguer::before{
     transform: rotate(135deg);
+    top: 1px;
 }
 
 
@@ -124,8 +125,8 @@ header.active{
     height: 70vh;
 }
 
-
-@media (min-width: 330px) and (max-width: 979.98px){
+/*BOTTOM HAMBURGUER*/
+@media (min-width: 320px) and (max-width: 979.98px){
     header{
         height: 50vh;
     }
@@ -135,7 +136,7 @@ header.active{
         padding-right: 35px;
     }
 
-    ul{
+    header ul{
         position: absolute;   /*talvez afete*/
         display: block;
         z-index: 1000;
@@ -148,16 +149,20 @@ header.active{
         visibility: visible;
     }
 }
-
+/*MEDIA HEADER*/
 @media (max-width: 575.98px) {
     
     header img{
         width: 300px;
-
+        margin-top: 60px;
     }
 
     header h2{
         font-size: 1.5em;
+    }
+    header .text{
+        margin-top: 10px;
+        margin-bottom: 25px;
     }
 
 }
@@ -167,10 +172,16 @@ header.active{
 @media (min-width: 576px) and (max-width: 767.98px) {
     header img{ 
         width: 340px;
+        margin-top: 90px;
     }
 
     header h2{
         font-size: 1.6em;
+    }
+
+    header .text{
+        margin-top: 10px;
+        margin-bottom: px;
     }
 }
 
@@ -178,15 +189,67 @@ header.active{
 @media (min-width: 768px) and (max-width: 991.98px) {
     header img{
         width: 360px;
+        margin-top: 80px;
     }
 
     header h2{
         font-size: 1.7em;
     }
+
+    header .text{
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px){
+    header img{
+        width: 520px;
 
+    }
+
+    header h2{
+        font-size: 2.3em;
+    }
+
+    header .text{
+        margin-top: 30px;
+    }
+    
+    header #nav{
+        margin-top: 60px;
+        font-size: 1.1em;
+    }
 }
+
+/*
+*********************************************************************/
+
+
+#h-fixed{
+    background-color: #595ba1;
+    height: 110px;
+    margin-bottom: 150px;
+    visibility: hidden;
+}
+
+#h-fixed img {
+    width: 100px;
+    padding-top: 5px;
+}
+
+#h-fixed #menu{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    margin-top: 35px;
+    height: 70px;
+}
+
+#h-fixed.active{
+    visibility: visible;
+}
+
 
