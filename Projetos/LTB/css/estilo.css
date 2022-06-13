@@ -229,10 +229,15 @@ header.active{
 
 
 #h-fixed{
-    background-color: #595ba1;
     height: 110px;
-    margin-bottom: 150px;
     visibility: hidden;
+    margin-bottom: 150px;
+    background: url(../images/garden2.jpg) no-repeat;
+    opacity: 90%;
+    background-position-y: -421px;
+    border: 1px solid red;
+    background-size: cover;
+    overflow-y: hidden;
 }
 
 #h-fixed img {
@@ -248,8 +253,11 @@ header.active{
     height: 70px;
 }
 
+
 #h-fixed.active{
     visibility: visible;
 }
+
+
 
 
