@@ -86,7 +86,7 @@ ul a:hover::after{
 }
 
 #hamburguer{
-    border-top: 3px solid;
+    border-top: 2px solid;
     width: 20px;
     display: block;
     color: #2e3192;
@@ -97,7 +97,7 @@ ul a:hover::after{
     content: ' ';
     display: block;
     width: 20px;
-    height: 3px;
+    height: 2px;
     background: currentColor;
     margin-top: 5px;
     transition: .3s;
@@ -111,7 +111,7 @@ header.active #hamburguer{
 
 header.active #hamburguer::after{
     transform: rotate(-135deg);
-    top: -7px;
+    top: -6px;
 }
 
 header.active #hamburguer::before{
@@ -164,7 +164,6 @@ header.active{
         margin-top: 10px;
         margin-bottom: 25px;
     }
-
 }
 
 
@@ -226,18 +225,15 @@ header.active{
 
 /*
 *********************************************************************/
-
-
+/*NAV FIXED*/
 #h-fixed{
     height: 110px;
     visibility: hidden;
     margin-bottom: 150px;
-    background: url(../images/garden2.jpg) no-repeat;
-    opacity: 90%;
-    background-position-y: -421px;
-    border: 1px solid red;
+    background: linear-gradient(to right, #60a2f5,#8aedf6);
     background-size: cover;
     overflow-y: hidden;
+    text-align: center;
 }
 
 #h-fixed img {
@@ -251,6 +247,7 @@ header.active{
     padding: 0;
     margin-top: 35px;
     height: 70px;
+    
 }
 
 
@@ -258,6 +255,48 @@ header.active{
     visibility: visible;
 }
 
+#h-fixed.active-menu, #fixed-nav.active{
+    height: 250px;
+}
+
+#fixed-nav.active #menu{
+    margin-top: 150px;
+    overflow-y: hidden;
+    text-align: end;
+}
+
+
+/*Botão fixed*/
+#fixed-btn{
+    padding: .5rem 1rem;
+    width: auto;
+    margin-top: 30px;
+    background: none;
+    border: none;
+    box-sizing: border-box;
+    display: none;
+}
+
+#fixed-hamburguer{
+    border-top: 2px solid;
+    width: 20px;
+    display: block;
+    color: #2e3192;
+    overflow-y: hidden;
+}
 
 
 
+@media (min-width: 320px) and (max-width: 979.98px){
+    #h-fixed #menu{
+        display: none;
+    }
+
+    #h-fixed.active-menu #menu{
+        display: block;
+    }
+
+    #fixed-btn{
+        display: flex;
+    }
+}

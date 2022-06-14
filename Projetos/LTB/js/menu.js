@@ -6,13 +6,30 @@ function toggleMenu(event){
     if(event.type ==='touchstart') event.preventDefault()
 
     header.classList.toggle('active');
-
     nav.classList.toggle('active');
 }
 
 btnMobile.addEventListener('click', toggleMenu);
 btnMobile.addEventListener('touchstart', toggleMenu);
 
+//////////////////////////////////////////////////////////////
+
+const btnFixed =document.getElementById('fixed-btn');
+const fixedNav = document.getElementById('fixed-nav');
+const hFixed = document.getElementById('h-fixed');
+
+function toggleFixedMenu(event){
+
+    if(event.type ==='touchstart') event.preventDefault()
+
+    hFixed.classList.toggle('active-menu');
+
+    fixedNav.classList.toggle('active');
+    
+}
+
+btnFixed.addEventListener('click', toggleFixedMenu);
+btnFixed.addEventListener('touchstart', toggleFixedMenu);
 
 //////////////////////////////////////////////////////////////
 
