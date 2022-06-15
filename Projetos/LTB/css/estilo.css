@@ -5,9 +5,8 @@
     margin: 0;
     box-sizing: border-box;
     font-family: sans-serif;
-    overflow-x: hidden;
+    overflow-x: hidden; 
 }
-
 
 header{
     background: url(../images/garden1.png) no-repeat;
@@ -91,6 +90,7 @@ ul a:hover::after{
     display: block;
     color: #2e3192;
     overflow-y: hidden;
+    transition: 0.8s;
 }
 
 #hamburguer::after, #hamburguer::before{
@@ -228,12 +228,13 @@ header.active{
 /*NAV FIXED*/
 #h-fixed{
     height: 110px;
-    visibility: hidden;
+    display: none;
     margin-bottom: 150px;
     background: linear-gradient(to right, #60a2f5,#8aedf6);
     background-size: cover;
     overflow-y: hidden;
     text-align: center;
+    transition: 0.8s;
 }
 
 #h-fixed img {
@@ -247,24 +248,37 @@ header.active{
     padding: 0;
     margin-top: 35px;
     height: 70px;
-    
 }
 
 
 #h-fixed.active{
-    visibility: visible;
+    display: block;
 }
 
 #h-fixed.active-menu, #fixed-nav.active{
-    height: 250px;
+    height: 80vh;
 }
 
 #fixed-nav.active #menu{
-    margin-top: 150px;
+    height: 200px;
+    margin-top: 460px;
     overflow-y: hidden;
     text-align: end;
+    padding: 30px 0;
 }
 
+#fixed-nav.active #menu li{
+    box-sizing: border-box;
+    margin: 0 0;
+    padding-top: 15px;
+    height: 70px;
+    border-top: 1px solid #8fbbf1;
+    border-bottom: 1px solid #8fbbf1;
+}
+
+#fixed-nav.active #menu li:hover{
+    border-bottom: 1px solid #74a0d6;
+}
 
 /*Botão fixed*/
 #fixed-btn{
@@ -278,11 +292,38 @@ header.active{
 }
 
 #fixed-hamburguer{
-    border-top: 2px solid;
+    border-top: 3px solid;
     width: 20px;
     display: block;
-    color: #2e3192;
+    color: #ffffffb2;
     overflow-y: hidden;
+    transition: 0.7s;
+}
+
+#fixed-hamburguer::after, #fixed-hamburguer::before{
+    content: ' ';
+    display: block;
+    width: 20px;
+    height: 3px;
+    background: currentColor;
+    margin-top: 5px;
+    transition: .3s;
+    position: relative;
+}
+
+/*MOVIMENTAÇÃO BOTÃO FIXED-HAMBURGUER*/
+#h-fixed.active-menu #fixed-hamburguer{
+    border-top: transparent;   
+}
+
+#h-fixed.active-menu #fixed-hamburguer::after{
+    transform: rotate(-135deg);
+    top: -6px;
+}
+
+#h-fixed.active-menu #fixed-hamburguer::before{
+    transform: rotate(135deg);
+    top: 1px;
 }
 
 
