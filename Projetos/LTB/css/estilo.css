@@ -8,6 +8,7 @@
     overflow-x: hidden; 
 }
 
+
 header{
     background: url(../images/garden1.png) no-repeat;
     background-size: cover;
@@ -230,16 +231,22 @@ header.active{
     height: 110px;
     display: none;
     margin-bottom: 150px;
-    background: linear-gradient(to right, #60a2f5,#8aedf6);
+    background: linear-gradient(to right, #82A05F,#AFBF36);
     background-size: cover;
     overflow-y: hidden;
     text-align: center;
     transition: 0.8s;
 }
 
+#h-fixed.active{
+    display: block;
+}
+
 #h-fixed img {
+    box-sizing: border-box;
+    padding-top: 10px;
     width: 100px;
-    padding-top: 5px;
+    margin-left: 40px;
 }
 
 #h-fixed #menu{
@@ -250,10 +257,15 @@ header.active{
     height: 70px;
 }
 
-
-#h-fixed.active{
-    display: block;
+#h-fixed a{
+    color: #fff;
 }
+
+#h-fixed a::after{
+    background-color: #fff;
+}
+
+
 
 #h-fixed.active-menu, #fixed-nav.active{
     height: 80vh;
@@ -272,19 +284,20 @@ header.active{
     margin: 0 0;
     padding-top: 15px;
     height: 70px;
-    border-top: 1px solid #8fbbf1;
-    border-bottom: 1px solid #8fbbf1;
+    border-top: 1px solid #B9C373;
+    border-bottom: 1px solid #B9C373;
 }
 
 #fixed-nav.active #menu li:hover{
-    border-bottom: 1px solid #74a0d6;
+    border-bottom: 1px solid #aeb965;
+    border-top: 1px solid #aeb965;
 }
 
 /*Botão fixed*/
 #fixed-btn{
     padding: .5rem 1rem;
     width: auto;
-    margin-top: 30px;
+    margin-top: 45px;
     background: none;
     border: none;
     box-sizing: border-box;
@@ -318,7 +331,7 @@ header.active{
 
 #h-fixed.active-menu #fixed-hamburguer::after{
     transform: rotate(-135deg);
-    top: -6px;
+    top: -7px;
 }
 
 #h-fixed.active-menu #fixed-hamburguer::before{
@@ -341,3 +354,12 @@ header.active{
         display: flex;
     }
 }
+
+@media (min-width: 980px){
+
+    #h-fixed #fixed-nav{
+        margin-left: 35%;
+    }
+
+}
+

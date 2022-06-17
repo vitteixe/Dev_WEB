@@ -14,17 +14,16 @@ btnMobile.addEventListener('touchstart', toggleMenu);
 
 //////////////////////////////////////////////////////////////
 
+const menuFixed = document.querySelector('#h-fixed');
+const fixedNav = document.querySelector('#fixed-nav');
 const btnFixed =document.getElementById('fixed-btn');
-const fixedNav = document.getElementById('fixed-nav');
-const hFixed = document.getElementById('h-fixed');
-const all = document.querySelector('*')
 
 function toggleFixedMenu(event){
 
     if(event.type ==='touchstart') event.preventDefault()
 
     
-    hFixed.classList.toggle('active-menu');
+    menuFixed.classList.toggle('active-menu');
     fixedNav.classList.toggle('active');
 
 }
@@ -39,12 +38,8 @@ btnFixed.addEventListener('touchstart', toggleFixedMenu);
 const positions =  setInterval(function () {
     
     const positionY = header.getBoundingClientRect().y*(-1);
-    const menuFixed = document.querySelector('#h-fixed');
-    const width = window.innerWidth;  
-    
+    const width = window.innerWidth; 
     const active = nav.classList.contains('active');
-
-    
 
     if(width <= 979 && active){
 
@@ -84,7 +79,17 @@ const positions =  setInterval(function () {
 
     }
     
-
+    if(menuFixed.classList.contains('active')){
+        fixedNav.classList.add('col');
+    }
     
+    function unloadScrollBars(){
+        document.documentElement.overflow = 'hidden';
+        document.body.scroll = 'no';
+    }
+
+    if(menuFixed.classList.contains('ative-menu')){
+        unloadScrollBars()
+    }
 
 })
