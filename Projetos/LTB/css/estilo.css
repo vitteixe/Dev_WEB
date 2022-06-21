@@ -124,8 +124,6 @@ header.active #hamburguer::before{
     top: 1px;
 }
 
-
-
 header.active{
     height: 70vh;
 }
@@ -282,7 +280,7 @@ header.active{
 #nav-fixed .menu{
     display: block;
     height: 540px;
-    padding-top: 400px;
+    padding-top: 300px;
     text-align: end;
 }
 
