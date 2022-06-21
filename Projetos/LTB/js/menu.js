@@ -1,6 +1,6 @@
-const btnMobile = document.getElementById('btn-mobile');
+const btnMobile = document.querySelector('#btn-mobile');
 const header = document.querySelector('header');
-const nav = document.getElementById('nav');
+const nav = document.querySelector('#nav');
 
 function toggleMenu(event){
     if(event.type ==='touchstart') event.preventDefault()
@@ -16,7 +16,7 @@ btnMobile.addEventListener('touchstart', toggleMenu);
 
 const menuFixed = document.querySelector('#h-fixed');
 const fixedNav = document.querySelector('#fixed-nav');
-const btnFixed =document.getElementById('fixed-btn');
+const btnFixed =document.querySelector('#fixed-btn');
 
 function toggleFixedMenu(event){
 
@@ -79,17 +79,13 @@ const positions =  setInterval(function () {
 
     }
     
-    if(menuFixed.classList.contains('active')){
-        fixedNav.classList.add('col');
-    }
+    /* PREVENÇÃO DE ROLAGEM AO ABRIR O MENU */
+    const html = document.querySelector('html');
     
-    function unloadScrollBars(){
-        document.documentElement.overflow = 'hidden';
-        document.body.scroll = 'no';
-    }
-
-    if(menuFixed.classList.contains('ative-menu')){
-        unloadScrollBars()
+    if(menuFixed.classList.contains('active-menu')){
+        html.classList.add('menu-active');
+    } else{
+        html.classList.remove('menu-active');
     }
 
 })

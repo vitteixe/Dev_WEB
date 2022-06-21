@@ -8,7 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
 
     <script src="js/menu.js" defer></script>
     <script src="js/galery.js" defer></script>
@@ -20,169 +21,199 @@
 </head>
 
 <body>
-    
-
-<header>
-
-    <!--container-->
-    <div class="container align-self-center">
-        <div class="row">
-
-            <div class="col">
-
-                <div class="d-flex justify-content-center">
-                    <img src="images/ltb-log.png">
-                </div>
-    
-                <div class="text">
-                    <h2>Rénovation de façades,</h2>
-    
-                    <h2>Isolation Thermique & Crépis</h2>
-                </div>
-
-            </div>
-
-        </div>
-    </div> <!--container-->
 
 
-    <div>
+    <header id="h-unstable">
+
         <!--container-->
-        <div class="container">
-            
-            <div class="row justify-content-end">
-                <button id="btn-mobile">
-                    <span id="hamburguer"></span>
-                </button>           
-            </div>
-            
-            <div id="header" class="row">
-                
+        <div class="container align-self-center">
+            <div class="row">
+
                 <div class="col">
-                    
-                    <div id='nav' class="d-flex justify-content-around">
-                        
-                        <ul id="menu">
-                            
-                            <li><a href="">Galerie</a></li>
 
-                            <li><a href="">Nous contacter</a></li>
+                    <div class="d-flex justify-content-center">
+                        <img src="images/ltb-log.png">
+                    </div>
 
-                        </ul>
+                    <div class="text">
+                        <h2>Rénovation de façades,</h2>
 
+                        <h2>Isolation Thermique & Crépis</h2>
                     </div>
 
                 </div>
 
             </div>
-        </div><!--container-->
-    </div>
-
-</header>
-
-<section id="h-fixed" class="fixed-top">
-
-    <div class="container">
-
-        <div class="row justify-content-around">
-
-            <div class="justify-content-start">
-                <img src="images/link.png" alt="LTB-Façádes">
-            </div>
-
-            <div id='nav' class="justify-content-end">
-
-                <ul id="menu">
-
-                    <li><a href="">Galerie</a></li>
-
-                    <li><a href="">Nous contacter</a></li>
-
-                </ul>
-
-            </div>
-
         </div>
-
-    </div>
-
-</section>
+        <!--container-->
 
 
-<section id="contato">
+        <div>
+            <!--container-->
+            <div class="container">
 
-    <div class="container">
+                <div class="row justify-content-end">
+                    <button id="btn-mobile">
+                        <span id="hamburguer"></span>
+                    </button>
+                </div>
 
-        <div class="row justify-content-around">
+                <div id="header" class="row">
 
-            <div class="cards-form d-flex">
+                    <div class="col">
 
-                <div class="row justify-content-around">
-                    
-                    <h2>Nous Contacter</h2>
+                        <div id='nav' class="d-flex justify-content-around">
 
-                    <div class="col-md-12">
+                            <ul id="menu">
 
-                        <div class="imput-group">
-        
-                            <input class="start form-control form-control-md" id="name" type="text" placeholder="Nom">
-        
-                            <input class="form-control form-control-md" id="number" type="text" placeholder="Téléphone">
-        
-                            <input class="form-control form-control-md" id="email" type="text" placeholder="E-mail">
-        
+                                <li><a href="">Galerie</a></li>
+
+                                <li><a href="">Nous contacter</a></li>
+
+                            </ul>
+
                         </div>
 
                     </div>
 
-                    <div class="col-md-6">
-                        <button type="button" class="btn btn-outline-warning">
-                            envoyer
-                        </button>
-                    </div>
+                </div>
+            </div>
+            <!--container-->
+        </div>
 
-                </div>    
+    </header>
+
+    <section id="h-fixed" class="fixed-top">
+
+        <div class="container">
+
+
+            <div class="row justify-content-between">
+
+                <div class="col-4">
+                    <div class="row justify-content-start">
+                        <img src="images/link.png" alt="LTB-Façádes">
+                    </div>
+                </div>
+
+
+                <div id='fixed-nav'style="border: 1px solid red">
+
+
+                    <ul id="menu" style="border: 1px solid red">
+
+                        <li><a href="">Galerie</a></li>
+
+                        <li><a href="">Nous contacter</a></li>
+
+                    </ul>
+
+
+                </div>
+
+                <div class="row justify-content-end">
+                    <button id="fixed-btn">
+                        <span id="fixed-hamburguer"></span>
+                    </button>
+                </div>
+
 
             </div>
 
         </div>
-        
+
+
+
+    </section>
+
+
+    <section id="contato">
+
+        <div class="container">
+
+            <div class="row justify-content-around">
+
+                <div class="cards-form d-flex">
+
+                    <div class="row justify-content-around">
+
+                        <h2>Nous Contacter</h2>
+
+                        <div class="col-md-12">
+
+                            <div class="imput-group">
+
+                                <input class="start form-control form-control-md" id="name" type="text"
+                                    placeholder="Nom">
+
+                                <input class="form-control form-control-md" id="number" type="text"
+                                    placeholder="Téléphone">
+
+                                <input class="form-control form-control-md" id="email" type="text" placeholder="E-mail">
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-6">
+                            <button type="button" class="btn btn-outline-warning">
+                                envoyer
+                            </button>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="espaco">
+        <br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br>
     </div>
 
-</section>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="espaco">
-    <br><br><br><br><br><br><br><br><br><br><br>
-    <br><br><br><br><br><br><br><br><br><br><br>
-    <br><br><br><br><br><br><br><br><br><br><br>
-    <br><br><br><br><br><br><br><br><br><br><br>
-    <br><br><br><br><br><br><br><br><br><br><br>
-    <br><br><br><br><br><br><br><br><br><br><br>
-    <br><br><br><br><br><br><br><br><br><br><br>
-    <br><br><br><br><br><br><br><br><br><br><br>
-    <br><br><br><br><br><br><br><br><br><br><br>
-</div>
-
-
+    <div>
+        <br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br>
+    </div>
 
 </body>
 
-    
+
 </html>
