@@ -8,6 +8,10 @@
     overflow-x: hidden; 
 }
 
+html.menu-active{
+    overflow: hidden;
+}
+
 
 header{
     background: url(../images/garden1.png) no-repeat;
@@ -235,7 +239,7 @@ header.active{
     background-size: cover;
     overflow-y: hidden;
     text-align: center;
-    transition: 0.8s;
+    transition: 0.6s;
 }
 
 #h-fixed.active{
@@ -265,33 +269,34 @@ header.active{
     background-color: #fff;
 }
 
-
-
 #h-fixed.active-menu, #fixed-nav.active{
     height: 80vh;
 }
 
-#fixed-nav.active #menu{
-    height: 200px;
-    margin-top: 460px;
-    overflow-y: hidden;
-    text-align: end;
-    padding: 30px 0;
+
+/*Menu mobile*/
+#nav-fixed{
+    overflow: hidden;
 }
 
-#fixed-nav.active #menu li{
-    box-sizing: border-box;
-    margin: 0 0;
-    padding-top: 15px;
-    height: 70px;
+#nav-fixed .menu{
+    display: block;
+    height: 540px;
+    padding-top: 400px;
+    text-align: end;
+}
+
+#nav-fixed li{
     border-top: 1px solid #B9C373;
     border-bottom: 1px solid #B9C373;
+    padding: 10px;
 }
 
-#fixed-nav.active #menu li:hover{
+#nav-fixed li:hover{
     border-bottom: 1px solid #aeb965;
     border-top: 1px solid #aeb965;
 }
+
 
 /*Botão fixed*/
 #fixed-btn{
@@ -344,19 +349,17 @@ header.active{
         box-sizing: border-box;
         padding-top: 10px;
         width: 100px;
-        margin-left: 60px;
-        border: 1px solid red;
+        margin-left: 40px;
+        display: flex;
     }
 }
 
 @media (min-width: 320px) and (max-width: 979.98px){
-    #h-fixed #menu{
+    
+    #fixed-nav{
         display: none;
     }
 
-    #h-fixed.active-menu #menu{
-        display: block;
-    }
 
     #fixed-btn{
         display: flex;
@@ -372,52 +375,6 @@ header.active{
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*FINAL************************************************************************************/
-
-
-
-
-
-
-
-
-
 /*Botão fixed*/
 #fixed-btn{
     padding: .5rem 1rem;
@@ -427,6 +384,7 @@ header.active{
     border: none;
     box-sizing: border-box;
     display: none;
+    margin-right: 30px;
 }
 
 #fixed-hamburguer{
@@ -469,16 +427,9 @@ header.active{
         display: none;
     }
 
-    #h-fixed.active-menu #menu{
-        display: block;
-    }
-
     #fixed-btn{
         display: flex;
     }
 }
 
-@media (min-width: 980px){
 
-
-}
