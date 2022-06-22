@@ -305,83 +305,6 @@ header.active{
     border: none;
     box-sizing: border-box;
     display: none;
-}
-
-#fixed-hamburguer{
-    border-top: 3px solid;
-    width: 20px;
-    display: block;
-    color: #ffffffb2;
-    overflow-y: hidden;
-    transition: 0.7s;
-}
-
-#fixed-hamburguer::after, #fixed-hamburguer::before{
-    content: ' ';
-    display: block;
-    width: 20px;
-    height: 3px;
-    background: currentColor;
-    margin-top: 5px;
-    transition: .3s;
-    position: relative;
-}
-
-/*MOVIMENTAÇÃO BOTÃO FIXED-HAMBURGUER*/
-#h-fixed.active-menu #fixed-hamburguer{
-    border-top: transparent;   
-}
-
-#h-fixed.active-menu #fixed-hamburguer::after{
-    transform: rotate(-135deg);
-    top: -7px;
-}
-
-#h-fixed.active-menu #fixed-hamburguer::before{
-    transform: rotate(135deg);
-    top: 1px;
-}
-
-@media (min-width: 220px){
-    #h-fixed img{
-        box-sizing: border-box;
-        padding-top: 10px;
-        width: 100px;
-        margin-left: 40px;
-        display: flex;
-    }
-}
-
-@media (min-width: 320px) and (max-width: 979.98px){
-    
-    #fixed-nav{
-        display: none;
-    }
-
-
-    #fixed-btn{
-        display: flex;
-    }
-}
-
-@media (min-width: 980px){
-
-    #h-fixed #fixed-nav{
-        margin-left: 26%;
-    }
-
-}
-
-
-/*Botão fixed*/
-#fixed-btn{
-    padding: .5rem 1rem;
-    width: auto;
-    margin-top: 45px;
-    background: none;
-    border: none;
-    box-sizing: border-box;
-    display: none;
     margin-right: 30px;
 }
 
@@ -420,8 +343,20 @@ header.active{
     top: 1px;
 }
 
+
+@media (min-width: 220px){
+    #h-fixed img{
+        box-sizing: border-box;
+        padding-top: 10px;
+        width: 100px;
+        margin-left: 40px;
+        display: flex;
+    }
+}
+
 @media (min-width: 320px) and (max-width: 979.98px){
-    #h-fixed #menu{
+    
+    #fixed-nav{
         display: none;
     }
 
@@ -431,3 +366,126 @@ header.active{
 }
 
 
+@media (min-width: 980px){
+
+    #h-fixed #fixed-nav{
+        margin-left: 26%;
+    }
+
+}
+
+
+/*
+*********************************************************************/
+/*GALLERY*/
+#gallery-area{
+    margin-top: 25px;
+    padding: 35px;
+    height: 100%;
+}
+
+#gallery-area h1{
+    text-align: center;
+}
+
+.r-border{
+    margin-top: 130px;
+    margin-bottom: 5px;
+    margin-left: 38%;
+    border-top: 1px solid #82A05F;
+}
+
+.l-border{
+    margin-top: 18px;
+    margin-right: 38%;
+    border-top: 1px solid #82A05F;
+}
+
+
+.gallery{
+    width: 100%;
+    padding: 2%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 30vh;
+    overflow: hidden;
+}
+
+.h-2{
+    grid-row: span 2;
+}
+
+.w-2{
+    grid-column: span 2;
+}
+
+.single-gallery{
+    border-radius: 5px;
+    margin: 0.5vw;
+    overflow: hidden;
+}
+
+.single-gallery img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;    /*Imagem responsiva*/
+    cursor: pointer;
+    transition: transform 0.25s ease-in-out;   
+}
+
+.single-gallery img:hover{
+    transform: scale(1.1);
+    
+}
+
+@media (max-width: 575.98px) {
+    .gallery{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 30vh;
+    }
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .gallery{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 15vh;
+    } 
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .gallery{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 30vh;
+    }
+}
+@media (min-width: 992px){
+    .gallery{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-rows: 30vh;
+    }
+}
+
+
+[data-animated]{
+    opacity: 0;
+    transition: .4s;
+}
+
+[data-animated='left']{
+    transform: translate3d(-65px, 0, 0);
+}
+
+[data-animated='right']{
+    transform: translate3d(65px, 0, 0);
+}
+
+[data-animated='top']{
+    transform: translate3d(0, 65px, 0);
+}
+
+[data-animated].animate{
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px);
+}
