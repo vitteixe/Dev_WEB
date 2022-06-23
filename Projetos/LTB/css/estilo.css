@@ -125,13 +125,13 @@ header.active #hamburguer::before{
 }
 
 header.active{
-    height: 70vh;
+    height: 100vh;
 }
 
 /*BOTTOM HAMBURGUER*/
 @media (min-width: 320px) and (max-width: 979.98px){
     header{
-        height: 50vh;
+        height: 85vh;
     }
     
     #btn-mobile{
@@ -156,16 +156,15 @@ header.active{
 @media (max-width: 575.98px) {
     
     header img{
-        width: 300px;
-        margin-top: 60px;
+        width: 360px;
     }
 
     header h2{
         font-size: 1.5em;
     }
     header .text{
-        margin-top: 10px;
-        margin-bottom: 25px;
+        margin-top: 70px;
+        margin-bottom: 110px;
     }
 }
 
@@ -173,8 +172,7 @@ header.active{
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) and (max-width: 767.98px) {
     header img{ 
-        width: 340px;
-        margin-top: 90px;
+        width: 360px;
     }
 
     header h2{
@@ -182,16 +180,15 @@ header.active{
     }
 
     header .text{
-        margin-top: 10px;
-        margin-bottom: px;
+        margin-top: 75px;
+        margin-bottom: 95px;
     }
 }
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) and (max-width: 991.98px) {
     header img{
-        width: 360px;
-        margin-top: 80px;
+        width: 395px;
     }
 
     header h2{
@@ -199,8 +196,8 @@ header.active{
     }
 
     header .text{
-        margin-top: 10px;
-        margin-bottom: 10px;
+        margin-top: 45px;
+        margin-bottom: 65px;
     }
 
 }
@@ -208,7 +205,7 @@ header.active{
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px){
     header img{
-        width: 520px;
+        width: 450px;
 
     }
 
@@ -226,22 +223,22 @@ header.active{
     }
 }
 
+
 /*
 *********************************************************************/
 /*NAV FIXED*/
 #h-fixed{
     height: 110px;
-    display: none;
+    visibility: hidden;
     margin-bottom: 150px;
     background: linear-gradient(to right, #82A05F,#AFBF36);
     background-size: cover;
     overflow-y: hidden;
     text-align: center;
-    transition: 0.6s;
 }
 
 #h-fixed.active{
-    display: block;
+    visibility: visible;
 }
 
 #h-fixed img {
@@ -374,6 +371,23 @@ header.active{
 
 }
 
+/*
+*********************************************************************/
+/*SEPARAÇÃO*/
+
+.r-border{
+    margin-top: 68px;
+    margin-bottom: 5px;
+    margin-left: 38%;
+    border-top: 1px solid #82A05F;
+}
+
+.l-border{
+    margin-top: 18px;
+    margin-right: 38%;
+    border-top: 1px solid #82A05F;
+}
+
 
 /*
 *********************************************************************/
@@ -386,21 +400,8 @@ header.active{
 
 #gallery-area h1{
     text-align: center;
+    margin-bottom: 25px;
 }
-
-.r-border{
-    margin-top: 130px;
-    margin-bottom: 5px;
-    margin-left: 38%;
-    border-top: 1px solid #82A05F;
-}
-
-.l-border{
-    margin-top: 18px;
-    margin-right: 38%;
-    border-top: 1px solid #82A05F;
-}
-
 
 .gallery{
     width: 100%;

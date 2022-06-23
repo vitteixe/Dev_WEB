@@ -1,3 +1,4 @@
+//Menu
 const btnMobile = document.querySelector("#btn-mobile");
 const header = document.querySelector("header");
 const nav = document.querySelector("#nav");
@@ -43,19 +44,19 @@ const positions = setInterval(function () {
     }
   } else {
     if (width <= 979) {
-      if (positionY >= 380) {
+      if (positionY >= 645) {
         menuFixed.classList.add("active");
       } else {
         menuFixed.classList.remove("active");
       }
     } else if (width <= 991) {
-      if (positionY >= 555) {
+      if (positionY >= 681) {
         menuFixed.classList.add("active");
       } else {
         menuFixed.classList.remove("active");
       }
     } else {
-      if (positionY >= 804) {
+      if (positionY >= 760) {
         menuFixed.classList.add("active");
       } else {
         menuFixed.classList.remove("active");
@@ -71,10 +72,10 @@ const positions = setInterval(function () {
   } else {
     html.classList.remove("menu-active");
   }
-});
+}, 200);
 
 //////////////////////////////////////////////////////////////
-
+//animated
 const target = document.querySelectorAll("[data-animated]");
 const animationClass = "animate";
 
@@ -97,5 +98,32 @@ animeScroll();
 if (target.length) {
   window.addEventListener("scroll", function () {
     animeScroll();
+  });
+}
+
+//////////////////////////////////////////////////////////////
+
+const menuItens = document.querySelectorAll('#menu a[href^="#"]');
+
+menuItens.forEach((item) => {
+  item.addEventListener("click", scrollClick);
+});
+
+function getScrollTopByHref(link) {
+  const id = link.getAttribute("href");
+  return document.querySelector(id).offsetTop;
+}
+
+function scrollClick(event) {
+  event.preventDefault(); //prevenção na url
+  const to = getScrollTopByHref(event.target) - 80;
+
+  scrollToPosition(to);
+}
+
+function scrollToPosition(to) {
+  window.scroll({
+    top: to,
+    behavior: "smooth", //scroll suave
   });
 }
