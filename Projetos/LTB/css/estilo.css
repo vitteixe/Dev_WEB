@@ -380,7 +380,7 @@ header.active{
 /*GALLERY*/
 #gallery-area{
     margin-top: 25px;
-    padding: 35px;
+    padding: 25px;
     height: 100%;
 }
 
@@ -404,7 +404,6 @@ header.active{
 
 .gallery{
     width: 100%;
-    padding: 2%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-auto-rows: 30vh;
