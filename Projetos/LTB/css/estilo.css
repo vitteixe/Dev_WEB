@@ -229,21 +229,20 @@ header.active{
 /*NAV FIXED*/
 #h-fixed{
     height: 110px;
-    visibility: hidden;
+    display: none;
     margin-bottom: 150px;
     background: linear-gradient(to right, #82A05F,#AFBF36);
     background-size: cover;
     overflow-y: hidden;
     text-align: center;
+    transition: .7s;
 }
 
 #h-fixed.active{
-    visibility: visible;
+    display: block;
 }
 
 #h-fixed img {
-    box-sizing: border-box;
-    padding-top: 10px;
     width: 100px;
     margin-left: 40px;
 }
@@ -274,8 +273,9 @@ header.active{
     overflow: hidden;
 }
 
-#nav-fixed .menu{
+#nav-fixed #menu{
     display: block;
+    box-sizing: border-box;
     height: 540px;
     padding-top: 300px;
     text-align: end;
@@ -311,7 +311,7 @@ header.active{
     display: block;
     color: #ffffffb2;
     overflow-y: hidden;
-    transition: 0.7s;
+    transition: 0.8s;
 }
 
 #fixed-hamburguer::after, #fixed-hamburguer::before{

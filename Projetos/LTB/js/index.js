@@ -30,21 +30,21 @@ btnFixed.addEventListener("click", toggleFixedMenu);
 btnFixed.addEventListener("touchstart", toggleFixedMenu);
 
 //////////////////////////////////////////////////////////////
-
+const html = document.querySelector("html");
 const positions = setInterval(function () {
   const positionY = header.getBoundingClientRect().y * -1;
   const width = window.innerWidth;
   const active = nav.classList.contains("active");
 
   if (width <= 979 && active) {
-    if (positionY >= 587) {
+    if (positionY >= 811) {
       menuFixed.classList.add("active");
     } else {
       menuFixed.classList.remove("active");
     }
   } else {
     if (width <= 979) {
-      if (positionY >= 645) {
+      if (positionY >= 677) {
         menuFixed.classList.add("active");
       } else {
         menuFixed.classList.remove("active");
@@ -64,15 +64,12 @@ const positions = setInterval(function () {
     }
   }
 
-  /* PREVENÇÃO DE ROLAGEM AO ABRIR O MENU */
-  const html = document.querySelector("html");
-
   if (menuFixed.classList.contains("active-menu")) {
     html.classList.add("menu-active");
   } else {
     html.classList.remove("menu-active");
   }
-}, 200);
+});
 
 //////////////////////////////////////////////////////////////
 //animated
@@ -106,7 +103,8 @@ if (target.length) {
 const menuItens = document.querySelectorAll('#menu a[href^="#"]');
 
 menuItens.forEach((item) => {
-  item.addEventListener("click", scrollClick);
+  item.addEventListener("click", scrollClick),
+  item.addEventListener("click", closeMenu)
 });
 
 function getScrollTopByHref(link) {
@@ -116,7 +114,7 @@ function getScrollTopByHref(link) {
 
 function scrollClick(event) {
   event.preventDefault(); //prevenção na url
-  const to = getScrollTopByHref(event.target) - 80;
+  const to = getScrollTopByHref(event.target) - 95;
 
   scrollToPosition(to);
 }
@@ -126,4 +124,12 @@ function scrollToPosition(to) {
     top: to,
     behavior: "smooth", //scroll suave
   });
+}
+
+const fixedLink = document.querySelector('.nav-link');
+
+function closeMenu (){
+  if (menuFixed.classList.contains("active-menu")){
+    menuFixed.classList.remove("active-menu")
+  }
 }
