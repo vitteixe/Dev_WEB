@@ -109,12 +109,14 @@ menuItens.forEach((item) => {
 
 function getScrollTopByHref(link) {
   const id = link.getAttribute("href");
+  console.log(id)
   return document.querySelector(id).offsetTop;
 }
 
 function scrollClick(event) {
   event.preventDefault(); //prevenção na url
-  const to = getScrollTopByHref(event.target) - 95;
+
+  const to = getScrollTopByHref(event.target) - 85;
 
   scrollToPosition(to);
 }
@@ -126,7 +128,7 @@ function scrollToPosition(to) {
   });
 }
 
-const fixedLink = document.querySelector('.nav-link');
+
 
 function closeMenu (){
   if (menuFixed.classList.contains("active-menu")){

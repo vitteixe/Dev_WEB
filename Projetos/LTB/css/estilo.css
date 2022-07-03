@@ -383,7 +383,8 @@ header.active{
 }
 
 .l-border{
-    margin-top: 18px;
+    margin-top: 88px;
+    margin-bottom: 45px;
     margin-right: 38%;
     border-top: 1px solid #82A05F;
 }
@@ -466,6 +467,53 @@ header.active{
         grid-auto-rows: 30vh;
     }
 }
+
+
+/*
+*********************************************************************/
+/*CONTACT*/
+.cards-form{
+    background: #fafaf8;
+    border: 1px #aeb965;
+    margin-top: 18px;
+    height: 480px;
+    width: 450px;
+    border-radius:9%;
+    padding: 25px;
+    text-align: center;
+}
+
+.cards-form h1{
+    margin-top: 30px;
+}
+
+.cards-form input.start{
+    margin-top: 1%;
+}
+
+.cards-form input{
+    margin-top: 15px;
+}
+
+.cards-form button{
+    margin-top: 30px;
+}
+
+button.btn.btn-outline-success {
+    text-transform: uppercase;
+    margin-left: 18%;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 [data-animated]{
