@@ -128,10 +128,11 @@ function scrollToPosition(to) {
   });
 }
 
-
-
 function closeMenu (){
   if (menuFixed.classList.contains("active-menu")){
     menuFixed.classList.remove("active-menu")
   }
 }
+
+
+//////////////////////////////////////////////////////////////

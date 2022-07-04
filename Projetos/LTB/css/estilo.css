@@ -472,36 +472,38 @@ header.active{
 /*
 *********************************************************************/
 /*CONTACT*/
-.cards-form{
+.card-form{
     background: #fafaf8;
-    border: 1px #aeb965;
     margin-top: 18px;
-    height: 480px;
-    width: 450px;
+    height: 30rem;
+    width: 28.1rem;
     border-radius:9%;
-    padding: 25px;
+    padding: 1.4rem;
     text-align: center;
 }
 
-.cards-form h1{
-    margin-top: 30px;
+.forms h1{
+    margin-top: 1.3rem;
+    margin-bottom: 3rem;
+}
+.forms input{
+    width: 80%;
+    font-size: 1.112rem;
+    margin-top: 0.9rem;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    padding: 2%;
+    transition: border-color, box-shadow 0.2s;
 }
 
-.cards-form input.start{
-    margin-top: 1%;
+.forms input:hover, .forms input:focus{
+    outline: none;
+    border-color: #09d;
+    box-shadow: 0 0 0 3px #41bdf7;
 }
 
-.cards-form input{
-    margin-top: 15px;
-}
-
-.cards-form button{
-    margin-top: 30px;
-}
-
-button.btn.btn-outline-success {
-    text-transform: uppercase;
-    margin-left: 18%;
+.forms button{
+    margin-top: 2.8rem;
 }
 
 
