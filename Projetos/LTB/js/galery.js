@@ -1,3 +1,4 @@
+//Menu
 const btnMobile = document.querySelector("#btn-mobile");
 const header = document.querySelector("header");
 const nav = document.querySelector("#nav");
@@ -29,21 +30,21 @@ btnFixed.addEventListener("click", toggleFixedMenu);
 btnFixed.addEventListener("touchstart", toggleFixedMenu);
 
 //////////////////////////////////////////////////////////////
-
+const html = document.querySelector("html");
 const positions = setInterval(function () {
   const positionY = header.getBoundingClientRect().y * -1;
   const width = window.innerWidth;
   const active = nav.classList.contains("active");
 
   if (width <= 979 && active) {
-    if (positionY >= 587) {
+    if (positionY >= 811) {
       menuFixed.classList.add("active");
     } else {
       menuFixed.classList.remove("active");
     }
   } else {
     if (width <= 979) {
-      if (positionY >= 645) {
+      if (positionY >= 677) {
         menuFixed.classList.add("active");
       } else {
         menuFixed.classList.remove("active");
@@ -63,18 +64,15 @@ const positions = setInterval(function () {
     }
   }
 
-  /* PREVENÇÃO DE ROLAGEM AO ABRIR O MENU */
-  const html = document.querySelector("html");
-
   if (menuFixed.classList.contains("active-menu")) {
     html.classList.add("menu-active");
   } else {
     html.classList.remove("menu-active");
   }
-},200);
+});
 
 //////////////////////////////////////////////////////////////
-
+//animated
 const target = document.querySelectorAll("[data-animated]");
 const animationClass = "animate";
 
@@ -99,3 +97,48 @@ if (target.length) {
     animeScroll();
   });
 }
+
+//////////////////////////////////////////////////////////////
+
+const menuItens = document.querySelectorAll('#menu a[href^="#"]');
+
+menuItens.forEach((item) => {
+  item.addEventListener("click", scrollClick),
+  item.addEventListener("click", closeMenu)
+});
+
+function getScrollTopByHref(link) {
+  const id = link.getAttribute("href");
+
+  return document.querySelector(id).offsetTop;
+}
+
+function scrollClick(event) {
+  event.preventDefault(); //prevenção na url
+
+  const to = getScrollTopByHref(event.target) - 85;
+
+  if (id === '#gallery'){
+    console.log('essa é uma galeria')
+  } else {
+    console.log('esse é um contato')
+  }
+
+  scrollToPosition(to);
+}
+
+function scrollToPosition(to) {
+  window.scroll({
+    top: to,
+    behavior: "smooth", //scroll suave
+  });
+}
+
+function closeMenu (){
+  if (menuFixed.classList.contains("active-menu")){
+    menuFixed.classList.remove("active-menu")
+  }
+}
+
+
+//////////////////////////////////////////////////////////////

@@ -107,25 +107,22 @@ menuItens.forEach((item) => {
   item.addEventListener("click", closeMenu)
 });
 
-function getScrollTopByHref(link) {
-  const id = link.getAttribute("href");
-  console.log(id)
-  return document.querySelector(id).offsetTop;
-}
-
 function scrollClick(event) {
-  event.preventDefault(); //prevenção na url
 
-  const to = getScrollTopByHref(event.target) - 85;
+  event.preventDefault();
 
-  scrollToPosition(to);
-}
+  const element = event.target;
+  const id = element.getAttribute("href");
 
-function scrollToPosition(to) {
-  window.scroll({
-    top: to,
-    behavior: "smooth", //scroll suave
-  });
+  if(id === '#gallery'){
+    const to = document.querySelector(id).offsetTop - 90
+    window.scroll({top: to, behavior: 'smooth'})
+
+  } else{
+    const to = document.querySelector(id).offsetTop - 210
+    window.scroll({top: to, behavior: 'smooth'})
+  }
+
 }
 
 function closeMenu (){
