@@ -1,42 +1,43 @@
 /* 
 *********************************/
-* {
+*{
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   font-family: sans-serif;
-  overflow-x: hidden;
+  overflow-x: hidden; 
 }
 
-html.menu-active {
+html.menu-active{
   overflow: hidden;
 }
 
-header {
+
+header{
   background: url(../images/garden1.png) no-repeat;
   background-size: cover;
-  background-position: center center;
+  background-position:center center;
   width: 100%;
   height: 100%;
   text-align: center;
-  transition: 0.5s;
+  transition: .5s;
   overflow-y: hidden;
 }
 
-header img {
+header img{
   margin: auto;
   margin-top: 25%;
   margin-bottom: 40px;
 }
 
 header h2 {
-  font-size: 2.5em;
+  font-size: 2.5em
 }
 
 /* NAV
-  **************************************************/
-ul {
-  margin-top: 60px; /*180*/
+**************************************************/
+ul{
+  margin-top: 60px;  /*180*/
   display: flex;
   list-style: none;
   gap: 5rem;
@@ -45,22 +46,22 @@ ul {
   padding: 1rem;
 }
 
-ul a {
+ul a{
   color: #2e3192;
   text-decoration: none;
   font-size: 1.5em;
-  position: relative;
+  position: relative;    
 }
 
-ul a:hover {
+ul a:hover{
   text-decoration: none;
   color: #2e3192;
 }
 
 /*BORDA EM BAIXO DOS LINKS*/
-ul a::after {
-  content: " ";
-  width: 0%; /*tamanho inicial*/
+ul a::after{
+  content: ' ';
+  width: 0%;   /*tamanho inicial*/
   height: 3px;
   background-color: #2e3192;
   position: absolute;
@@ -69,26 +70,26 @@ ul a::after {
   transition: 0.3s ease-in-out;
 }
 
-ul a:hover::after {
-  width: 55%; /*tamanho final*/
+ul a:hover::after{
+  width: 55%;    /*tamanho final*/
 }
 
-#header {
+#header{
   height: 300px;
   box-sizing: border-box;
   overflow-y: hidden;
 }
 
 /*BOTÃO HAMBURGUER*/
-#btn-mobile {
+#btn-mobile{
   background: none;
   border: none;
   display: none;
-  padding: 0.5rem 1rem;
+  padding: .5rem 1rem;
   width: auto;
 }
 
-#hamburguer {
+#hamburguer{
   border-top: 2px solid;
   width: 20px;
   display: block;
@@ -97,34 +98,33 @@ ul a:hover::after {
   transition: 0.8s;
 }
 
-#hamburguer::after,
-#hamburguer::before {
-  content: " ";
+#hamburguer::after, #hamburguer::before{
+  content: ' ';
   display: block;
   width: 20px;
   height: 2px;
   background: currentColor;
   margin-top: 5px;
-  transition: 0.3s;
+  transition: .3s;
   position: relative;
 }
 
 /*MOVIMENTAÇÃO BOTÃO HAMBURGUER*/
-header.active #hamburguer {
-  border-top: transparent;
+header.active #hamburguer{
+  border-top: transparent;   
 }
 
-header.active #hamburguer::after {
+header.active #hamburguer::after{
   transform: rotate(-135deg);
   top: -6px;
 }
 
-header.active #hamburguer::before {
+header.active #hamburguer::before{
   transform: rotate(135deg);
   top: 1px;
 }
 
-header.active {
+header.active{
   height: 100vh;
 }
 
@@ -555,10 +555,6 @@ footer .box-footer a:hover {
 footer .box-footer a i {
   margin: 5px;
   margin-right: 15px;
-}
-
-span{
-  margin-top: 810px;
 }
 
 footer .divisor{
