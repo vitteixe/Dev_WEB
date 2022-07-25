@@ -8,6 +8,15 @@ Este repositório foi criado para realizar commits durante a evolução do meu c
 
 Estes são projetos criados para praticar o aprendizado adquirido no decorrer do curso. <br><br>
 
+### [10. Game Mata Mosquito](https://vitteixe.github.io/Dev_WEB/Projetos/projeto-10/)
+
+---
+
+<a href="https://vitteixe.github.io/Dev_WEB/Projetos/projeto-9/" target="_blank">
+    <img src="https://user-images.githubusercontent.com/89394210/180821896-72733067-0ad8-41f7-abd2-11bd7b1ec9e3.jpg" 
+    style="display: block; margin: 0 auto;" width="65%" height="65%">
+</a> <br><br>
+
 ### [9. Calculadora](https://vitteixe.github.io/Dev_WEB/Projetos/projeto-9/)
 
 ---
