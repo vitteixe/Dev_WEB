@@ -29,8 +29,12 @@ cadastrarDespesa = () => {
         valor.value
     )
 
-    console.log(despesa)
+    toRecord(despesa)
 }
 
 btnCadastro.addEventListener('click', cadastrarDespesa);
 
+
+toRecord = (despesas) => {
+    localStorage.setItem('despesa', JSON.stringify(despesas))
+}
