@@ -7,6 +7,18 @@ class Despesa {
         this.descricao = descricao;
         this.valor = valor
     }
+
+    validarDados(){
+
+        for(let atributos in this){
+            if(this[atributos] == undefined || this[atributos] == '' || this[atributos] == null){
+                return false;
+            }
+        } return true
+        
+
+    }
+
 }
 
 //--------------------------
@@ -63,7 +75,13 @@ cadastrarDespesa = () => {
         valor.value
     )
 
-    bd.toRecord(despesa)
+    if(despesa.validarDados()){
+        //bd.toRecord(despesa);
+        console.log('Dados validos')
+    } else {
+        console.log('Dados inválidos')
+    }
+    
 }
 
 btnCadastro.addEventListener('click', cadastrarDespesa);
