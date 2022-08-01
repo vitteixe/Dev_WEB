@@ -9,6 +9,40 @@ class Despesa {
     }
 }
 
+//--------------------------
+class Bd {
+
+    constructor(){
+        let id = localStorage.getItem('id');
+
+        // setando um valor para ID
+        if(id === null) {
+            localStorage.setItem('id', 0);
+        }
+    }
+
+    getNextId(){
+
+        let nextId = localStorage.getItem('id');
+        return parseInt(nextId) + 1;
+
+    }
+
+    toRecord(Despesas){
+
+        let id = this.getNextId();
+
+        localStorage.setItem(id, JSON.stringify(Despesas));
+
+        localStorage.setItem('id', id);
+
+    }
+
+}
+
+let bd = new Bd()
+
+//--------------------------
 const btnCadastro = document.querySelector('#btn-cadastro');
 
 cadastrarDespesa = () => {
@@ -29,12 +63,10 @@ cadastrarDespesa = () => {
         valor.value
     )
 
-    toRecord(despesa)
+    bd.toRecord(despesa)
 }
 
 btnCadastro.addEventListener('click', cadastrarDespesa);
 
 
-toRecord = (despesas) => {
-    localStorage.setItem('despesa', JSON.stringify(despesas))
-}
+
