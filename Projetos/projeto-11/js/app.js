@@ -76,10 +76,10 @@ cadastrarDespesa = () => {
     )
 
     if(despesa.validarDados()){
-        //bd.toRecord(despesa);
-        console.log('Dados validos')
+        bd.toRecord(despesa);
+        $('#sucessoGravacao').modal('show');
     } else {
-        console.log('Dados inválidos')
+        $('#erroGravacao').modal('show');
     }
     
 }
