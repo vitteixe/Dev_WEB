@@ -74,12 +74,35 @@ cadastrarDespesa = () => {
         descricao.value, 
         valor.value
     )
+    
+    let title = document.querySelector('#modal-title');
+    let colorText = document.querySelector('#modal-header');
+    let btn = document.querySelector('#btn-modal');
+    let body = document.querySelector('.modal-body');
 
     if(despesa.validarDados()){
-        bd.toRecord(despesa);
-        $('#sucessoGravacao').modal('show');
+        
+        //bd.toRecord(despesa);
+
+        title.innerHTML = 'Registro inserido com sucesso!';
+        colorText.className = 'modal-header text-success';
+        body.innerHTML = 'Despesa cadastrada com sucesso!';
+        btn.className = 'btn btn-success';
+        btn.innerHTML = 'Registrar nova despesa';
+
+        $('#modalRegistroDespesa').modal('show');
+
+
     } else {
-        $('#erroGravacao').modal('show');
+
+        title.innerHTML = 'Erro na inclusão do registro!';
+        colorText.className ='modal-header text-danger';
+        body.innerHTML = 'Erro na gravação! <br> Existem campos obrigatórios que não foram preenchidos.';
+        btn.className = 'btn btn-danger';
+        btn.innerHTML = 'Voltar e corrigir';
+
+        $('#modalRegistroDespesa').modal('show');
+
     }
     
 }
