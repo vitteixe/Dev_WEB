@@ -137,5 +137,7 @@ carregaListaDespesas = () => {
     let despesas = [];
     despesas = bd.recuperarTodosRegistros();
 
-    console.log(despesas);
+    var listaDespesas = document.querySelector('#listaDespesas');
+
 }
+
