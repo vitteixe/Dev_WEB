@@ -1,0 +1,415 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #fffafa;
+  height: 100%;
+}
+
+header {
+  background: #fffafa;
+  padding: 1rem;
+  height: 80px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #8b0000;
+}
+
+#logo {
+  display: flex;
+  background-image: url(../img/AMK-logo.jpg);
+  height: 36px;
+  width: 190px;
+}
+
+/*
+**************************************/
+
+a {
+  color: #000;
+  text-decoration: none;
+  display: flex;
+  position: relative;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #000;
+}
+
+nav a::after {
+  content: " ";
+  width: 0;
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  background: #8b0000;
+  transition: 0.3s ease-in-out;
+}
+
+nav a:hover::after {
+  width: 70%;
+}
+
+/*
+**************************************/
+
+#menu {
+  display: flex;
+  list-style: none;
+  gap: 0.6rem;
+}
+li {
+  margin-top: 15px;
+  margin-left: 10px;
+}
+
+#btn-mobile {
+  display: none;
+  padding: 0.5rem 1rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+#hamburger {
+  color: #8b0000;
+  border-top: 2px solid;
+  width: 20px;
+  overflow-y: hidden;
+}
+
+#hamburger::after,
+#hamburger::before {
+  content: " ";
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: currentColor;
+  margin-top: 5px;
+  transition: 0.3s;
+  position: relative;
+}
+
+nav.active #hamburger {
+  border-top-color: transparent;
+}
+
+nav.active #hamburger::after {
+  transform: rotate(-135deg);
+  top: -6px;
+}
+
+nav.active #hamburger::before {
+  transform: rotate(135deg);
+  top: 1px;
+}
+
+@media (max-width: 979.98px) {
+  #btn-mobile {
+    display: flex;
+  }
+
+  #menu {
+    display: block;
+    padding-top: 13px;
+    position: absolute;
+    width: 100%;
+    top: 70px;
+    right: 0px;
+    height: 0;
+    background: #fffafa;
+    transition: 0.5s ease-in-out;
+    z-index: 1000;
+    visibility: hidden;
+    overflow-y: hidden;
+    border-bottom: 1px solid #8b0000;
+  }
+
+  nav.active #menu {
+    height: calc(40vh - 70px);
+    visibility: visible;
+  }
+
+  #menu a {
+    margin: 0 1rem;
+    border-top: 2px solid #0000000d;
+  }
+
+  nav a:hover::after {
+    width: 13%;
+  }
+}
+
+/*
+*******************************************/
+
+.s1 {
+  background: url(../img/header.jpg);
+  background-size: cover;
+  color: #fff;
+  padding: 4rem 4rem;
+  max-width: 100%;
+  height: 520px;
+  text-align: center;
+}
+
+.s1 h2 {
+  font-size: 45px;
+  margin-top: 30px;
+  margin-bottom: 65px;
+  font-weight: bold;
+  display: block;
+}
+
+.s1 h4 {
+  margin-bottom: 30px;
+}
+
+.s1 button {
+  padding: 0.8rem 2rem;
+  border: none;
+  display: flex;
+  color: #fff;
+  font-weight: bold;
+  margin: auto;
+  background: #8b0000;
+  border: 1px solid #8b0000;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.s1 button:hover {
+  background: #b35050;
+}
+
+@media (min-width: 250px) and (max-width: 767px) {
+  .s1 h2 {
+    font-size: 30px;
+    margin-top: -15px;
+    margin-bottom: 35px;
+  }
+}
+
+/*
+*******************************************/
+
+.s2 {
+  background: url(../img/header2.jpg);
+  background-size: cover;
+  padding: 1.5rem 5rem;
+  text-align: center;
+  height: 520px;
+}
+
+.s2 h4 {
+    margin-top: 8px;
+  margin-bottom: 7rem;
+  font-weight: bold;
+  color: #fff;
+  background: #8b0000;
+  opacity: 0.7;
+  display: inline-block;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.s2 .Card {
+  background: #fff;
+  color: #000;
+  border-radius: 1rem;
+  padding: 1.3rem;
+  text-align: start;
+  opacity: 0.7;
+}
+
+.s2 .Card h3 {
+  text-align: center;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #8b0000;
+  padding-bottom: 12px;
+  font-weight: bold;
+}
+
+.s2 .Card span {
+  color: #8b0000;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.s2 .Card .read {
+  background-color: #8b0000;
+  border: 1px solid #8b0000;
+  border-radius: 4px;
+  padding: 4px;
+  color: #fff;
+  transition: 0.2s;
+}
+
+.s2 .Card .read:hover {
+  background: #b35050;
+}
+
+@media (min-width: 250px) and (max-width: 767px) {
+    .s2 h4 {
+        margin-bottom: 3rem;
+    }
+
+    .s2 h3 {
+        font-size: 25px;
+    }
+
+    .s2 p{
+        font-size: 90%;
+    }
+}
+
+#main{
+    margin-top: 90px;
+}
+
+/*
+***************************/
+
+
+.c1, .c2{
+    height: 400px;
+    width: 100%;
+    /*opacity: .7;*/
+    background-position: cover;
+    background-attachment: fixed;
+}
+
+
+.c1{
+    background: url(../img/cta.jpg) no-repeat;
+    background-size: cover;
+}
+
+.c2{
+    background: url(../img/app.jpg) no-repeat;
+    background-size: cover;
+    padding-top: 140px;
+}
+
+.conteudo1{
+    padding: 4rem 8rem;
+    text-align: center;
+}
+
+.conteudo1 span{
+    display: block;
+}
+
+.contact{
+    font-weight: bold;
+    color: #fff;
+    padding: 60px;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+
+.contact h3{
+    display: block;
+}
+
+.contact p{
+    margin-top: -20px;
+    display: inline-block;
+    display: flex;
+}
+
+.contact button{
+    margin-top: 3px;
+    margin-left: 420px;
+    padding: 8px 20px;
+    background: #fff;
+    border-radius: 8px;
+    border: none;
+    color: #000;
+    font-size: 20px;
+    font-weight: bold;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.contact button:hover{
+    background: #8b0000;
+    color:#fff;
+}
+
+@media (min-width: 250px) and (max-width: 767px) {
+
+    .contact h3{
+        font-size: 40px;
+    }
+
+    .contact p{
+        font-size: 16px;
+    }
+
+    .contact button{
+        padding: 5px 14px;
+        margin-left: 240px;
+    }
+
+}
+
+/*
+***************************/
+.services{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.services h2{
+    font-size: 40px;
+    font-weight: bold;
+    color: #8b0000;
+    margin-top: -8px;
+}
+
+.services h4{
+    color: #8b0000;
+    transition: .2s;
+}
+
+.service-title{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.service{
+    padding: 2rem;
+    cursor: pointer;
+}
+
+.service h4{
+    margin-bottom: 25px;
+}
+
+.service i{
+    margin-top: 30px;
+    align-items: flex-end;
+    color: #cfcfcfc5;
+    transition: .3s ease-in-out;
+}
+
+.service:hover i{
+    color: #8b0000;
+}
+
+.service:hover{
+    box-shadow: 0 0 5px #cfcfcfc5;
+}
+
+.service:hover h4{
+    color: #8f8f8fc5;
+    font-weight: bold;
+}
