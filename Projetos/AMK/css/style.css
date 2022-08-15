@@ -2,13 +2,11 @@
   margin: 0;
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
-  
 }
 
-body{
+body {
   background-color: #fffafa;
   height: 100%;
-
 }
 
 header {
@@ -31,13 +29,13 @@ header {
 }
 
 @media (max-width: 979.98px) {
-  #logo{
+  #logo {
     margin-right: -20px;
   }
 }
 
-@media(min-width: 345px) and (max-width: 523px){
-  #btn-mobile{
+@media (min-width: 345px) and (max-width: 523px) {
+  #btn-mobile {
     margin-left: -105px;
   }
 }
@@ -155,12 +153,12 @@ nav.active #hamburger::before {
   }
 }
 
-.divisor{
+.divisor {
   position: absolute;
   left: 45%;
   width: 10%;
   height: 7px;
-  border-bottom: 1px solid #8b0000
+  border-bottom: 1px solid #8b0000;
 }
 
 .s1 {
@@ -210,7 +208,7 @@ nav.active #hamburger::before {
     margin-bottom: 35px;
   }
 
-  .s1 button{
+  .s1 button {
     padding: 10px;
   }
 }
@@ -224,7 +222,7 @@ nav.active #hamburger::before {
 }
 
 .s2 h4 {
-    margin-top: 8px;
+  margin-top: 8px;
   margin-bottom: 7rem;
   font-weight: bold;
   color: #fff;
@@ -273,232 +271,227 @@ nav.active #hamburger::before {
 }
 
 @media (min-width: 250px) and (max-width: 767px) {
-    .s2 h4 {
-        margin-bottom: 30px;
-        font-size: 15px;
-    }
-
-    .s2 h3 {
-        font-size: 20px;
-    }
-
-    .s2 p{
-        font-size: 80%;
-    }
-}
-
-#main{
-    margin-top: 90px;
-}
-
-.c1, .c2{
-    height: 400px;
-    width: 100%;
-}
-
-
-.c1{
-    background: url(../img/cta.jpg) no-repeat;
-    opacity: .5;
-    background-size: cover;
-    background-position: center center;
-    background-attachment: fixed;
-}
-
-.c2{
-    background: url(../img/contact.jpg) no-repeat;
-    background-size: cover;
-    background-position: center center;
-    background-attachment: fixed;
-    padding-top: 140px;
-
-}
-
-@media (max-width: 520px){
-
-  .c1{
-    height: 255px;
+  .s2 h4 {
+    margin-bottom: 30px;
+    font-size: 15px;
   }
 
-}
-
-.conteudo1{
-    padding: 4rem 8rem;
-    text-align: center;
-}
-
-.conteudo1 span{
-    display: block;
-}
-
-.contact{
-    font-weight: bold;
-    color: #fff;
-    padding: 50px;
-    background: rgba(0, 0, 0, 0.3);
-}
-
-.contact h3{
-    display: block;
-}
-
-.contact p{
-    margin-top: -20px;
-    display: inline-block;
-    display: flex;
-}
-
-.contact button{
-    margin-top: 3px;
-    margin-left: 420px;
-    padding: 8px 20px;
-    background: #fff;
-    border-radius: 8px;
-    border: none;
-    color: #000;
+  .s2 h3 {
     font-size: 20px;
-    font-weight: bold;
-    transition: .3s;
-    cursor: pointer;
-    display: flex;
-    text-align: center;
+  }
+
+  .s2 p {
+    font-size: 80%;
+  }
 }
 
-.contact button:hover{
-    background: #8b0000;
-    color:#fff;
+#main {
+  margin-top: 90px;
+}
+
+.c1,
+.c2 {
+  height: 400px;
+  width: 100%;
+}
+
+.c1 {
+  background: url(../img/cta.jpg) no-repeat;
+  opacity: 0.5;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+.c2 {
+  background: url(../img/contact.jpg) no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  padding-top: 140px;
+}
+
+@media (max-width: 520px) {
+  .c1 {
+    height: 255px;
+  }
+}
+
+.conteudo1 {
+  padding: 4rem 8rem;
+  text-align: center;
+}
+
+.conteudo1 span {
+  display: block;
+}
+
+.contact {
+  font-weight: bold;
+  color: #fff;
+  padding: 50px;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.contact h3 {
+  display: block;
+}
+
+.contact p {
+  margin-top: -20px;
+  display: inline-block;
+  display: flex;
+}
+
+.contact button {
+  margin-top: 3px;
+  margin-left: 420px;
+  padding: 8px 20px;
+  background: #fff;
+  border-radius: 8px;
+  border: none;
+  color: #000;
+  font-size: 20px;
+  font-weight: bold;
+  transition: 0.3s;
+  cursor: pointer;
+  display: flex;
+  text-align: center;
+}
+
+.contact button:hover {
+  background: #8b0000;
+  color: #fff;
 }
 
 @media (min-width: 250px) and (max-width: 767px) {
+  .conteudo1 h2 {
+    font-size: 25px;
+  }
 
-    .conteudo1 h2{
-      font-size: 25px;
-    }
-
-    .contact h3{
-        font-size: 40px;
-    }
-
-    .contact p{
-        font-size: 16px;
-    }
-
-    .contact button{
-        padding: 5px 14px;
-        margin-left: -80px;
-        margin-top: 30px;
-    }
-
-}
-
-.services{
-    text-align: center;
-    margin-bottom: 50px;
-}
-
-.services h2{
+  .contact h3 {
     font-size: 40px;
-    font-weight: bold;
-    color: #8b0000;
-    margin-top: -8px;
-}
+  }
 
-.services h4{
-    color: #8b0000;
-    transition: .2s;
-}
+  .contact p {
+    font-size: 16px;
+  }
 
-.service-title{
-    margin-top: 50px;
-    margin-bottom: 50px;
-}
-
-.service{
-    padding: 2rem;
-    cursor: pointer;
-}
-
-.service h4{
-    margin-bottom: 25px;
-}
-
-.service i{
+  .contact button {
+    padding: 5px 14px;
+    margin-left: -80px;
     margin-top: 30px;
-    align-items: flex-end;
-    color: #cfcfcfc5;
-    transition: .3s ease-in-out;
+  }
 }
 
-.service:hover i{
-    color: #8b0000;
+.services {
+  text-align: center;
+  margin-bottom: 50px;
 }
 
-.service:hover{
-    box-shadow: 0 0 5px #cfcfcfc5;
+.services h2 {
+  font-size: 40px;
+  font-weight: bold;
+  color: #8b0000;
+  margin-top: -8px;
 }
 
-.service:hover h4{
-    color: #8f8f8fc5;
-    font-weight: bold;
+.services h4 {
+  color: #8b0000;
+  transition: 0.2s;
 }
 
-.footer-divisor{
+.service-title {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.service {
+  padding: 2rem;
+  cursor: pointer;
+}
+
+.service h4 {
+  margin-bottom: 25px;
+}
+
+.service i {
+  margin-top: 30px;
+  align-items: flex-end;
+  color: #cfcfcfc5;
+  transition: 0.3s ease-in-out;
+}
+
+.service:hover i {
+  color: #8b0000;
+}
+
+.service:hover {
+  box-shadow: 0 0 5px #cfcfcfc5;
+}
+
+.service:hover h4 {
+  color: #8f8f8fc5;
+  font-weight: bold;
+}
+
+.footer-divisor {
   border: 1px solid #8b0000;
   width: 40%;
   margin-top: -4px;
   margin-bottom: 15px;
 }
 
-footer{
+footer {
   width: 100%;
   color: #000;
   text-align: center;
   margin-top: 10px;
 }
 
-footer #main{
+footer #main {
   padding: 10px 2.5rem;
 }
 
-footer #main h5{
+footer #main h5 {
   margin-bottom: 15px;
   font-weight: bold;
   text-align: justify;
 }
 
-footer #main p{
+footer #main p {
   margin-top: 40px;
   font-size: 16px;
 }
 
-footer #main span{
+footer #main span {
   color: #8b0000;
 }
 
-footer #main i{
+footer #main i {
   margin-top: 25px;
   color: #8b0000;
   cursor: pointer;
-  transition: .3s;
+  transition: 0.3s;
   margin-left: 10px;
 }
 
-footer #main i:hover{
+footer #main i:hover {
   color: #c71f1f;
 }
 
-footer #main a{
+footer #main a {
   display: flex;
   margin-top: 3px;
   color: #8b0000;
   text-align: center;
 }
 
-footer #main a:hover{
+footer #main a:hover {
   color: #c71f1f;
 }
 
-footer #end{
+footer #end {
   height: 60px;
   background: #8b0000;
   color: #fff;
@@ -506,7 +499,7 @@ footer #end{
   padding: 1rem;
 }
 
-[data-animated]{
+[data-animated] {
   opacity: 0;
   transition: 0.3s;
 }
