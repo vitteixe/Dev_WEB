@@ -38,7 +38,7 @@ header {
 
 @media(min-width: 345px) and (max-width: 523px){
   #btn-mobile{
-    margin-left: -75px;
+    margin-left: -105px;
   }
 }
 
@@ -301,16 +301,25 @@ nav.active #hamburger::before {
     background: url(../img/cta.jpg) no-repeat;
     opacity: .5;
     background-size: cover;
-    background-position: center;
+    background-position: center center;
     background-attachment: fixed;
 }
 
 .c2{
     background: url(../img/contact.jpg) no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: center center;
     background-attachment: fixed;
     padding-top: 140px;
+
+}
+
+@media (max-width: 520px){
+
+  .c1{
+    height: 255px;
+  }
+
 }
 
 .conteudo1{
