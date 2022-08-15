@@ -40,9 +40,6 @@ header {
   }
 }
 
-/*
-**************************************/
-
 a {
   color: #000;
   text-decoration: none;
@@ -68,9 +65,6 @@ nav a::after {
 nav a:hover::after {
   width: 70%;
 }
-
-/*
-**************************************/
 
 #menu {
   display: flex;
@@ -159,9 +153,6 @@ nav.active #hamburger::before {
   }
 }
 
-/*
-*******************************************/
-
 .divisor{
   position: absolute;
   left: 45%;
@@ -169,7 +160,6 @@ nav.active #hamburger::before {
   height: 7px;
   border-bottom: 1px solid #8b0000
 }
-
 
 .s1 {
   background: url(../img/header.jpg);
@@ -222,9 +212,6 @@ nav.active #hamburger::before {
     padding: 10px;
   }
 }
-
-/*
-*******************************************/
 
 .s2 {
   background: url(../img/header2.jpg);
@@ -302,10 +289,6 @@ nav.active #hamburger::before {
     margin-top: 90px;
 }
 
-/*
-***************************/
-
-
 .c1, .c2{
     height: 400px;
     width: 100%;
@@ -348,7 +331,6 @@ nav.active #hamburger::before {
     padding: 50px;
     background: rgba(0, 0, 0, 0.3);
 }
-
 
 .contact h3{
     display: block;
@@ -403,8 +385,6 @@ nav.active #hamburger::before {
 
 }
 
-/*
-***************************/
 .services{
     text-align: center;
     margin-bottom: 50px;
@@ -493,6 +473,7 @@ footer #main i{
   color: #8b0000;
   cursor: pointer;
   transition: .3s;
+  margin-left: 10px;
 }
 
 footer #main i:hover{
