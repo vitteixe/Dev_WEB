@@ -27,6 +27,19 @@ header {
   width: 190px;
 }
 
+@media (max-width: 979.98px) {
+
+  #logo{
+    margin-right: -20px;
+  }
+}
+
+@media(min-width: 345px) and (max-width: 523px){
+  #btn-mobile{
+    margin-left: -75px;
+  }
+}
+
 /*
 **************************************/
 
@@ -195,6 +208,10 @@ nav.active #hamburger::before {
     margin-top: -15px;
     margin-bottom: 35px;
   }
+
+  .s1 button{
+    padding: 10px;
+  }
 }
 
 /*
@@ -258,15 +275,16 @@ nav.active #hamburger::before {
 
 @media (min-width: 250px) and (max-width: 767px) {
     .s2 h4 {
-        margin-bottom: 3rem;
+        margin-bottom: 30px;
+        font-size: 15px;
     }
 
     .s2 h3 {
-        font-size: 25px;
+        font-size: 20px;
     }
 
     .s2 p{
-        font-size: 90%;
+        font-size: 80%;
     }
 }
 
@@ -281,20 +299,27 @@ nav.active #hamburger::before {
 .c1, .c2{
     height: 400px;
     width: 100%;
-    /*opacity: .7;*/
-    background-position: cover;
     background-attachment: fixed;
 }
 
 
 .c1{
     background: url(../img/cta.jpg) no-repeat;
+    opacity: .5;
     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 .c2{
-    background: url(../img/app.jpg) no-repeat;
+    background: url(../img/contact.jpg) no-repeat;
     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
     padding-top: 140px;
 }
 
@@ -337,6 +362,8 @@ nav.active #hamburger::before {
     font-weight: bold;
     transition: .3s;
     cursor: pointer;
+    display: flex;
+    text-align: center;
 }
 
 .contact button:hover{
@@ -345,6 +372,10 @@ nav.active #hamburger::before {
 }
 
 @media (min-width: 250px) and (max-width: 767px) {
+
+    .conteudo1 h2{
+      font-size: 25px;
+    }
 
     .contact h3{
         font-size: 40px;
@@ -356,7 +387,8 @@ nav.active #hamburger::before {
 
     .contact button{
         padding: 5px 14px;
-        margin-left: 240px;
+        margin-left: -80px;
+        margin-top: 30px;
     }
 
 }
@@ -413,3 +445,4 @@ nav.active #hamburger::before {
     color: #8f8f8fc5;
     font-weight: bold;
 }
+
