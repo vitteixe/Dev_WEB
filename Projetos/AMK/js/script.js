@@ -14,3 +14,24 @@ function toggleMenu(event) {
 btn.addEventListener('click', toggleMenu);
 btn.addEventListener('touchstart', toggleMenu);
 
+const animacao = document.querySelectorAll('[data-animated');
+const classeAnimada = 'animate';
+
+function animacaoScroll() {
+    const windowTop = window.pageYOffset + ((window.innerHeight * 3) /4);
+
+    animacao.forEach(function(elemento){
+
+        if((windowTop) > elemento.offsetTop){
+            elemento.classList.add(classeAnimada);
+        } else{
+            elemento.classList.remove(classeAnimada);
+        }
+    })
+
+}
+
+animacaoScroll();
+
+window.addEventListener('scroll', animacaoScroll);
+

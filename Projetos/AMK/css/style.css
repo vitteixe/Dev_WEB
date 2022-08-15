@@ -265,6 +265,7 @@ nav.active #hamburger::before {
 
 .s2 .Card span {
   color: #8b0000;
+  display: inline-block;
   cursor: pointer;
   font-weight: bold;
 }
@@ -516,4 +517,27 @@ footer #end{
   font-weight: bold;
   padding: 1rem;
 }
+
+[data-animated]{
+  opacity: 0;
+  transition: 0.3s;
+}
+
+[data-animated="left"] {
+  transform: translate3d(-65px, 0, 0);
+}
+
+[data-animated="right"] {
+  transform: translate3d(65px, 0, 0);
+}
+
+[data-animated="top"] {
+  transform: translate3d(0, 65px, 0);
+}
+
+[data-animated].animate {
+  opacity: 1;
+  transform: translate3d(0px, 0px, 0px);
+}
+
 
