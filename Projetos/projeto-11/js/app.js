@@ -108,6 +108,13 @@ cadastrarDespesa = () => {
     if(despesa.validarDados()){
         
         bd.toRecord(despesa);
+        
+        ano.value = '';
+        mes.value = '';
+        dia.value = '';
+        tipo.value = '';
+        descricao.value = '';
+        valor.value = '';
 
         title.innerHTML = 'Registro inserido com sucesso!';
         colorText.className = 'modal-header text-success';
