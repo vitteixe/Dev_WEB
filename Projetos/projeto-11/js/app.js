@@ -137,7 +137,46 @@ carregaListaDespesas = () => {
     let despesas = [];
     despesas = bd.recuperarTodosRegistros();
 
-    var listaDespesas = document.querySelector('#listaDespesas');
+    // TBODY
+    const listaDespesas = document.querySelector('#listaDespesas');
+
+    despesas.forEach(function(objDespesas) {
+
+        console.log(objDespesas)
+
+        //criação do <tr>
+        let linha = listaDespesas.insertRow();
+
+        //criação das colunas <td>
+        linha.insertCell(0).innerHTML = `${objDespesas.dia}/${objDespesas.mes}/${objDespesas.ano}`;
+        //ajustar o tipo
+        switch(objDespesas.tipo){
+            case '1' : objDespesas.tipo = 'Alimentação';
+                break;
+            case '2' : objDespesas.tipo = 'Educação';
+                break;
+            case '3' : objDespesas.tipo = 'Lazer';
+                break;
+            case '4' : objDespesas.tipo = 'Saúde';
+                break;
+            case '5' : objDespesas.tipo = 'Transporte';
+                break;          
+        }
+        linha.insertCell(1).innerHTML = objDespesas.tipo;
+        linha.insertCell(2).innerHTML = objDespesas.descricao;
+        linha.insertCell(3).innerHTML = objDespesas.valor;
+
+    })
 
 }
 
+    /*
+    <tr>
+        <td>15/03/2022</td>
+        <td>Alimentação</td>
+        <td>Comrpas do mês</td>
+        <td>956.36</td>
+    </tr>
+    */
+
+    //
