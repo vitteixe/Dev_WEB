@@ -66,7 +66,8 @@ class Bd {
             if(despesa === null){
                 continue
             }
-                
+
+            despesa.id = i;    
             despesas.push(despesa);
             
         }
@@ -112,6 +113,10 @@ class Bd {
         }
 
         return despesasFiltradas
+    }
+
+    remover(id){
+        localStorage.removeItem(id)
     }
 
 }
@@ -213,6 +218,27 @@ carregaListaDespesas = (despesas = [], filtro = false) => {
         linha.insertCell(2).innerHTML = objDespesas.descricao;
         linha.insertCell(3).innerHTML = objDespesas.valor;
 
+        //botão de exclusão
+        let btn = document.createElement('button');
+        btn.className = 'btn btn-danger';
+        btn.innerHTML = '<i class="fas fa-times"></i>';
+        btn.id = `id_despesa_${objDespesas.id}`
+
+        linha.insertCell(4).append(btn)
+
+        //Função de remoção
+        if(document.body.contains(btn)){
+            btn.addEventListener('click', function(){
+                
+                // substituindo 'id_despesa_' por vazio
+                let id = this.id.replace('id_despesa_','');
+
+                bd.remover(id);
+
+                window.location.reload()
+            })
+        }
+
     })
 
 }
@@ -239,4 +265,4 @@ if(document.body.contains(btnCadastro)){
     btnCadastro.addEventListener('click', cadastrarDespesa);
 } else if(document.body.contains(btnPesquisa)){
     btnPesquisa.addEventListener('click', pesquisarDespesa);
-}
+} 
