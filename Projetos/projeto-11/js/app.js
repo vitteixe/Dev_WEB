@@ -75,12 +75,17 @@ class Bd {
 
     }
 
+    pesquisar(despesa){
+        console.log(despesa)
+    }
+
 }
 
 let bd = new Bd()
 
 //--------------------------
 const btnCadastro = document.querySelector('#btn-cadastro');
+const btnPesquisa = document.querySelector('#btn-search');
 
 cadastrarDespesa = () => {
 
@@ -149,8 +154,6 @@ carregaListaDespesas = () => {
 
     despesas.forEach(function(objDespesas) {
 
-        console.log(objDespesas)
-
         //criação do <tr>
         let linha = listaDespesas.insertRow();
 
@@ -177,13 +180,24 @@ carregaListaDespesas = () => {
 
 }
 
-    /*
-    <tr>
-        <td>15/03/2022</td>
-        <td>Alimentação</td>
-        <td>Comrpas do mês</td>
-        <td>956.36</td>
-    </tr>
-    */
+pesquisarDespesa = () => {
+    
+    let ano = document.querySelector('#ano').value;
+    let mes = document.querySelector('#mes').value;
+    let dia = document.querySelector('#dia').value;
+    let tipo = document.querySelector('#tipo').value;
+    let descricao = document.querySelector('#descricao').value;
+    let valor = document.querySelector('#valor').value;
 
-    //
+    let despesa = new Despesa(ano, mes, dia, tipo, descricao, valor);
+
+    bd.pesquisar(despesa)
+    
+}
+
+
+if(document.body.contains(btnCadastro)){
+    btnCadastro.addEventListener('click', cadastrarDespesa);
+} else if(document.body.contains(btnPesquisa)){
+    btnPesquisa.addEventListener('click', pesquisarDespesa);
+}
