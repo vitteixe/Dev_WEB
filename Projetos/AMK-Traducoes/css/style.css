@@ -1,0 +1,14 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+  background: #fffafa;
+}
+
+header{
+  height: 90px;
+  border-bottom: 1px solid #8b0000;
+}
