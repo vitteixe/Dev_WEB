@@ -63,17 +63,12 @@ a:hover{
   width: 70%;
 }
 
-#menu li{
-  border-bottom: 1px solid #f0eded;
-  height: 25px;
-}
-
 #btn-mobile{
   padding: .5rem 1rem;
   border: none;
   background: none;
   cursor: pointer;
-  display: flex;
+  display: none;
 }
 
 
@@ -145,6 +140,11 @@ nav.active #hamburger::after{
 
   #menu a:hover::after{
     width: 13%;
+  }
+
+  #menu li{
+    border-bottom: 1px solid #f0eded;
+    height: 25px;
   }
 
 }
@@ -302,5 +302,60 @@ nav.active #hamburger::after{
 @media (max-width: 520px) {
   .c1 {
     height: 255px;
+  }
+}
+
+#contents{
+  margin-top: 20px;
+  text-align: center;
+}
+
+.content1{
+  height: 375px;
+  padding: 75px 35px;
+}
+
+.content1 span{
+  display: block;
+}
+
+@media (min-width: 1125px){
+  .content1 h2{
+    font-size: 2.4rem;
+  }
+}
+
+.parallax1{
+  height: 400px;
+  width: 100%;
+}
+
+.parallax1{
+  background: url(../img/imagem1.jpg) no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  opacity: .5;
+}
+
+@media (max-width: 520px){
+  .parallax1{
+    height: 355px;
+  }
+}
+
+.services{
+  margin-top: 45px;
+}
+
+.services h2{
+  margin-top: -8px;
+  font-weight: bold;
+  color: #8b0000;
+}
+
+@media (max-width: 720px){
+  .services h2{
+    font-size: 2.3rem;
   }
 }
