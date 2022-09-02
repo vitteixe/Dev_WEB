@@ -323,6 +323,9 @@ nav.active #hamburger::after{
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  color:#fff;
+  padding-top: 125px;
+  margin-bottom: 30px;
 }
 
 @media (max-width: 520px){
@@ -406,4 +409,161 @@ nav.active #hamburger::after{
     margin-bottom: 25px;
   }
 
+  .service p{
+    font-size: 15px;
+  }
+
+}
+
+.contact{
+  background: rgba(0,0,0,0.2);
+  padding: 45px;
+  width: 60%;
+  height: 85%;
+  margin-left: 30px;
+  border-radius: 23px;
+  padding-top: 23px;
+  padding-left: 26px;
+  text-align: start;
+}
+
+.contact h3{
+  margin-top: 36px;
+}
+
+.contact p{
+  margin-top: -15px;
+  margin-bottom: 25px;
+}
+
+.contact button{
+  border: none;
+  border-radius: 6px;
+  display: flex;
+  font-weight: bold;
+}
+
+.contact button:hover {
+  background: #8b0000;
+  color: #fff;
+}
+
+@media (max-width: 520px){
+  .contact h3{
+    font-size: 33px;
+  }
+  .contact p{
+    font-size: 14px;
+  }
+  .contact button{
+    margin-left: 145px;
+    padding: 8px 12px;
+  }
+}
+
+@media (min-width: 521px){
+  .contact h3{
+    font-size: 53px;
+  }
+  .contact p{
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  .contact button{
+    margin-left: 455px;
+    padding: 12px;
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 1014px){
+  .contact{
+    margin-left: 120px;
+  }
+}
+
+footer {
+  width: 100%;
+  color: #000;
+  text-align: center;
+  margin-top: 10px;
+}
+
+footer #main {
+  padding: 10px 2.5rem;
+}
+
+footer #main h5 {
+  margin-bottom: 15px;
+  font-weight: bold;
+  text-align: justify;
+}
+
+footer #main p {
+  margin-top: 40px;
+  font-size: 16px;
+}
+
+footer #main span {
+  color: #8b0000;
+}
+
+footer #main i {
+  margin-top: 25px;
+  color: #8b0000;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-left: 10px;
+}
+
+footer #main i:hover {
+  color: #c71f1f;
+}
+
+footer #main a {
+  display: flex;
+  margin-top: 3px;
+  color: #8b0000;
+  text-align: center;
+}
+
+footer #main a:hover {
+  color: #c71f1f;
+}
+
+footer #end {
+  height: 60px;
+  background: #8b0000;
+  color: #fff;
+  font-weight: bold;
+  padding: 1rem;
+}
+
+.footer-divisor {
+  border: 1px solid #8b0000;
+  width: 40%;
+  margin-top: -4px;
+  margin-bottom: 15px;
+}
+
+[data-animated]{
+  opacity: 0;
+  transition: .3s;
+}
+
+[data-animated = "left"]{
+  transform: translate3d(-65px, 0, 0);
+}
+
+[data-animated = "right"]{
+  transform: translate3d(65px, 0, 0);
+}
+
+[data-animated = "top"]{
+  transform: translate3d(0, 65px, 0);
+}
+
+[data-animated].animate{
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
 }
