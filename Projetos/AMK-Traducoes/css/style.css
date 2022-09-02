@@ -277,33 +277,6 @@ nav.active #hamburger::after{
   }
 }
 
-.c1,
-.c2 {
-  height: 400px;
-  width: 100%;
-}
-
-.c1 {
-  background: url(../img/cta.jpg) no-repeat;
-  opacity: 0.5;
-  background-size: cover;
-  background-position: center center;
-  background-attachment: fixed;
-}
-
-.c2 {
-  background: url(../img/contact.jpg) no-repeat;
-  background-size: cover;
-  background-position: center center;
-  background-attachment: fixed;
-  padding-top: 140px;
-}
-
-@media (max-width: 520px) {
-  .c1 {
-    height: 255px;
-  }
-}
 
 #contents{
   margin-top: 20px;
@@ -311,12 +284,18 @@ nav.active #hamburger::after{
 }
 
 .content1{
-  height: 375px;
+  height: 295px;
   padding: 75px 35px;
 }
 
 .content1 span{
   display: block;
+}
+
+@media (max-width: 622px){
+  .content1 h2{
+    margin-top: -33px;
+  }
 }
 
 @media (min-width: 1125px){
@@ -325,7 +304,8 @@ nav.active #hamburger::after{
   }
 }
 
-.parallax1{
+.parallax1,
+.parallax2{
   height: 400px;
   width: 100%;
 }
@@ -338,6 +318,13 @@ nav.active #hamburger::after{
   opacity: .5;
 }
 
+.parallax2{
+  background: url(../img/contact.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
 @media (max-width: 520px){
   .parallax1{
     height: 355px;
@@ -345,7 +332,18 @@ nav.active #hamburger::after{
 }
 
 .services{
-  margin-top: 45px;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  padding: 30px 10px;
+}
+
+.divider{
+  position: absolute;
+  left: 45.3%;
+  width: 10%;
+  height: 7px;
+  border-bottom: 2px solid #8b0000;
+  margin-top: -4px;
 }
 
 .services h2{
@@ -358,4 +356,54 @@ nav.active #hamburger::after{
   .services h2{
     font-size: 2.3rem;
   }
+}
+
+.service{
+  margin-top: 60px;
+  height: 395px;
+  padding: 50px 30px;
+  border-radius: 22px;
+  cursor: pointer;
+}
+
+.service h4{
+  margin-bottom: 15px;
+  color: #8b0000;
+  font-weight: bold;
+  transition: .3s ease-in-out;
+}
+
+.service p{
+  text-align: justify;
+}
+
+.service i{
+  margin-top: 7px;
+  color: #cfcfcfc5;
+  transition: .3s ease-in-out;
+}
+
+.service:hover{
+  box-shadow: 0 0 5px #cfcfcfc5;
+}
+
+.service:hover h4{
+  color: #cfcfcfc5;
+}
+
+.service:hover i{
+  color: #8b0000;
+}
+
+@media (max-width: 767px){
+
+  .service{
+    margin-top: 30px;
+    height: 325px;
+  }
+
+  .service h4{
+    margin-bottom: 25px;
+  }
+
 }
