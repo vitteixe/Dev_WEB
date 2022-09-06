@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+    display: flex;
+    height: 80px;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    border-bottom: 1px solid #006400;
+    padding: 3rem;
+}
+
+#menu{
+    display: flex;
+    list-style: none;
+    gap: 1.8rem;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+    display: flex;
+    position: relative;
+}
+
+#menu a::after{
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 0;
+    background: #006400;
+    bottom: 0;
+    transition: .3s ease-in-out;
+}
+
+#menu a:hover::after{
+    width: 70%;
+}
+
+#btn-mobile{
+    display: flex;
+    padding: .5rem 1rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+#hamburger{
+    color: #006400;
+    border-top: 2px solid #006400;
+    width: 20px;
+}
+
+#hamburger::after,
+#hamburger::before{
+    position: relative;
+    content: " ";
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: currentColor;
+    margin-top: 5px;
+    transition: .3s ease-in-out;
+}
+
+nav.active #hamburger{
+    border-top: transparent;
+}
+
+nav.active #hamburger::after{
+    transform: rotate(135deg);
+    top: -6px;
+}
+
+nav.active #hamburger::before{
+    transform: rotate(-135deg);
+    top: 1px;
+}
+
+
+@media (max-width: 979.98px) {
+
+    #menu{
+        visibility: hidden;
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 0;
+        left: 0px;
+        top: 80px;
+        overflow-y: hidden;
+        z-index: 10000;
+        margin-top: 7px;
+        border-bottom: 1px solid #006400;
+        transition: .5s ease-in-out;
+        background: #fff;
+    }
+
+    #menu a{
+        margin-left: 30px;
+        margin-top: 5px;
+    }
+    
+    nav.active #menu{
+       visibility: visible;
+       height: calc(35vh - 70px);
+    }
+
+    #menu a:hover::after{
+        width: 13%;
+    }
+
+    #menu li{
+        border-bottom: 1px solid #f0eded;
+        height: 35px;
+    }
+
+}
