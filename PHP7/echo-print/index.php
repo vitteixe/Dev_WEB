@@ -6,16 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>PHP</title>
+    <title>Echo e Print - PHP</title>
 
 </head>
 <body>
     
     <?php 
-        echo 'Hello world! <br>';
+        echo '<h1>Comando echo</h1>';
+        print '<h1>Comando print</h1><hr>';
     ?>
-
-    <?= 'Vamos iniciar o curso!!!!'?>
 
 </body>
 </html>
