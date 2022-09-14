@@ -17,8 +17,14 @@
 
         $recebeu_desconto_frete = false;
 
-        if($cartao == true && $valor_compra >= 100){
+        if($cartao && $valor_compra >= 400){
             $valor_frete = 0;
+            $recebeu_desconto_frete = true;
+        } else if ($cartao && $valor_compra >= 300){
+            $valor_frete = 10;
+            $recebeu_desconto_frete = true;
+        } else if ($cartao && $valor_compra >= 100){
+            $valor_frete = 25;
             $recebeu_desconto_frete = true;
         }
 
