@@ -32,6 +32,11 @@ a:hover{
     text-decoration: none;
 }
 
+a.active{
+    color: #006400;
+    font-weight: bold;
+}
+
 #menu a::after{
     content: "";
     position: absolute;
@@ -47,7 +52,7 @@ a:hover{
 }
 
 #btn-mobile{
-    display: flex;
+    display: none;
     padding: .5rem 1rem;
     border: none;
     background: none;
@@ -87,7 +92,11 @@ nav.active #hamburger::before{
 }
 
 
-@media (max-width: 979.98px) {
+@media (max-width: 979.99px) {
+
+    #btn-mobile{
+        display: flex;
+    }
 
     #menu{
         visibility: hidden;
@@ -126,6 +135,13 @@ nav.active #hamburger::before{
 
 }
 
+@media (min-width: 980px){
+    #menu{
+       margin-right: 120px; 
+       margin-top: 20px;
+    }
+}
+
 h1, h2, h3, h4, h5{
     text-align: center;
 }
@@ -145,5 +161,9 @@ h1{
 @media (max-width: 767px){
     select.form-control, input{
         margin-top: 15px;
+    }
+
+    #btn-registration, #btn-search{
+        margin-top: 10px;
     }
 }
