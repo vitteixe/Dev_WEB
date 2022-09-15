@@ -27,6 +27,11 @@ a{
     position: relative;
 }
 
+a:hover{
+    color: #000;
+    text-decoration: none;
+}
+
 #menu a::after{
     content: "";
     position: absolute;
@@ -119,4 +124,26 @@ nav.active #hamburger::before{
         height: 35px;
     }
 
+}
+
+h1, h2, h3, h4, h5{
+    text-align: center;
+}
+
+h1{
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+
+
+@media (max-width: 500px){
+    h1{
+        font-size: 33px;
+    }
+}
+
+@media (max-width: 767px){
+    select.form-control, input{
+        margin-top: 15px;
+    }
 }
