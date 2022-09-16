@@ -9,8 +9,19 @@ btnMobile.addEventListener('click', toggleMenu);
 
 
 //---------------------------------------------------------------------//
-const btnRegister = document.querySelector('#btn-register');
-const btnSearch = document.querySelector('#btn-search');
+
+class Expense {
+    
+    constructor(year, month, day, type, description, value){
+        this.year = year;
+        this.month = month;
+        this.day = day;
+        this.type = type;
+        this.description = description;
+        this.value = value;    
+    }
+
+}
 
 
 RegisterExpense = () => {
@@ -22,11 +33,26 @@ RegisterExpense = () => {
     let description = document.querySelector('#description');
     let value = document.querySelector('#value');
 
-    console.log(year.value, month.value, day.value, type.value, description.value, value.value)
+    let objExpense = new Expense(
+        year.value, 
+        month.value, 
+        day.value, 
+        type.value, 
+        description.value, 
+        value.value
+    );
+
+    console.log(objExpense);
 
 }
 
 
+
+
+
+
+const btnRegister = document.querySelector('#btn-register');
+const btnSearch = document.querySelector('#btn-search');
 
 if(document.body.contains(btnRegister)){
     btnRegister.addEventListener('click', RegisterExpense);
