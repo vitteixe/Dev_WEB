@@ -42,10 +42,13 @@ RegisterExpense = () => {
         value.value
     );
 
-    console.log(objExpense);
+    toRecord(objExpense);
 
 }
 
+toRecord = (expense) => {
+    localStorage.setItem('despesa', JSON.stringify(expense));
+}
 
 
 
