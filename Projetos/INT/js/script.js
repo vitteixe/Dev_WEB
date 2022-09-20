@@ -22,6 +22,20 @@ class Expense {
         this.value = value;    
     }
 
+    //MÉTODO DE VALIDAÇÃO DE DADOS
+    validateDate(){
+        //percorrer os atributos do objeto despesa
+        for(let attr in this){
+            //retornando false caso algum campo esteja vazio
+            if(this[attr] == undefined || this[attr] == '' || this[attr] == null){
+                return false;
+            }
+        }
+
+        //caso nenhum attr esteja vazio, retornará true
+        return true;
+
+    }
 }
 
 //OBJETO BD (localStorage)
@@ -60,7 +74,11 @@ class BD{
 
 let bd = new BD();
 
-
+// TAGS MODAL
+let title = document.querySelector('#modal-title');
+let colorText = document.querySelector('#modal-header');
+let btnModal = document.querySelector('#btn-modal');
+let modalBody = document.querySelector('.modal-body');
 
 // REGISTRO DE NOVA DESPESA
 RegisterExpense = () => {
@@ -80,9 +98,26 @@ RegisterExpense = () => {
         description.value, 
         value.value
     );
-    
-    //CHAMANDO FUNÇÃO/MÉTODO DE GRAVAÇÃO 
-    bd.toRecord(objExpense);
+
+    if(objExpense.validateDate()){
+        //CHAMANDO FUNÇÃO/MÉTODO DE GRAVAÇÃO 
+        //bd.toRecord(objExpense);
+
+        title.innerHTML = 'Registro inserido com sucesso!';
+        colorText.className = 'modal-header text-success';
+        modalBody.innerHTML = 'Despesa cadastrada com sucesso!';
+        btnModal.innerHTML = 'Registrar nova despesa';
+        btnModal.className = 'btn btn-success';
+
+    } else {
+
+        title.innerHTML = 'Erro na inclusão do registro!';
+        colorText.className = 'modal-header text-danger';
+        modalBody.innerHTML = 'Erro na gravação! <br> Existem campos obrigatórios que não foram preenchidos.';
+        btnModal.innerHTML = 'Voltar e corrigir';
+        btnModal.className = 'btn btn-danger';
+    }
+    $("#modalRegistroDespesa").modal('show');
 
 }
 

@@ -34,7 +34,7 @@
 
 
 <body>
-    
+
     <header>
 
         <div>
@@ -46,7 +46,7 @@
             <button id="btn-mobile">
                 <span id="hamburger"></span>
             </button>
-    
+
             <ul id="menu">
                 <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="pages/consulta.html">Consulta</a></li>
@@ -57,7 +57,7 @@
     </header>
 
     <section>
-        
+
         <div class="container">
 
             <h1>Registro de despesas</h1>
@@ -66,18 +66,18 @@
 
                 <div class="col-md-2">
                     <select class="form-control" id="year">
-    
+
                         <option value="">Ano</option>
                         <option value="2021">2021</option>
                         <option value="2022">2022</option>
                         <option value="2022">2023</option>
-    
+
                     </select>
                 </div>
-    
+
                 <div class="col-md-2">
                     <select class="form-control" id="month">
-    
+
                         <option value="">Mês</option>
                         <option value="1">Janeiro</option>
                         <option value="2">Fevereiro</option>
@@ -91,49 +91,73 @@
                         <option value="10">Outubro</option>
                         <option value="11">Novembro</option>
                         <option value="12">Dezembro</option>
-    
+
                     </select>
                 </div>
-    
+
                 <div class="col-md-2">
                     <input type="text" class="form-control" placeholder="Dia" id="day" />
                 </div>
-    
+
                 <div class="col-md-6">
                     <select class="form-control" id="type">
-    
+
                         <option value="">Tipo</option>
                         <option value="1">Alimentação</option>
                         <option value="2">Educação</option>
                         <option value="3">Lazer</option>
                         <option value="4">Saúde</option>
                         <option value="5">Transporte</option>
-    
+
                     </select>
                 </div>
-    
+
             </div>
-            
+
             <div class="row mt-4">
-    
+
                 <div class="col-md-8">
                     <input type="text" class="form-control" placeholder="Descrição" id="description" />
                 </div>
-    
+
                 <div class="col-md-2">
                     <input type="text" class="form-control" placeholder="Valor" id="value" />
                 </div>
-    
+
                 <div class="col-md-2 d-flex justify-content-end">
                     <button type="button" class="btn btn-primary" id="btn-register">
                         <i class="fas fa-plus"></i>
                     </button>
                 </div>
-    
+
             </div>
 
         </div>
-            
+
+        <div>
+    
+            <div class="modal fade" id="modalRegistroDespesa" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        
+                        <div id="modal-header">
+                            <h5 id="modal-title" class="modal-title"></h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body"></div>
+                        <div class="modal-footer">
+                            <button type="button" id="btn-modal" data-dismiss="modal"></button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        
 
     </section>
 
