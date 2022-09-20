@@ -1,3 +1,4 @@
+// BOTÃO DE NAVEGAÇÃO
 const btnMobile = document.querySelector('#btn-mobile');
 
 function toggleMenu(){
@@ -9,7 +10,7 @@ btnMobile.addEventListener('click', toggleMenu);
 
 
 //---------------------------------------------------------------------//
-
+// OBJETO DESPESA
 class Expense {
     
     constructor(year, month, day, type, description, value){
@@ -23,7 +24,45 @@ class Expense {
 
 }
 
+//OBJETO BD (localStorage)
+class BD{
 
+    constructor(){
+        let id = localStorage.getItem('id');
+
+        //verificação se existe um id(chave) em local storage
+        if(id === null){
+            //setando valor inicial ao id
+            localStorage.setItem('id',0);
+        }
+    }
+    
+    // FUNÇÃO/MÉTODO PARA ATUALIZAÇÃO DE ÍNDICE
+    getNextId(){
+
+        let nextId = localStorage.getItem('id');
+        return parseInt(nextId) + 1;
+    }
+
+    // FUNÇÃO/MÉTODO DE GRAVAÇÃO DE NOVA DESPESA
+    toRecord(d){
+    
+        //chamando o método de soma do id
+        let id = this.getNextId();
+
+        localStorage.setItem(id, JSON.stringify(d));
+
+        //atualizando valor do id
+        localStorage.setItem('id', id);
+    }   
+
+}
+
+let bd = new BD();
+
+
+
+// REGISTRO DE NOVA DESPESA
 RegisterExpense = () => {
     
     let year = document.querySelector('#year');
@@ -41,13 +80,10 @@ RegisterExpense = () => {
         description.value, 
         value.value
     );
+    
+    //CHAMANDO FUNÇÃO/MÉTODO DE GRAVAÇÃO 
+    bd.toRecord(objExpense);
 
-    toRecord(objExpense);
-
-}
-
-toRecord = (expense) => {
-    localStorage.setItem('despesa', JSON.stringify(expense));
 }
 
 
