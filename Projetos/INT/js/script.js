@@ -98,19 +98,62 @@ class BD{
 
     }
 
+    //MÉTODO DE PESQUISA
+    search(expenseSH){
+        
+        //recuperando todos os registros através do método criado a cima
+        let filterExpense = this.allRecords();
+        
+
+
+        console.log(expenseSH)
+
+        console.log(filterExpense)
+
+
+        //ano
+        if(expenseSH.year != ''){
+            //verificando se cada objeto literal corresponde ao filtro solicitado
+            filterExpense = filterExpense.filter(d => d.year == expenseSH.year);
+        }
+
+        //mes
+        if(expenseSH.month != ''){
+            filterExpense = filterExpense.filter(d => d.month == expenseSH.month);
+        }
+
+        //dia
+        if(expenseSH.day != ''){
+            filterExpense = filterExpense.filter(d => d.day == expenseSH.day);
+        }
+
+        //tipo
+        if(expenseSH.type != ''){
+            filterExpense = filterExpense.filter(d => d.type == expenseSH.type);
+        }
+
+        //descricao
+        if(expenseSH.description != ''){
+            filterExpense = filterExpense.filter(d => d.description == expenseSH.description);
+        }
+
+        //valor
+        if(expenseSH.value != ''){
+            filterExpense = filterExpense.filter(d => d.value == expenseSH.value);
+        }
+
+        console.log(filterExpense)
+
+    }
+
+
+
 }
 
 let bd = new BD();
 
-// TAGS MODAL
-let title = document.querySelector('#modal-title');
-let colorText = document.querySelector('#modal-header');
-let btnModal = document.querySelector('#btn-modal');
-let modalBody = document.querySelector('.modal-body');
-
 // REGISTRO DE NOVA DESPESA
 RegisterExpense = () => {
-    
     let year = document.querySelector('#year');
     let month = document.querySelector('#month');
     let day = document.querySelector('#day');
@@ -127,9 +170,16 @@ RegisterExpense = () => {
         value.value
     );
 
+
+    // TAGS MODAL
+    let title = document.querySelector('#modal-title');
+    let colorText = document.querySelector('#modal-header');
+    let btnModal = document.querySelector('#btn-modal');
+    let modalBody = document.querySelector('.modal-body');
+
     if(objExpense.validateDate()){
         //CHAMANDO FUNÇÃO/MÉTODO DE GRAVAÇÃO 
-        //bd.toRecord(objExpense);
+        bd.toRecord(objExpense);
 
         title.innerHTML = 'Registro inserido com sucesso!';
         colorText.className = 'modal-header text-success';
@@ -198,15 +248,36 @@ loadExpenseList = () => {
 
 
 
+//-----------------------------------------------------------------------
+// PESQUISA DE DESPESAS  (consulta)
+SearchExpense = () => {
+
+    let year = document.querySelector('#year').value;
+    let month = document.querySelector('#month').value;
+    let day = document.querySelector('#day').value;
+    let type = document.querySelector('#type').value;
+    let description = document.querySelector('#description').value;
+    let value = document.querySelector('#value').value;   
+
+    let expenseSH = new Expense(year, month, day, type, description, value);
 
 
+    //chamando método de pesquisa
+    bd.search(expenseSH);
+}
+
+
+
+
+
+//-----------------------------------------------------------------
 const btnRegister = document.querySelector('#btn-register');
 const btnSearch = document.querySelector('#btn-search');
 
 if(document.body.contains(btnRegister)){
     btnRegister.addEventListener('click', RegisterExpense);
 } else if(document.body.contains(btnSearch)){
-    btnSearch.addEventListener('click', RegisterExpense);
+    btnSearch.addEventListener('click', SearchExpense);
 }
 
 
