@@ -68,7 +68,35 @@ class BD{
 
         //atualizando valor do id
         localStorage.setItem('id', id);
-    }   
+    }
+
+    // MÉTODO PARA RECUPERAR TODOS REGISTROS
+    allRecords(){
+        
+        //array de despesas
+        let expenseArray = [];
+        
+        let id = localStorage.getItem('id');
+
+        //loping para recuperar as despesas dos respectivos ID's cadastrados em local storage
+        for(let i = 1; i <= id; i++){
+            
+            //recuperando a despesas
+            let expense = JSON.parse(localStorage.getItem(i)); //convertendo JSON em objeto literal
+
+            //verificando ID's removidos, ==> em seguida iremos pular esse indices
+            if(expense == null){
+                continue;  
+            }
+
+            //acrescentando despesas (recuperada a cima), no array 
+            expenseArray.push(expense);
+
+        }
+
+        return expenseArray
+
+    }
 
 }
 
@@ -101,7 +129,7 @@ RegisterExpense = () => {
 
     if(objExpense.validateDate()){
         //CHAMANDO FUNÇÃO/MÉTODO DE GRAVAÇÃO 
-        //bd.toRecord(objExpense);
+        bd.toRecord(objExpense);
 
         title.innerHTML = 'Registro inserido com sucesso!';
         colorText.className = 'modal-header text-success';
@@ -119,6 +147,17 @@ RegisterExpense = () => {
     }
     $("#modalRegistroDespesa").modal('show');
 
+}
+
+// MÉTODO CARREGAR LISTA DESPESAS
+loadExpenseList = () => {
+
+    // chamando método para carregar todas as despesas
+    let finalExpenses = bd.allRecords();
+
+    bd.allRecords();
+
+    console.log(finalExpenses);
 }
 
 
