@@ -155,9 +155,35 @@ loadExpenseList = () => {
     // chamando método para carregar todas as despesas
     let finalExpenses = bd.allRecords();
 
-    bd.allRecords();
+    // TBODY
+    var tBody = document.querySelector('#listExpenses');
 
-    console.log(finalExpenses);
+    // percorrendo o array finalExpenses
+    finalExpenses.forEach(function(expense){
+
+        // inserindo linhas (TR ==> TBODY)
+        let row = tBody.insertRow();
+
+        // ajustar tipo (númerico para string)
+        switch(expense.type){
+            case '1': expense.type = 'Alimentação'
+                break
+            case '2': expense.type = 'Educação'
+                break
+            case '3': expense.type = 'Lazer'
+                break
+            case '4': expense.type = 'Saúde'
+                break
+            case '5': expense.type = 'Transporte'
+                break  
+        }
+
+        // criar colunas (TD ==> TR) >>>>> inserindo dados em cada coluna
+        row.insertCell(0).innerHTML = `${expense.day}/${expense.month}/${expense.year}` ;
+        row.insertCell(1).innerHTML = `${expense.type}`;
+        row.insertCell(2).innerHTML = `${expense.description}`;
+        row.insertCell(3).innerHTML = `R$ ${expense.value}`;
+    })
 }
 
 
