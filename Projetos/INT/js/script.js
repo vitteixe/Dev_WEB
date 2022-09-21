@@ -129,13 +129,23 @@ RegisterExpense = () => {
 
     if(objExpense.validateDate()){
         //CHAMANDO FUNÇÃO/MÉTODO DE GRAVAÇÃO 
-        bd.toRecord(objExpense);
+        //bd.toRecord(objExpense);
 
         title.innerHTML = 'Registro inserido com sucesso!';
         colorText.className = 'modal-header text-success';
         modalBody.innerHTML = 'Despesa cadastrada com sucesso!';
         btnModal.innerHTML = 'Registrar nova despesa';
         btnModal.className = 'btn btn-success';
+
+        //clear nos campos, após em 'registrar uma nova tarefa'
+        btnModal.addEventListener('click',function(){
+            year.value = '';
+            month.value = '';
+            day.value = '';
+            type.value = '';
+            description.value = '';
+            value.value = '';
+        })
 
     } else {
 
