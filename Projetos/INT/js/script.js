@@ -91,6 +91,9 @@ class BD{
                 continue;  
             }
 
+            //criando atributo de id
+            expense.id = i;
+
             //acrescentando despesas (recuperada a cima), no array 
             expenseArray.push(expense);
 
@@ -139,6 +142,10 @@ class BD{
 
         return filterExpense
 
+    }
+
+    remove(idDelete){
+        localStorage.removeItem(idDelete);
     }
 
 }
@@ -244,6 +251,31 @@ loadExpenseList = (finalExpenses = [], filter = false) => {
         row.insertCell(1).innerHTML = `${expense.type}`;
         row.insertCell(2).innerHTML = `${expense.description}`;
         row.insertCell(3).innerHTML = `R$ ${expense.value}`;
+        
+
+        //botão de exclusão
+        let btnDelete = document.createElement('button');
+        btnDelete.className = 'btn btn-danger';
+        btnDelete.innerHTML = '<i class="fas fa-times"></i>';
+        btnDelete.id = `id_despesa_${expense.id}`
+
+        row.insertCell(4).append(btnDelete);
+
+        //Função de remoção
+        if(document.body.contains(btnDelete)){
+            btnDelete.addEventListener('click', function(){
+                
+                // substituindo 'id_despesa_' por vazio
+                let id = this.id.replace('id_despesa_','');
+
+                bd.remove(id);
+
+                window.location.reload()
+            })
+        }
+        
+
+
     })
 }
 
