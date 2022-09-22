@@ -38,6 +38,8 @@ class Expense {
     }
 }
 
+
+
 //OBJETO BD (localStorage)
 class BD{
 
@@ -100,18 +102,11 @@ class BD{
 
     //MÉTODO DE PESQUISA
     search(expenseSH){
-        
+
         //recuperando todos os registros através do método criado a cima
         let filterExpense = this.allRecords();
-        
 
-
-        console.log(expenseSH)
-
-        console.log(filterExpense)
-
-
-        //ano
+        //ano só entra no bloco se o resultado for diferente de vazio ''
         if(expenseSH.year != ''){
             //verificando se cada objeto literal corresponde ao filtro solicitado
             filterExpense = filterExpense.filter(d => d.year == expenseSH.year);
@@ -142,15 +137,15 @@ class BD{
             filterExpense = filterExpense.filter(d => d.value == expenseSH.value);
         }
 
-        console.log(filterExpense)
+        return filterExpense
 
     }
-
-
 
 }
 
 let bd = new BD();
+
+
 
 // REGISTRO DE NOVA DESPESA
 RegisterExpense = () => {
@@ -209,14 +204,20 @@ RegisterExpense = () => {
 
 }
 
-// MÉTODO CARREGAR LISTA DESPESAS
-loadExpenseList = () => {
 
-    // chamando método para carregar todas as despesas
-    let finalExpenses = bd.allRecords();
+
+//-----------------------------------------------------------------------
+// MÉTODO CARREGAR LISTA DESPESAS
+loadExpenseList = (finalExpenses = [], filter = false) => {
+
+    if(finalExpenses.length == 0 && filter == false) {
+        // chamando método para carregar todas as despesas
+        finalExpenses = bd.allRecords();
+    }
 
     // TBODY
     var tBody = document.querySelector('#listExpenses');
+    tBody.innerHTML = '';
 
     // percorrendo o array finalExpenses
     finalExpenses.forEach(function(expense){
@@ -248,7 +249,6 @@ loadExpenseList = () => {
 
 
 
-//-----------------------------------------------------------------------
 // PESQUISA DE DESPESAS  (consulta)
 SearchExpense = () => {
 
@@ -261,9 +261,10 @@ SearchExpense = () => {
 
     let expenseSH = new Expense(year, month, day, type, description, value);
 
-
     //chamando método de pesquisa
-    bd.search(expenseSH);
+    filterBdExpense = bd.search(expenseSH);
+
+    loadExpenseList(filterBdExpense, true)
 }
 
 
