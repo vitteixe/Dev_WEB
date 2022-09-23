@@ -6,7 +6,10 @@ function toggleMenu(){
     nav.classList.toggle('active');
 }
 
-btnMobile.addEventListener('click', toggleMenu);
+if(document.body.contains(btnMobile)){
+    btnMobile.addEventListener('click', toggleMenu);
+}
+
 
 
 //---------------------------------------------------------------------//
@@ -300,18 +303,53 @@ SearchExpense = () => {
 }
 
 
+//--------------------------------------------------------------------
+
+LoginConsult = () => {
+
+    let userADM = 'admin';
+    let passADM = 'admin';
+
+    let user = document.querySelector('#user');
+    let pass = document.querySelector('#password');
+
+
+    if(user.value != userADM){
+        user.classList.add('incorrect');
+    }else{
+        user.classList.add('correct');
+    }
+
+    if(pass.value != passADM){
+        pass.classList.add('incorrect');
+    }else{
+        pass.classList.add('correct');
+    }
+
+    if(user.value == userADM && pass.value == passADM){
+        btnLogin.href = '../pages/consult.html'
+    }
+
+
+}
+
+
+
+
 
 
 
 //-----------------------------------------------------------------
 const btnRegister = document.querySelector('#btn-register');
 const btnSearch = document.querySelector('#btn-search');
+const btnLogin = document.querySelector('#btn-login');
 
 if(document.body.contains(btnRegister)){
     btnRegister.addEventListener('click', RegisterExpense);
 } else if(document.body.contains(btnSearch)){
     btnSearch.addEventListener('click', SearchExpense);
+} else if(document.body.contains(btnLogin)){
+    btnLogin.addEventListener('click', LoginConsult)
 }
-
 
 
