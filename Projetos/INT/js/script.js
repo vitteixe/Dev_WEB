@@ -327,7 +327,7 @@ LoginConsult = () => {
     }
 
     if(user.value == userADM && pass.value == passADM){
-        btnLogin.href = '../pages/consult.html'
+        document.querySelector('#link-login').href = '../pages/consult.html';
     }
 
 

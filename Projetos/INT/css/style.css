@@ -168,6 +168,29 @@ h1{
     }
 }
 
+.login{
+    background: #006400;
+}
+
+#perfil{
+    width: 120px;
+    height: 120px;
+    margin-top: -260px;
+    margin-left: 30%;
+}
+
+@media (min-width: 440px){
+    #perfil{
+        margin-left: 32%;
+    }
+}
+
+@media (min-width: 500px){
+    #perfil{
+        margin-left: 38%;
+    }
+}
+
 #login{
     width: 95%;
     margin: auto;
@@ -175,13 +198,21 @@ h1{
     height: 550px;
     border: 1px solid #fff;
     border-radius: 25px;
-    background: #006400;
+    background-color: #ffffff4d;
     padding: 120px 20px;
     align-self: center;
 }
 
+@media (min-width: 768px){
+    #login{
+        width: 530px;
+    }
+}
+
 #login h2{
+    margin-top: -20px;
     margin-bottom: 35px;
+    font-weight: bold;
 }
 
 #login input{
@@ -191,6 +222,19 @@ h1{
     border: none;
     margin-top: 25px;
     border: 2px solid #fff;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    padding-left: 40px;
+    background-position: 10px;
+    font-size: 18px;
+}
+
+#user{
+    background: url(../images/user.png);
+}
+
+#password{
+    background: url(../images/padlock.png);
 }
 
 #login input.correct{
@@ -202,13 +246,7 @@ h1{
 }
 
 #btn-login{
-    display: block;
-    width: 40%;
-    margin-top: 50px;
-    border: none;
-    border-radius: 5px;
-    padding: 4px;
-    background-color: #dd9207;
+    margin-top: 55px;
 }
 
 
