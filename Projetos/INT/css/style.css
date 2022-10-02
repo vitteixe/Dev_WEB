@@ -10,7 +10,7 @@ header{
     align-items: center;
     justify-content: space-between;
     box-sizing: border-box;
-    border-bottom: 1px solid #006400;
+    border-bottom: 1px solid #45997d;
     padding: 3rem;
 }
 
@@ -33,7 +33,7 @@ a:hover{
 }
 
 a.active{
-    color: #006400;
+    color: #45997d;
     font-weight: bold;
 }
 
@@ -42,7 +42,7 @@ a.active{
     position: absolute;
     height: 2px;
     width: 0;
-    background: #006400;
+    background: #45997d;
     bottom: 0;
     transition: .3s ease-in-out;
 }
@@ -60,8 +60,8 @@ a.active{
 }
 
 #hamburger{
-    color: #006400;
-    border-top: 2px solid #006400;
+    color: #45997d;
+    border-top: 2px solid #45997d;
     width: 20px;
 }
 
@@ -169,7 +169,7 @@ h1{
 }
 
 .login{
-    background: #006400;
+    background: #59dbaf;
 }
 
 #perfil{
@@ -198,7 +198,7 @@ h1{
     height: 550px;
     border: 1px solid #fff;
     border-radius: 25px;
-    background-color: #ffffff4d;
+    background-color: #45997d;
     padding: 120px 20px;
     align-self: center;
 }
@@ -213,6 +213,7 @@ h1{
     margin-top: -20px;
     margin-bottom: 35px;
     font-weight: bold;
+    color: #fff;
 }
 
 #login input{
@@ -251,3 +252,7 @@ h1{
 
 
 
+#logo img{
+    width: 230px;
+    height: 90px;
+}
