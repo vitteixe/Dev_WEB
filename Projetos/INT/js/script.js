@@ -56,14 +56,14 @@ class BD{
         }
     }
     
-    // FUNÇÃO/MÉTODO PARA ATUALIZAÇÃO DE ÍNDICE
+    // MÉTODO PARA ATUALIZAÇÃO DE ÍNDICE
     getNextId(){
 
         let nextId = localStorage.getItem('id');
         return parseInt(nextId) + 1;
     }
 
-    // FUNÇÃO/MÉTODO DE GRAVAÇÃO DE NOVA DESPESA
+    // MÉTODO DE GRAVAÇÃO DE NOVA DESPESA
     toRecord(d){
     
         //chamando o método de soma do id
