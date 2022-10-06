@@ -11,7 +11,6 @@ if(document.body.contains(btnMobile)){
 }
 
 
-
 //---------------------------------------------------------------------//
 // OBJETO DESPESA
 class Expense {
@@ -40,7 +39,6 @@ class Expense {
 
     }
 }
-
 
 
 //OBJETO BD (localStorage)
@@ -156,7 +154,6 @@ class BD{
 let bd = new BD();
 
 
-
 // REGISTRO DE NOVA DESPESA
 RegisterExpense = () => {
     let year = document.querySelector('#year');
@@ -174,7 +171,6 @@ RegisterExpense = () => {
         description.value, 
         value.value
     );
-
 
     // TAGS MODAL
     let title = document.querySelector('#modal-title');
@@ -215,6 +211,36 @@ RegisterExpense = () => {
 }
 
 
+//-----------------------------------------------------------------------
+// TELA DE LOGIN
+LoginConsult = () => {
+
+    let userADM = 'admin';
+    let passADM = 'admin';
+
+    let user = document.querySelector('#user');
+    let pass = document.querySelector('#password');
+
+
+    if(user.value != userADM){
+        user.classList.add('incorrect');
+    }else{
+        user.classList.add('correct');
+    }
+
+    if(pass.value != passADM){
+        pass.classList.add('incorrect');
+    }else{
+        pass.classList.add('correct');
+    }
+
+    if(user.value == userADM && pass.value == passADM){
+        document.querySelector('#link-login').href = '../pages/consult.html';
+    }
+
+}
+
+
 
 //-----------------------------------------------------------------------
 // MÉTODO CARREGAR LISTA DESPESAS
@@ -227,7 +253,6 @@ loadExpenseList = (finalExpenses = [], filter = false) => {
 
     // TBODY
     var tBody = document.querySelector('#listExpenses');
-    tBody.innerHTML = '';
 
     // percorrendo o array finalExpenses
     finalExpenses.forEach(function(expense){
@@ -276,13 +301,9 @@ loadExpenseList = (finalExpenses = [], filter = false) => {
                 window.location.reload()
             })
         }
-        
-
 
     })
 }
-
-
 
 // PESQUISA DE DESPESAS  (consulta)
 SearchExpense = () => {
@@ -301,41 +322,6 @@ SearchExpense = () => {
 
     loadExpenseList(filterBdExpense, true)
 }
-
-
-//--------------------------------------------------------------------
-
-LoginConsult = () => {
-
-    let userADM = 'admin';
-    let passADM = 'admin';
-
-    let user = document.querySelector('#user');
-    let pass = document.querySelector('#password');
-
-
-    if(user.value != userADM){
-        user.classList.add('incorrect');
-    }else{
-        user.classList.add('correct');
-    }
-
-    if(pass.value != passADM){
-        pass.classList.add('incorrect');
-    }else{
-        pass.classList.add('correct');
-    }
-
-    if(user.value == userADM && pass.value == passADM){
-        document.querySelector('#link-login').href = '../pages/consult.html';
-    }
-
-
-}
-
-
-
-
 
 
 
