@@ -1,3 +1,13 @@
+<?php 
+    
+    session_start();
+
+    if(!isset($_SESSION["autenticado"]) || $_SESSION["autenticado"] != "SIM"){
+        header("location: ../index.php?login=erro2");
+    }
+    
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -9,7 +19,7 @@
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/style.css">
-    <title>App Help Desk</title>
+    <title>Consultar chamado - Help Desk</title>
 
 </head>
 
