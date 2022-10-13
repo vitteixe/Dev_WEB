@@ -108,7 +108,7 @@ nav.active #hamburger::before{
         top: 80px;
         overflow-y: hidden;
         z-index: 10000;
-        margin-top: 7px;
+        margin-top: 13px;
         border-bottom: 1px solid #006400;
         transition: .5s ease-in-out;
         background: #fff;
@@ -250,9 +250,25 @@ h1{
     margin-top: 55px;
 }
 
+@media (max-width: 767px){
+    #logo{
+        background-image: url(../images/logo-mobile.png);
+        width: 125px;
+        height: 150px;
+        margin-top: px;
+    }
+}
 
+@media (min-width: 768px){
+    #logo{
+        background-image: url(../images/logo-fc.png);
+        width: 260px;
+        height: 90px;
+    }
+}
 
-#logo img{
-    width: 125px;
-    height: 150px;
+@media (min-width: 948px){
+    #logo{
+        margin-left: 40px;
+    }
 }
