@@ -20,6 +20,8 @@
 
     if($usuario_autenticado){
         $_SESSION["autenticado"] = "SIM";
+        $_SESSION["x"] = "um valor";
+        $_SESSION["y"] = "outro";
         header("location: home.php");
     } else {
         $_SESSION["autenticado"] = "NAO";
