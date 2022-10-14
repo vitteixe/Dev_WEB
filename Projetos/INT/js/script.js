@@ -314,6 +314,7 @@ loadExpenseList = (finalExpenses = Array(), filter = false) => {
     })
 }
 
+
 // PESQUISA DE DESPESAS  (consulta)
 SearchExpense = () => {
 
@@ -332,8 +333,6 @@ SearchExpense = () => {
     filterBdExpense = bd.search(expenseSH);
 
     loadExpenseList(filterBdExpense, true)
-
-    
     
 }
 

@@ -14,6 +14,28 @@ header{
     padding: 3rem;
 }
 
+@media (max-width: 767px){
+    #logo{
+        background-image: url(../images/logo-mobile.png);
+        width: 125px;
+        height: 150px;
+    }
+}
+
+@media (min-width: 768px){
+    #logo{
+        background-image: url(../images/logo-fc.png);
+        width: 260px;
+        height: 90px;
+    }
+}
+
+@media (min-width: 948px){
+    #logo{
+        margin-left: 40px;
+    }
+}
+
 #menu{
     display: flex;
     list-style: none;
@@ -248,26 +270,4 @@ h1{
 
 #btn-login{
     margin-top: 55px;
-}
-
-@media (max-width: 767px){
-    #logo{
-        background-image: url(../images/logo-mobile.png);
-        width: 125px;
-        height: 150px;
-    }
-}
-
-@media (min-width: 768px){
-    #logo{
-        background-image: url(../images/logo-fc.png);
-        width: 260px;
-        height: 90px;
-    }
-}
-
-@media (min-width: 948px){
-    #logo{
-        margin-left: 40px;
-    }
 }
