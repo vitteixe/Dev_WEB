@@ -107,37 +107,45 @@ class BD{
     //MÉTODO DE PESQUISA
     search(expenseSH){
 
+        let filterExpense = []
+
         //recuperando todos os registros através do método criado a cima
-        let filterExpense = this.allRecords();
+        filterExpense = this.allRecords();
 
         //ano só entra no bloco se o resultado for diferente de vazio ''
         if(expenseSH.year != ''){
             //verificando se cada objeto literal corresponde ao filtro solicitado
+            console.log("ano");
             filterExpense = filterExpense.filter(d => d.year == expenseSH.year);
         }
 
         //mes
         if(expenseSH.month != ''){
+            console.log("mês");
             filterExpense = filterExpense.filter(d => d.month == expenseSH.month);
         }
 
         //dia
         if(expenseSH.day != ''){
+            console.log("dia");
             filterExpense = filterExpense.filter(d => d.day == expenseSH.day);
         }
 
         //tipo
         if(expenseSH.type != ''){
+            console.log("tipo");
             filterExpense = filterExpense.filter(d => d.type == expenseSH.type);
         }
 
         //descricao
         if(expenseSH.description != ''){
+            console.log("desc");
             filterExpense = filterExpense.filter(d => d.description == expenseSH.description);
         }
 
         //valor
         if(expenseSH.value != ''){
+            console.log("filtr");
             filterExpense = filterExpense.filter(d => d.value == expenseSH.value);
         }
 
@@ -244,7 +252,7 @@ LoginConsult = () => {
 
 //-----------------------------------------------------------------------
 // MÉTODO CARREGAR LISTA DESPESAS
-loadExpenseList = (finalExpenses = [], filter = false) => {
+loadExpenseList = (finalExpenses = Array(), filter = false) => {
 
     if(finalExpenses.length == 0 && filter == false) {
         // chamando método para carregar todas as despesas
@@ -252,7 +260,8 @@ loadExpenseList = (finalExpenses = [], filter = false) => {
     }
 
     // TBODY
-    var tBody = document.querySelector('#listExpenses');
+    let tBody = document.querySelector('#listExpenses');
+    tBody.innerHTML = '';
 
     // percorrendo o array finalExpenses
     finalExpenses.forEach(function(expense){
@@ -317,10 +326,15 @@ SearchExpense = () => {
 
     let expenseSH = new Expense(year, month, day, type, description, value);
 
+    console.log(expenseSH)
+
     //chamando método de pesquisa
     filterBdExpense = bd.search(expenseSH);
 
     loadExpenseList(filterBdExpense, true)
+
+    
+    
 }
 
 
