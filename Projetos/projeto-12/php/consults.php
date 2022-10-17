@@ -67,6 +67,16 @@
                             <?php        
                                 $callDates = explode("#", $call);
 
+                                # Verificando tipo de perfil
+                                if($_SESSION["perfil_id"] == 2){
+
+                                    # só vamos exibir o chamado, se ele foi criado pelo user
+                                    if($_SESSION["id"] != $callDates[0]){
+                                        continue;
+                                    }
+
+                                };
+
                                 # Pulando a impressão do dado, caso o mesmo esteja vazio
                                 if(count($callDates) < 3){
                                     continue;
@@ -74,9 +84,9 @@
                             ?>
                             <div class="card mb-3 bg-light">
                                 <div class="card-body">
-                                    <h5 class="card-title"><?= $callDates[0] ?></h5>
-                                    <h6 class="card-subtitle mb-2 text-muted"><?= $callDates[1] ?></h6>
-                                    <p class="card-text"><?= $callDates[2] ?></p>
+                                    <h5 class="card-title"><?= $callDates[1] ?></h5>
+                                    <h6 class="card-subtitle mb-2 text-muted"><?= $callDates[2] ?></h6>
+                                    <p class="card-text"><?= $callDates[3] ?></p>
 
                                 </div>
                             </div>

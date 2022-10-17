@@ -1,11 +1,12 @@
 <?php 
-    
+
+    session_start();
     # Montagem do texto
     $title = str_replace("#", "-", $_POST["title"]);
     $category = str_replace("#", "-", $_POST["category"]);
     $description = str_replace("#", "-", $_POST["description"]);
 
-    $texto = $title . "#" . $category . "#" . $description . PHP_EOL; #PHP_EOL constante de quebra de linha
+    $texto = $_SESSION["id"] . "#" . $title . "#" . $category . "#" . $description . PHP_EOL; #PHP_EOL constante de quebra de linha
 
     # Abrindo um arquivo (nome do arquivo, método utilizado (documentação php))
     $arquivo = fopen("arquivo.hd", "a");
