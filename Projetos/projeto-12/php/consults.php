@@ -1,5 +1,26 @@
 <?php require_once "accessValidator.php" ?>
 
+<?php 
+
+    # CHAMADOS
+    $calls = [];
+
+    # Abri o arquivo.hd
+    $arquivo = fopen("arquivo.hd", "r");
+
+    # percorrer o arquivo enquanto houver registros (linhas) a serem recuperadas
+    # feof (), testa pelo fim de um arquivo
+    while(!feof($arquivo)){
+        // recuperando conteúdo até o final da linha
+        $register = fgets($arquivo);
+        
+        $calls[] = $register;
+    }
+
+    # fechar o aquivo.hd
+    fclose($arquivo);
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -41,22 +62,26 @@
 
                     <div class="card-body">
 
-                        <div class="card mb-3 bg-light">
-                            <div class="card-body">
-                                <h5 class="card-title">Título do chamado...</h5>
-                                <h6 class="card-subtitle mb-2 text-muted">Categoria</h6>
-                                <p class="card-text">Descrição do chamado...</p>
+                        <?php foreach($calls as $call) { ?>
 
-                            </div>
-                        </div>
+                            <?php        
+                                $callDates = explode("#", $call);
 
-                        <div class="card mb-3 bg-light">
-                            <div class="card-body">
-                                <h5 class="card-title">Título do chamado...</h5>
-                                <h6 class="card-subtitle mb-2 text-muted">Categoria</h6>
-                                <p class="card-text">Descrição do chamado...</p>
+                                # Pulando a impressão do dado, caso o mesmo esteja vazio
+                                if(count($callDates) < 3){
+                                    continue;
+                                }
+                            ?>
+                            <div class="card mb-3 bg-light">
+                                <div class="card-body">
+                                    <h5 class="card-title"><?= $callDates[0] ?></h5>
+                                    <h6 class="card-subtitle mb-2 text-muted"><?= $callDates[1] ?></h6>
+                                    <p class="card-text"><?= $callDates[2] ?></p>
+
+                                </div>
                             </div>
-                        </div>
+
+                        <?php } ?>
 
                         <div class="row mt-5">
 
