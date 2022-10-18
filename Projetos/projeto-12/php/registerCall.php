@@ -9,7 +9,7 @@
     $texto = $_SESSION["id"] . "#" . $title . "#" . $category . "#" . $description . PHP_EOL; #PHP_EOL constante de quebra de linha
 
     # Abrindo um arquivo (nome do arquivo, método utilizado (documentação php))
-    $arquivo = fopen("arquivo.hd", "a");
+    $arquivo = fopen("../../private/HelpDesk/arquivo.hd", "a");
 
     # escrevendo no arquivo aberto (selecionando o arquivo aberto, o que escrever no arquivo)
     fwrite($arquivo, $texto);

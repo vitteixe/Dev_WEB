@@ -6,7 +6,7 @@
     $calls = [];
 
     # Abri o arquivo.hd
-    $arquivo = fopen("arquivo.hd", "r");
+    $arquivo = fopen("../../private/HelpDesk/arquivo.hd", "r");
 
     # percorrer o arquivo enquanto houver registros (linhas) a serem recuperadas
     # feof (), testa pelo fim de um arquivo
