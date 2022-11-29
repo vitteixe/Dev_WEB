@@ -24,6 +24,13 @@
 
 	</head>
 
+	<!----------------------------------
+    |                             |
+    |    VITTEIXE PRODUCTION      |
+    |           ᓚᘏᗢ              |
+    |                             |
+    ------------------------------->
+
 	<body>
 
 		<div class="container">  
@@ -41,20 +48,20 @@
   				
 					<div class="card-body font-weight-bold">
 						
-						<form>
+						<form action="./php/shipping-process.php" method="post">
 							<div class="form-group">
-								<label for="para">Para</label>
-								<input type="text" class="form-control" id="para" placeholder="joao@dominio.com.br">
+								<label for="for">Para</label>
+								<input id="for" name="for" type="text" class="form-control"  placeholder="joao@dominio.com.br">
 							</div>
 
 							<div class="form-group">
-								<label for="assunto">Assunto</label>
-								<input type="text" class="form-control" id="assunto" placeholder="Assundo do e-mail">
+								<label for="subject">Assunto</label>
+								<input id="subject" name="subject" type="text" class="form-control"  placeholder="Assunto do e-mail">
 							</div>
 
 							<div class="form-group">
-								<label for="mensagem">Mensagem</label>
-								<textarea class="form-control" id="mensagem"></textarea>
+								<label for="message">Mensagem</label>
+								<textarea id="message" name="message" class="form-control" ></textarea>
 							</div>
 
 							<button type="submit" class="btn btn-primary btn-lg">Enviar Mensagem</button>
