@@ -12,7 +12,7 @@ Estes são projetos criados para praticar o aprendizado adquirido no decorrer do
 
 ---
 
-<a href="https://vitteixe.github.io/Dev_WEB/Projetos/projeto-10/" target="_blank">
+<a href="https://vitteixe.github.io/Dev_WEB/Projetos/projeto-11/" target="_blank">
     <img src="https://user-images.githubusercontent.com/89394210/203413259-3ee88ca0-59cc-48fd-af48-fa2a1260407e.jpg" 
     style="display: block; margin: 0 auto;" width="65%" height="65%">
 </a> <br><br>
