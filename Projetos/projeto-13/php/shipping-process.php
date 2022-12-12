@@ -18,11 +18,12 @@
     use PHPMailer\PHPMailer\SMTP;
     use PHPMailer\PHPMailer\Exception;
 
-
+    // header('Content-Type: text/html; charset=utf-8');
     class Message{
         private $para = null;
         private $assunto = null;
         private $mensagem = null;
+        public $status = ["codigo_status" => null, "descricao_status" =>""];
 
         public function __get($attr){
             return $this->$attr;
@@ -59,25 +60,29 @@
     # Convocando o método de validação de mensagem
     if(!$mensagem->mensagemValida()){
         echo "Erro ao enviar mensagem, existem campos inválidos";
-        die();
+        header("location: ../index.php");
     } 
 
 
     $mail = new PHPMailer(true);
+    
 
     try {
+        $mail->addCustomHeader('Content-Type', 'text/plain;charset=utf-8');
+        
         # Configuração do servidor
-        $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      
+        $mail->SMTPDebug = SMTP::DEBUG_SERVER;     
+        // $mail->Encoding = 'base64';                
         $mail->isSMTP();                                            
-        $mail->Host       = 'smtp.gmail.com';                     
+        $mail->Host       = "smtp.hostinger.com";//'smtp.gmail.com';                     
         $mail->SMTPAuth   = true;                                   
-        $mail->Username   = 'projectsendmail22@gmail.com';                     
-        $mail->Password   = 'dwqbggijdfepsmin';                               
+        $mail->Username   = 'vitor@traue.com.br';                     
+        $mail->Password   = 'Senh@123';                               
         $mail->SMTPSecure = "PHPMailer::ENCRYPTION_STARTTLS";         
-        $mail->Port       = 587;                                    
+        $mail->Port       = "587";//587;                                    
 
         # Remetente
-        $mail->setFrom('projectsendmail22@gmail.com');
+        $mail->setFrom('vitor@traue.com.br');
         # Destinatário
         $mail->addAddress($mensagem->__get("para"));
         # RESPOSTA PARA 3º PESSOA   $mail->addReplyTo('info@example.com', 'Information');
@@ -91,7 +96,9 @@
         //Content
         $mail->isHTML(true);                                  //Set email format to HTML
         $mail->Subject = $mensagem->__get("assunto");
-        $mail->Body    = $mensagem->__get("mensagem");
+        $mail->charSet = 'UTF-8';
+        $str = mb_convert_encoding('é um teste', 'UTF-8');;//$mensagem->__get('mensagem')
+        $mail->Body    =  $str; //$mensagem->__get("mensagem");
 
         $mail->send();
         echo 'E-mail enviado com sucesso!';
