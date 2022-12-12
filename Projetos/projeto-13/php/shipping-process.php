@@ -52,6 +52,10 @@
     $mensagem->__set("assunto", $_POST["subject"]);
     $mensagem->__set("mensagem", $_POST["message"]);
 
+    echo "<pre>";
+        print_r($mensagem);
+    echo "</pre>";
+
     # Convocando o método de validação de mensagem
     if(!$mensagem->mensagemValida()){
         echo "Erro ao enviar mensagem, existem campos inválidos";
@@ -73,9 +77,9 @@
         $mail->Port       = 587;                                    
 
         # Remetente
-        $mail->setFrom('projectsendmail22@gmail.com', 'Web Completo Remetente');
+        $mail->setFrom('projectsendmail22@gmail.com');
         # Destinatário
-        $mail->addAddress('vitoroliv@outlook.com', 'WEB COMPLETO DESTINATÁRIO');
+        $mail->addAddress($mensagem->__get("para"));
         # RESPOSTA PARA 3º PESSOA   $mail->addReplyTo('info@example.com', 'Information');
         # ENVIAR COMO CÓPIA         $mail->addCC('cc@example.com');
         # CÓPIA OCULTA              $mail->addBCC('bcc@example.com');
@@ -86,12 +90,11 @@
 
         //Content
         $mail->isHTML(true);                                  //Set email format to HTML
-        $mail->Subject = "Oi eu sou o assunto!";
-        $mail->Body    = 'Conteúdo do <b>E-mail</b>';
-        $mail->AltBody = 'Conteúdo do E-mail';
+        $mail->Subject = $mensagem->__get("assunto");
+        $mail->Body    = $mensagem->__get("mensagem");
 
         $mail->send();
-        echo 'Mensagem enviada com sucesso!';
+        echo 'E-mail enviado com sucesso!';
     } catch (Exception $e) {
         echo "Não foi possível enviar esse e-mail, tente novamente mais tarde!";
         echo "Detalhes do erro: {$mail->ErrorInfo}";
