@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comando MySQL</title>
+</head>
+<body>
+
+    <h1>Criando e excluindo BD</h1>
+
+    <!-- Criando BD -->
+    <b>Criar:</b> CREATE DATABASE nome_do_banco
+    <br><br>
+    <!-- Excluindo BD -->
+    <b>Excluir:</b> DROP DATABASE nome_do_banco
+
+
+    <br><br><br>
+    <!-- # ------------------------------------------- # -->
+
+    <h1>Tipos de dados</h1>
+    <h2>Campos de TEXTO</h2>
+    <b>Text:</b> (Tamanho variável que armazena uma grande quantidade de caracteres) <br>
+    <b>Varchar:</b> (Tamanho variável que armazena de <b>0</b> até <b>255</b> caracteres) <br>
+    <b>Char:</b> (Tamanho <b>FIXO</b> que que armazena de <b>0</b> até <b>255</b> caracteres) <br><br>
+
+
+    <h2>Campos NUMÉRICOS</h2>
+    <b>Int:</b> (Valores numéricos <b>inteiros</b>) <br>
+    <b>float:</b> (Valores Numéricos <b>Fracionados</b>) <br><br>
+
+
+    <h2>Campos de DATA e HORA</h2>
+    <b>Date:</b> (data no formato <b>YYYY/mm/dd</b>) <br>
+    <b>Time:</b> (hora) <br>
+    <b>Datetime:</b> (combinação de date e time em um mesmo campo) <br><br><br><br>
+
+
+    <!-- # ------------------------------------------- # -->
+
+
+    <h2>Tabelas</h2>
+    <p>Para criar uma tabela, basta utilizar o comando <mark>CREATE TABLE nome_da_tabela ( );</mark> para escluir basta utilizar <mark>DROP</mark></p>
+    <p>Dentro dos parenteses, é acrescentado o nome das colunas <mark>nome_coluna - tipo - null</mark></p>
+        
+    <h3>Exemplo:</h3>
+    <p>
+        <p>CREATE TABLE tb_cursos(</p>
+            <p style="margin-left: 25px; margin-top: -10px"> id_cursos int not null,</p>
+            <p style="margin-left: 25px; margin-top: -10px"> image_curso varchar(100) not null,</p>
+        <p style="margin-top: -10px">);</p>
+    </p>
+
+
+
+
+        
+    
+   
+</body>
+</html>
