@@ -9,7 +9,7 @@
 <body>
 
 
-    <h2>Tabelas</h2>
+    <h1>Tabelas</h1>
     <p>Para criar uma tabela, basta utilizar o comando <mark>CREATE TABLE nome_da_tabela ( );</mark> para escluir basta utilizar <mark>DROP</mark></p>
     <p>Dentro dos parenteses, é acrescentado o nome das colunas <mark>nome_coluna - tipo - null</mark></p>
         
@@ -25,7 +25,24 @@
     <p>
         <b>RENAME TABLE</b> <-nome_tabela-> <b>TO</b> <-nome_novo->;
     </p>
-    
+
+
+    <br><hr><br><br>
+    <h1>Colunas</h1>
+    <h2>Adicionando Colunas</h2>
+    <p>
+        <b>ALTER TABLE</b> <-nome_tabela-> <mark><b>ADD COLUMN</b></mark> <-nome_coluna-> <b>VARCHAR/CHAR/INT... NOT NULL</b>;
+    </p> <br>
+
+    <h2>Modificando Colunas</h2>
+    <p>
+        <b>ALTER TABLE</b> <-nome_tabela-> <mark><b>CHANGE</b></mark> <-nome_coluna-> <-nome_coluna_modificado-> <b>TIPO DADO</b>;
+    </p> <br>
+
+    <h2>Excluindo Colunas</h2>
+    <p>
+        <b>ALTER TABLE</b> <-nome_tabela-> <mark><b>DROP</b></mark> <-nome_coluna->;
+    </p>
 
 
 </body>
