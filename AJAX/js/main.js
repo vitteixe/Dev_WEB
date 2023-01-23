@@ -1,5 +1,7 @@
 function requisitarPagina(url){
 
+    document.querySelector("#conteudo").innerHTML = "";
+
     // incluir o gif de loading na página
     if(!document.querySelector("#loading")){
         let imgLoading = document.createElement("img");
@@ -24,7 +26,18 @@ function requisitarPagina(url){
 
     // lógica que fica olhando para o progresso da req
     ajax.onreadystatechange = () => {
-        if(ajax.readyState == 4){
+        if(ajax.readyState == 4 && ajax.status == 200){
+
+            document.querySelector("#conteudo").innerHTML = "Requisição finalizada com sucesso!"
+            
+            console.log("sucesso");
+            document.querySelector("#loading").remove();
+        }
+
+        if(ajax.readyState == 4 && ajax.status == 404){
+
+            document.querySelector("#conteudo").innerHTML = "Requisição finalizada, porém o recurso solicitado não foi encontrado!"
+
             console.log("sucesso");
             document.querySelector("#loading").remove();
         }
