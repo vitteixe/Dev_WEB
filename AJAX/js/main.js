@@ -28,18 +28,18 @@ function requisitarPagina(url){
     ajax.onreadystatechange = () => {
         if(ajax.readyState == 4 && ajax.status == 200){
 
-            document.querySelector("#conteudo").innerHTML = "Requisição finalizada com sucesso!"
+            document.querySelector("#conteudo").innerHTML = ajax.responseText
             
             console.log("sucesso");
-            document.querySelector("#loading").remove();
+            //document.querySelector("#loading").remove();
         }
 
         if(ajax.readyState == 4 && ajax.status == 404){
 
-            document.querySelector("#conteudo").innerHTML = "Requisição finalizada, porém o recurso solicitado não foi encontrado!"
+            document.querySelector("#conteudo").innerHTML = "...Tente novamente mais tarde"
 
             console.log("sucesso");
-            document.querySelector("#loading").remove();
+            //document.querySelector("#loading").remove();
         }
     }
 
