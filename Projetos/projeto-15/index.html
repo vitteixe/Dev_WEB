@@ -1,0 +1,58 @@
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		<link rel="shortcut icon" href="images/favicon.svg" type="image/x-icon">
+
+		<script src="js/script.js" defer></script>
+
+		<title>Search Address</title>
+		
+	</head>
+
+	<!----------------------------------
+    |                             |
+    |    VITTEIXE PRODUCTION      |
+    |           ᓚᘏᗢ              |
+    |                             |
+    ------------------------------->
+
+	<body>
+		
+		<nav class="navbar navbar-light bg-light mb-4">
+			<div class="container">
+				<div class="navbar-brand mb-0 h1">
+					<h3>Pesquisar Endereço</h3>
+				</div>
+			</div>
+		</nav>
+
+		<div class="container">
+			<div class="row form-group">
+				<div class="col-sm-3">
+					<input type="text" class="form-control" placeholder="CEP" onblur="getCEP(this.value)"/>
+				</div>
+				<div class="col-sm-9">
+					<input id="endereco" type="text" class="form-control" placeholder="Endereço" readonly />
+				</div>
+			</div>
+
+			<div class="row form-group">
+				<div class="col-sm-6">
+					<input id="bairro" type="text" class="form-control" placeholder="Bairro" readonly />
+				</div>
+				<div class="col-sm-4">
+					<input id="cidade" type="text" class="form-control" placeholder="Cidade" readonly />
+				</div>
+
+				<div class="col-sm-2">
+					<input id="uf" type="text" class="form-control" placeholder="UF" readonly />
+				</div>
+
+			</div>
+		</div>
+	</body>
+</html>
