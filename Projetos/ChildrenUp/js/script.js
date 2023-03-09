@@ -1,8 +1,10 @@
-const btnM = document.querySelector("#btn-mobile");
+const menuFlex = document.querySelector("#btn-menu");
 
 function toggleMenu(){
     const nav = document.querySelector("nav");
     nav.classList.toggle("active");
 }
 
-btnM.addEventListener("click", toggleMenu)
+if(document.body.contains(menuFlex)){
+    menuFlex.addEventListener("click", toggleMenu);
+}
