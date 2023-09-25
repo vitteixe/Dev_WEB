@@ -135,3 +135,37 @@ nav.active #hamburger::after{
 
     
 }
+
+
+/***********************************************/
+
+@font-face {
+    font-family: AgathaFont;
+    src: url(../fonts/Agatha.ttf);
+}
+
+#main {
+    margin-top: 50px;
+}
+
+#main img {
+    max-width:480px;
+    width: auto;
+    height: auto;
+    margin-left: 2%;
+}
+
+#textMain h1{
+    font-family: AgathaFont;
+    font-size: 60px;
+    text-align: center;
+    margin-top: 5%
+}
+
+#textMain p{
+    text-align: justify;
+}
+
+.textStart{
+    margin-left: 10%;
+}
