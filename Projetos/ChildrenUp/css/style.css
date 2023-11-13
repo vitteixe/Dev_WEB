@@ -19,7 +19,7 @@ a:hover {
     text-decoration: none;
 }
 
-ul {
+#menu {
     display: flex;
     list-style: none;
 }
@@ -153,6 +153,10 @@ nav.active #hamburger::after {
     display: block;
 }
 
+#mainRow{
+    background-color: antiquewhite;
+}
+
 @media (max-width: 800.99px) {
     #main img {
         max-width: 380px;
@@ -280,7 +284,7 @@ nav.active #hamburger::after {
 
 
 body {
-    background-image: url('../images/bg.jpg');
+    /* background-image: url('../images/bg.jpg'); */
     background-repeat: repeat;
     background-size: contain;
     background-position: center center;
