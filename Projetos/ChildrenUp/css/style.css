@@ -5,7 +5,12 @@
 }
 
 body {
-    overflow-x: hidden;
+    overflow: hidden;
+    background-image: url('../images/BG.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    background-attachment: fixed;
 }
 
 a {
