@@ -5,12 +5,11 @@
 }
 
 body {
-    overflow: hidden;
+    overflow-x: hidden;
     background-image: url('../images/BG.jpg');
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     background-position: center center;
-    background-attachment: fixed;
 }
 
 a {
@@ -160,6 +159,8 @@ nav.active #hamburger::after {
 
 #mainRow{
     background-color: antiquewhite;
+    border-radius: 10%;
+    padding: 20px;
 }
 
 @media (max-width: 800.99px) {
