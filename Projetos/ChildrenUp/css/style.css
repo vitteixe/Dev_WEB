@@ -36,6 +36,7 @@ header {
     justify-content: space-between;
     box-sizing: border-box;
     border-bottom: 1px solid #45997d;
+    background-color: #fff;
 }
 
 #menu {
@@ -147,7 +148,7 @@ nav.active #hamburger::after {
 }
 
 #main {
-    margin-top: 50px;
+    margin-top: 120px;
 }
 
 #main img {
@@ -215,7 +216,6 @@ nav.active #hamburger::after {
     cursor: pointer;
     transition: all .4s ease;
     font-size: 25px;
-    border: 1px solid red;
 }
 
 .box .icon {
